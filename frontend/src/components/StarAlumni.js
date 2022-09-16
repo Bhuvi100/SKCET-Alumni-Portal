@@ -1,4 +1,5 @@
 import React from 'react'
+
 const StarAlumni = () => {
   return (
     <div id={"initiatives"}>
@@ -8,7 +9,7 @@ const StarAlumni = () => {
            
             <h1 className={" mb-16 pb-2 font-bold sm:text-xl text-2xl md:text-3xl text-center"}>
               Notable
-              <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+              <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300" >
                 Alumni
               </span>
               <div className=""></div>
@@ -23,7 +24,7 @@ const StarAlumni = () => {
                Working at Google
               </h3>
               <div className="m-4" >
-              <a href="https://ariia.gov.in/" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded' target="_blank" >View Profile</a>
+              <a href="https://ariia.gov.in/" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
               </div>
             </div>
 
@@ -34,7 +35,7 @@ const StarAlumni = () => {
                 Working at Google
                </h3>
                <div className="m-4">
-               <a href="https://ariia.gov.in/" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded' target="_blank" >View Profile</a>
+               <a href="https://ariia.gov.in/" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
                </div>
              </div>
              <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
@@ -44,7 +45,7 @@ const StarAlumni = () => {
                 Working at Google
                </h3>
                <div className="m-4">
-               <a href="https://ariia.gov.in/" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded' target="_blank" >View Profile</a>
+               <a href="https://ariia.gov.in/" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
                </div>
              </div>
              <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
@@ -54,17 +55,17 @@ const StarAlumni = () => {
                 Working at Google
                </h3>
                <div className="m-4">
-               <a href="https://ariia.gov.in/" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded' target="_blank" >View Profile</a>
+               <a href="https://ariia.gov.in/" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
                </div>
              </div>
              <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
              
-             <img className=" " src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
+             <img className="m-auto" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
                <h3 className="mt-4 text-xl font-bold text-center text-indblue">
                 Working at Google
                </h3>
-               <div className="m-4" >
-                <a href="https://ariia.gov.in/" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded' target="_blank" >View Profile</a>
+               <div className="m-4">
+               <a href="https://ariia.gov.in/" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
                </div>
              </div>
 
