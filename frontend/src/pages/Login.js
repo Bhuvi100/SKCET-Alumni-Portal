@@ -1,10 +1,9 @@
 import React from 'react'
-
+import Loginform from '../components/Loginform'
 const Login = () => {
   return (
-    <div>Login
-
-      <a href = "/register">Login</a>
+    <div>
+      <Loginform />
     </div>
   )
 }
