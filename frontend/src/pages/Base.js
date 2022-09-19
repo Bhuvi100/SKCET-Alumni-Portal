@@ -6,6 +6,12 @@ import Home from './Home';
 import Landing from './Landing';
 import Profile from "../components/Profile";
 import SuccessStoriesForm from '../components/SuccessStoriesForm';
+import JobOpportunities from '../components/JobOpportunities';
+import QueriesForm from '../components/QueriesForm';
+import Clubs from '../components/Clubs';
+import Academictranscript from '../components/AcademicTranscriptForm';
+import Mediumofinstructionform from '../components/MediumOfInstructionForm';
+import Objectives from '../components/Objectives';
 
 const Base = () => {
   return (
@@ -13,7 +19,7 @@ const Base = () => {
 
 <Routes>
             <Route
-              path="/"
+              path="/login"
               element={<Login />}
             />
             <Route
@@ -39,8 +45,41 @@ const Base = () => {
               path="/addsuccessstories"
               element={<SuccessStoriesForm />}
             />
+
+          <Route
+              path="/jobs"
+              element={<JobOpportunities />}
+            />
+
+          <Route
+              path="/queries"
+              element={<QueriesForm />}
+            />
+
+          <Route
+              path="/clubs"
+              element={<Clubs />}
+            />
              
-             
+          <Route
+              path="/transcriptform"
+              element={<Academictranscript />}
+            />
+            <Route
+              path="/mediumofinstruction"
+              element={<Mediumofinstructionform />}
+            />
+
+          <Route
+              path="/"
+              element={<Landing />}
+            />
+
+          <Route
+              path="/objectives"
+              element={<Objectives />}
+            />
+
           </Routes>
     </div>
   )
