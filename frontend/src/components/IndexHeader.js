@@ -1,13 +1,15 @@
 import React, { useState , useEffect } from 'react';
-import UntitledDesign from './../assets/Untitled design.png';
+import {Link } from "react-router-dom"
+import "../App.css"
+/*import UntitledDesign from './../assets/Untitled design.png';
 import Chairperson from './../assets/Chairperson.jpg';
-import Principal from './../assets/Principal.jpg';
+import Principal from './../assets/Principal.jpg';*/
 
 
 const IndexHeader = () => {
   return (
     <div class="leading-normal tracking-normal text-white gradient" style={{ background: "linear-gradient(to right, #2A2A72, #009FFD)", fontFamily:"sans-serif" }}>
-    <nav id="header" class="fixed w-full z-30 top-0 text-white" style={{ position:"fixed" , top:"0" , left:"0" }}> 
+    <nav id="header" class="fixed w-full z-30 top-0 text-white" style={{  background: "linear-gradient(to right, #2A2A72, #009FFD)", position:"fixed" , top:"0" , left:"0" }}> 
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
           <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
@@ -27,18 +29,36 @@ const IndexHeader = () => {
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">About LinkUP</a>
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">About LinkUP</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Services</a>
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Services</a>
             </li>
+
+            <li class="mr-3">
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/queries">General Queries</a>
+            </li>
+
+            <li class="mr-3">
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/mediumofinstruction">Medium of Instruction Form</a>
+            </li>
+
+            <li class="mr-3">
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/transcriptform">Academic Transcript Form</a>
+            </li>
+
+            <li class="mr-3">
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/objectives">Objectives</a>
+            </li>
+
           </ul>
-          <button
+          <a
+            href = "/login"
             id="navAction"
             class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
             Login
-          </button>
+          </a>
         </div>
       </div>
       <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -53,12 +73,12 @@ const IndexHeader = () => {
           <p class="leading-normal text-2xl mb-8">
             Not a part of our community yet ?
           </p>
-          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          <Link to = "/register" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Join Today 
-          </button>
+          </Link>
         </div>
         <div class="w-full md:w-3/5 py-6 text-center">
-          <img class="w-full md:w-4/5 z-50 p-10 ml-0 md:ml-40 " src={UntitledDesign}  />
+          <img class="w-full md:w-4/5 z-50 p-10 ml-0 md:ml-40 " src="/assets/design.png" />
         </div>
       </div>
     </div>
@@ -104,7 +124,7 @@ const IndexHeader = () => {
             </p>
           </div>
           <div class="w-full sm:w-1/2 p-6">
-            <img class=" object-fill h-48 w-48 rounded-full shadow-2xl ml-20"  src={Chairperson} />
+            <img class=" object-fill h-48 w-48 rounded-full shadow-2xl ml-20"   src="/assets/Chairperson.jpg" />
           </div>
         </div>
         <br />
@@ -120,7 +140,7 @@ const IndexHeader = () => {
               </p>
             </div>
             <div class="w-full sm:w-1/2 p-6">
-              <img class="object-fill h-48 w-48 rounded-full shadow-2xl ml-20"  src={Principal} />
+              <img class="object-fill h-48 w-48 rounded-full shadow-2xl ml-20"  src="/assets/Principal.jpg"/>
             </div>
           </div>
         </div>
