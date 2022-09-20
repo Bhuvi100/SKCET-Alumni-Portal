@@ -1,8 +1,21 @@
-import logo from "./logo.svg";
-import "./App.css";
-
-function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+import React from 'react'
+import  Header from "./components/Header"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Base from './pages/Base';
+const App = () => {
+  return (
+    <div>
+    <BrowserRouter>
+    <Routes>
+      <Route path = "/*" element = {<Base />} />
+      
+    </Routes>
+    
+    </BrowserRouter>
+ 
+  </div>
+  )  
+  
 }
 
-export default App;
+export default App
