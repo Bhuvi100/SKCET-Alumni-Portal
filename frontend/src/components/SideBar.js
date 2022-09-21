@@ -2,10 +2,10 @@ import SuccessStories from '../components/SuccessStories';
 import Logo from "../logo.png";
 import { useState } from 'react';
 
-export default function SideBar(){
+const SideBar = () => {
     const [showSidebar,setShowSidebar] = useState(false);
     return(
-        <div>
+        <div style = {{marginTop : "7rem", position : "sticky"}}>
                 <div className="">
                 <div className='md:hidden'>
         <button type="button" class="text-black hover:bg-white md:hidden font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 "
@@ -112,3 +112,5 @@ export default function SideBar(){
         </div>
     )
 }
+
+export default SideBar
