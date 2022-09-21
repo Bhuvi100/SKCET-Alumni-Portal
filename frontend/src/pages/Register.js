@@ -166,7 +166,7 @@ function Register() {
    
         </div>
         </div>
-       <div class="grid grid-cols-3 gap-4 mt-2 mb-4">
+       <div class="grid gap-6 lg:grid-cols-3  mt-2 mb-4">
   <div> <label for="ad1" class="block mb-2 text-black font-bold">Country</label>
   <div class="mt-2.5">
  <Country/>
