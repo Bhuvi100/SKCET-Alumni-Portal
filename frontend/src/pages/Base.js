@@ -5,6 +5,7 @@ import Register from "./Register"
 import Home from './Home';
 import Landing from './Landing';
 import Profile from "../components/Profile";
+import ProfileNew from './Profie';
 import SuccessStoriesForm from '../components/SuccessStoriesForm';
 import JobOpportunities from '../components/JobOpportunities';
 import QueriesForm from '../components/QueriesForm';
@@ -39,6 +40,11 @@ const Base = () => {
             <Route
               path="/profile"
               element={<Profile />}
+            />
+
+            <Route
+              path="/profilenew"
+              element={<ProfileNew />}
             />
 
             <Route
