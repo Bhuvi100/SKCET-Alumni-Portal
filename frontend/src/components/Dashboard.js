@@ -2,7 +2,7 @@ import React from 'react'
 
 const Dashboard = () => {
   return (
-    <div>
+    <div style = {{marginTop : "7rem"}}>
       <div class="flex flex-col flex-1">
         
         <main class="pb-16 overflow-y-auto">
