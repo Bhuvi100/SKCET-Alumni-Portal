@@ -11,25 +11,27 @@ const IndexHeader = () => {
   return (
     <div class="leading-normal tracking-normal text-white gradient" style={{ background: "linear-gradient(to right, #2A2A72, #009FFD)", fontFamily:"sans-serif" }}>
     <Navbar />
-    <div class="pt-0">
-      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+    <div class="pl-24 mb-11">
+    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-between flex-end" >
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
           <p class="uppercase tracking-loose w-full">Lorem Ipsum</p>
           <h1 class="my-4 text-5xl font-bold leading-tight ">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </h1>
-          <p class="leading-normal text-2xl mb-8">
+          <p class="leading-normal text-2xl tracking-loose w-full">
             Not a part of our community yet ?
           </p>
           <Link to = "/register" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Join Today 
           </Link>
         </div>
-        <div class="w-full md:w-3/5 py-6 text-center">
-          <img class="w-full md:w-4/5 z-50 p-10 ml-0 md:ml-40 " src="/assets/design.png" />
+        <div class="w-46 mt-7 mb-10">
+          <img class="w-full md:w-3/4 z-50  ml-0 object-center" style = {{display : "flex", justifyContent : "center", alignItems : "center"}} src="/assets/hero.png" />
         </div>
       </div>
     </div>
+    <br />
+    <br />
     <br />
     <br />
     <div class="relative -mt-20 lg:-mt-24">
@@ -46,7 +48,8 @@ const IndexHeader = () => {
       </svg>
     </div>
 
-    <section className='bg-white'>
+
+    <section className='bg-white '>
     <div class="text-gray-900 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">

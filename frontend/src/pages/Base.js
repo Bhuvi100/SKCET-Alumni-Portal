@@ -13,6 +13,7 @@ import Clubs from '../components/Clubs';
 import Academictranscript from '../components/AcademicTranscriptForm';
 import Mediumofinstructionform from '../components/MediumOfInstructionForm';
 import Objectives from '../components/Objectives';
+import JobForm from '../components/JobForm';
 
 const Base = () => {
   return (
@@ -85,6 +86,11 @@ const Base = () => {
               path="/objectives"
               element={<Objectives />}
             />
+
+          <Route
+            path='/job'
+            element={ <JobForm />}
+          />
 
           </Routes>
     </div>
