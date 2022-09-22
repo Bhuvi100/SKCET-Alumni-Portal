@@ -4,21 +4,21 @@ const Loginform = () => {
   return (
     
     <div>
-        <section class="h-full gradient-form bg-gray-200 md:h-screen grid h-screen place-items-center">
+        <section class="h-full grid place-items-center">
         <div class="container py-12 px-6 h-full">
             <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
             <div class="xl:w-10/12">
                 <div class="block bg-white shadow-lg rounded-lg">
                 <div class="lg:flex lg:flex-wrap g-0">
                     <div class="lg:w-6/12 px-4 md:px-0">
-                    <div class="md:p-12 md:mx-6">
+                    <div class="md:p-8 md:mx-4">
                         <div class="text-center">
                         <img
                             class="mx-auto w-48"
-                            src="https://www.padhaishala.com/logo-img/121-skcet-coimbatore.jpg"
+                            src="/assets/reg-logo.png"
                             alt="logo"
                         />
-                        <h4 class="text-xl font-semibold mt-1 mb-12 pb-1">Once Again Welcome To SKCET Family !</h4>
+                        <h4 class="text-xl font-semibold mt-8 mb-6 pb-1">Once Again Welcome To SKCET Family !</h4>
                         </div>
                         <form>
                         <p class="mb-4">Please login to your account</p>
@@ -38,7 +38,7 @@ const Loginform = () => {
                             placeholder="Password"
                             />
                         </div>
-                        <div class="text-center pt-1 mb-12 pb-1">
+                        <div class="text-center pt-1 mb-6 pb-1">
                             <a
                             href = "/home"
                             class="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
@@ -52,8 +52,8 @@ const Loginform = () => {
                             </a>
                             <a class="text-gray-500" href="#!">Forgot password?</a>
                         </div>
-                        <div class="flex items-center justify-between pb-6">
-                            <p class="mb-0 mr-2">Not a part of our community yet ? <a class="text-gray-500" href='#!'>Join Now</a></p>
+                        <div class="flex items-center justify-between pb-3">
+                            <p class="mr-2">Not a part of our community yet ? <a class="text-gray-500" href='#!'>Join Now</a></p>
                         </div>
                         </form>
                     </div>
