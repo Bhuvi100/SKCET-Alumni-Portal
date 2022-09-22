@@ -1,13 +1,27 @@
-import React from 'react'
-import NewsFeed from '../components/NewsFeed'
+import React from 'react';
+import SuccessStories from '../components/SuccessStories';
+import Logo from "../logo.png";
+import SideBar from '../components/SideBar';
+import Dashboard from '../components/Dashboard';
 
-const Home = () => {
+
+
+function Home() {
+  
   return (
-    <div>
+    
+<div class="bg-slate-200" >
+    <div class="flex h-screen bg-slate-200">
 
-      <NewsFeed />
+<SideBar/>
+<Dashboard />
+      
+     
     </div>
-  )
-}
 
-export default Home
+   
+</div>
+
+   );
+ }
+export default Home;
