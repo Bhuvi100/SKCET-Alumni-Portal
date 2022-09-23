@@ -31,11 +31,12 @@ const QueriesForm = () => {
             <textarea id="message" rows="4" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" placeholder="Post your queries..."></textarea>
          </div>
       </div>
-      <div class="flex items-center justify-center">
-         <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm w-full sm:w-auto px-6 py-2.5 text-center" style={{ background: "linear-gradient(to right, #2A2A72, #009FFD)" }}>SUBMIT</button>
-      </div>
+      <div class="flex items-center justify-center mt-4">
+   <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+   </div>
    </form>
 </div>
+<br/><br/><br/><br/><br/><br/>
 </div>
   )
 }

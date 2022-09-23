@@ -25,14 +25,19 @@ const SuccessStoriesForm = () => {
            <label for="Mob" class="block mb-2 text-black dark:text-gray-900">Mobile Number</label>
            <input type="tel" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
        </div>
+       </div>
        <div>
            <label for="email" class="block mb-2 text-black dark:text-gray-900">Achievement Title</label>
            <input type="email" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
        </div>
+<<<<<<< HEAD
         <div>
            <label for="job" class="block mb-2 text-black dark:text-gray-900">Description</label>
            <textarea id="message" rows="4" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" placeholder="Your message..."></textarea>
        </div>
+=======
+       <div class="grid gap-6 lg:grid-cols-2 mt-2">
+>>>>>>> cd6737be547b6623b93761b75718974025f4b90d
          <div>
            <label for="dept" class="block mb-2 text-black dark:text-gray-900">Category</label>
            <select class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring">
@@ -63,7 +68,10 @@ const SuccessStoriesForm = () => {
        </div>
       
        </div>
-
+       <div>
+           <label for="job" class="block mb-2 text-black font-bold">Description</label>
+           <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-white  dark:text-white " placeholder="Add you Success Story..."></textarea>
+       </div>
        
       
        <div>
@@ -71,12 +79,20 @@ const SuccessStoriesForm = () => {
      
        </div>
        
+<<<<<<< HEAD
        <div class="flex items-center justify-center">
          <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm w-full sm:w-auto px-6 py-2.5 text-center" style={{ background: "linear-gradient(to right, #2A2A72, #009FFD)" }}>SUBMIT</button>
       </div>
+=======
+   <div class="flex items-center justify-center mt-4">
+   <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+   </div>
+>>>>>>> cd6737be547b6623b93761b75718974025f4b90d
 </form>
 </div>
-   </div>
+<br/>
+<br/>
+</div>
   )
 }
 
