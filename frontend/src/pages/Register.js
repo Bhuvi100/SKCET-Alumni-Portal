@@ -62,7 +62,7 @@ function Register() {
   }
 
   return(
-  <div id='bg'>
+ <div id='bg'>
     
     <div class="max-w-2xl mx-auto bg-slate-200 p-5 mt-5">
    <div class="flex flex-col justify-center items-center h-12 text-3xl font-extrabold bg-blue-600 mb-2">
@@ -101,6 +101,14 @@ function Register() {
             <label for="job" class="block mb-2 text-black font-bold">Designation</label>
             <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
         </div>
+        <div>
+            <label for="org" class="block mb-2 text-black font-bold">Organization Name</label>
+            <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+           </div>
+         <div>
+            <label for="org" class="block mb-2 text-black font-bold">Organization-Email</label>
+            <input type="email" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+            </div>
           <div>
             <label for="dept" class="block mb-2 text-black font-bold">Department</label>
             <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
@@ -141,18 +149,9 @@ function Register() {
       
 <div class="grid gap-6 mb-6 lg:grid-cols-2 mt-4">
  <div>
-            <label for="dept" class="block mb-2 text-black font-bold">Gender</label>
+            <label for="dept" class="block mb-2 text-black font-bold">Area of Expertise</label>
             <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
-  <option selected>Select the Gender</option>
-  <option >Male</option>
-  <option >Female</option>
-
-</select>           </div>
-  <div>
-        <div>
-            <label for="dept" class="block mb-2 text-black font-bold">Club</label>
-            <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
-  <option selected>Select the Club</option>
+            <option selected>Select the Club</option>
   <option >AI/ML</option>
   <option >Cyber Security</option>
   <option >Devops</option>
@@ -162,17 +161,34 @@ function Register() {
   <option >CAD</option>
   <option >Design & Architecture</option>
 
+
+</select>           </div>
+  <div>
+        <div>
+            <label for="dept" class="block mb-2 text-black font-bold">Categories</label>
+            <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
+  <option selected>Select an option</option>
+  <option >Engineering</option>
+  <option >Information Technology</option>
+  <option >Entrepreneurs</option>
+  <option >Others</option>
+
       </select>           </div>
    
         </div>
         </div>
-       <div class="grid gap-6 lg:grid-cols-3  mt-2 mb-4">
-  <div> <label for="ad1" class="block mb-2 text-black font-bold">Country</label>
+        <div>
+            <label for="address" class="block mb-2 text-black font-bold">Address line </label>
+            <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+
+        </div>
+        <div class="grid gap-6 mb-6 lg:grid-cols-2 mt-2">
+            <div> <label for="ad1" class="block mb-2 text-black font-bold">Country</label>
   <div class="mt-2.5">
- <Country/>
+<Country/>
   </div>
   </div>
-   <div>
+   {/* <div>
    <label for="dept" class="block mb-2 text-black font-bold">State</label>
             <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
   <option selected>Select State</option>
@@ -215,22 +231,12 @@ function Register() {
   <option >Puducherry</option>
 
 </select>     
-     </div>
+     </div> */}
   <div> 
     <label for="ad1" class="block mb-2 text-black font-bold">City</label>
             <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
     </div>
-</div>
-        <div class="grid gap-6 mb-6 lg:grid-cols-2 mt-2">
-            <div>
-            <label for="ad1" class="block mb-2 text-black font-bold">Address line 1</label>
-            <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
-
-        </div>
-        <div>
-            <label for="ad2" class="block mb-2 text-black font-bold">Address line 2</label>
-            <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
- </div>
+      
         <div>
             <label for="pass" class="block mb-2 text-black font-bold">Password</label>
             <input type="password"  name="password"
