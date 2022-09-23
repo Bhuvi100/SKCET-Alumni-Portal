@@ -14,6 +14,9 @@ import Academictranscript from '../components/AcademicTranscriptForm';
 import Mediumofinstructionform from '../components/MediumOfInstructionForm';
 import Objectives from '../components/Objectives';
 import JobForm from '../components/JobForm';
+import MentorForm from '../components/MentorForm';
+import GuestSpeakerForm from '../components/GuestSpeakerForm';
+
 
 const Base = () => {
   return (
@@ -28,6 +31,7 @@ const Base = () => {
               path="/register"
               element={<Register />}
             />
+
             <Route
               path="/home"
               element={<Home />}
@@ -91,7 +95,15 @@ const Base = () => {
             path='/job'
             element={ <JobForm />}
           />
-
+          <Route 
+            path='/mentor'
+            element={<MentorForm/>}
+          />
+          <Route
+            path='/guest'
+            element={<GuestSpeakerForm/>}
+          />
+          
           </Routes>
     </div>
   )

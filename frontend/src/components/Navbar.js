@@ -1,15 +1,16 @@
 import React from 'react'
 import { useState } from 'react';
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div class = "mb-4">
-     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-5">
+    <div class = "mx-10">
+     <div className="px-8 py-2 mx-auto sm:max-w-xl md:max-w-full sm:px-12  md:px-24 lg:px-5 fixed w-full z-30 top-0 text-white" id="header"  style={{  background: "linear-gradient(to right, #2A2A72, #009FFD)", position:"fixed" , top:"0" , left:"0" , width : "100vw"}}>
         <div className="relative flex items-center justify-between">
-        <div class="pl-4 flex items-center">
+        <div class="pl-4 flex items-center" >
           <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/">
-            <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-            </svg>
+            
             LinkUP
           </a>
         </div>
@@ -18,16 +19,14 @@ const Navbar = () => {
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">About LinkUP</a>
             </li>
-            <div class="dropdown">
-              <button class="dropbtn">Services
-                <i class="fa fa-caret-down"></i>
-              </button>
+            <li class="dropdown">
+              <button class="dropbtn">Services</button>
               <div class="dropdown-content">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/queries">General Queries</a>
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/mediumofinstruction">Medium of Instruction Form</a>
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/transcriptform">Academic Transcript Form</a>
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="https://www.skcet.ac.in/pdf/coe/APPLICATION_FOR_TRANSCRIPTS_2021.pdf" target="blank">Academic Transcript Form</a>
               </div>
-            </div>
+            </li>
 
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/objectives">Objectives</a>
@@ -40,6 +39,7 @@ const Navbar = () => {
           >
             Login
           </a>
+          
         </div>
           <div className="lg:hidden">
             <button
@@ -117,7 +117,7 @@ const Navbar = () => {
                           title="Our product"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                          About Us
+                          About Us  
                         </a>
                       </li>
                       <li>

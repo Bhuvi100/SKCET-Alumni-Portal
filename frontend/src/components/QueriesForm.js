@@ -1,12 +1,11 @@
 import React from 'react'
 import "../App.css"
 import { useState } from 'react';
+
 const QueriesForm = () => {
 
-  
-
   return (
-<div id="bg" class="pt-7">
+<div id="bg" class="pt-12">
    <div class="max-w-2xl  mx-auto bg-white p-5 rounded-lg shadow-inner border-solid border-2 border-gray-100">
       <div class="font-lg mb-2 mt-5" style = {{display : "flex", justifyContent : "center" ,alignItems : "center"}}>
       <h4 class="text-2xl font-semibold mt-4 mb-4 pb-1">GENERAL
