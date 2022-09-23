@@ -217,3 +217,29 @@ html {
     .border-main-color {
         border-color: var(--main-color);
     }
+}
+#Succ_bg{
+  background: url('https://www.skcet.ac.in/old%20website/NCRAC/images/bd1.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#qbg{
+  background: url('https://www.skcet.ac.in/images/air.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#mbg{
+  background: url('https://www.skcet.ac.in/depttop.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#jbg{
+  background: url('https://images.shiksha.com/mediadata/images/1550490587php7iX2A7.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#gbg{
+  background: url('https://www.skcet.ac.in/old%20website/NCRAC/images/bg5.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
