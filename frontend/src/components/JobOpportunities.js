@@ -1,8 +1,10 @@
 import React from 'react'
 import reactImg from "../reactImg.png"
+import Navbar from './Navbar';
 const JobOpportunities = () => {
   return (
     <div>
+      
        <div className="px-4 mt-20  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-0">
        <h1 className={" mb-16 pb-2 font-bold sm:text-xl text-2xl md:text-3xl text-center"}>
               Job

@@ -12,6 +12,9 @@ import Clubs from '../components/Clubs';
 import Academictranscript from '../components/AcademicTranscriptForm';
 import Mediumofinstructionform from '../components/MediumOfInstructionForm';
 import Objectives from '../components/Objectives';
+import MentorForm from '../components/MentorForm';
+import GuestSpeakerForm from '../components/GuestSpeakerForm';
+import Chats from '../components/Chats';
 
 const Base = () => {
   return (
@@ -79,6 +82,22 @@ const Base = () => {
               path="/objectives"
               element={<Objectives />}
             />
+
+          <Route
+              path="/mentorform"
+              element={<MentorForm />}
+            />
+
+          <Route
+              path="/guestspeaker"
+              element={<GuestSpeakerForm />}
+            />
+
+          <Route
+              path="/chats"
+              element={<Chats />}
+            />
+             
 
           </Routes>
     </div>

@@ -1,62 +1,71 @@
 import React, { useState } from 'react';
+// import logo from './logo.svg';
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+import '../App.css';
+import Country from '../components/Country';
+import { Link } from 'react-router-dom';
+import Home from './Home';
+import CountryState from '../components/CountryState';
 
 
 function Register() {
-    const [input, setInput] = useState({
-        password: '',
-        confirmPassword: ''
-      });
-    
-      const [error, setError] = useState({
-        password: '',
-        confirmPassword: ''
-      })
-    
-      const onInputChange = e => {
-        const { name, value } = e.target;
-        setInput(prev => ({
-          ...prev,
-          [name]: value
-        }));
-        validateInput(e);
-      }
-    
-      const validateInput = e => {
-        let { name, value } = e.target;
-        setError(prev => {
-          const stateObj = { ...prev, [name]: "" };
-    
-          switch (name) {
-            case "password":
-              if (!value) {
-                stateObj[name] = "Please enter Password.";
-              } else if (input.confirmPassword && value !== input.confirmPassword) {
-                stateObj["confirmPassword"] = "Password does not match.";
-              } else {
-                stateObj["confirmPassword"] = input.confirmPassword ? "" : error.confirmPassword;
-              }
-              break;
-    
-            case "confirmPassword":
-              if (!value) {
-                stateObj[name] = "Please enter Confirm Password.";
-              } else if (input.password && value !== input.password) {
-                stateObj[name] = "Password does not match.";
-              }
-              break;
-    
-            default:
-              break;
+  const [value, setValue] = useState()
+  const [input, setInput] = useState({
+    password: '',
+    confirmPassword: ''
+  });
+
+  const [error, setError] = useState({
+    password: '',
+    confirmPassword: ''
+  })
+
+  const onInputChange = e => {
+    const { name, value } = e.target;
+    setInput(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    validateInput(e);
+  }
+
+  const validateInput = e => {
+    let { name, value } = e.target;
+    setError(prev => {
+      const stateObj = { ...prev, [name]: "" };
+
+      switch (name) {
+        case "password":
+          if (!value) {
+            stateObj[name] = "Please enter Password.";
+          } else if (input.confirmPassword && value !== input.confirmPassword) {
+            stateObj["confirmPassword"] = "Password does not match.";
+          } else {
+            stateObj["confirmPassword"] = input.confirmPassword ? "" : error.confirmPassword;
           }
-    
-          return stateObj;
-        });
+          break;
+
+        case "confirmPassword":
+          if (!value) {
+            stateObj[name] = "Please enter Confirm Password.";
+          } else if (input.password && value !== input.password) {
+            stateObj[name] = "Password does not match.";
+          }
+          break;
+
+        default:
+          break;
       }
+
+      return stateObj;
+    });
+  }
+
+  return(
+  <div id='bg'>
     
-  return (
-    <div id="bg">
-  
-     <div class="max-w-2xl mx-auto bg-slate-200 p-5 mt-5">
+    <div class="max-w-2xl mx-auto bg-slate-200 p-5 mt-5">
    <div class="flex flex-col justify-center items-center h-12 text-3xl font-extrabold bg-blue-600 mb-2">
         <h3 class="text-lg text-white">Welcome to SKCET Alumini Portal</h3>
       </div>
@@ -82,11 +91,16 @@ function Register() {
             <input type="email" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
         </div>
          <div>
-            <label for="Mob" class="block mb-2 text-black font-bold">Mobile Number</label>
-            <input type="tel" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
-        </div>
+            <label for="Mob" class="block mb-2 text-black font-bold">Phone Number</label>
+            <div class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  <PhoneInput
+  placeholder = "Enter Phone Number"
+      defaultCountry="US"
+      value={value}
+      onChange={setValue} />
+      </div>          </div>
          <div>
-            <label for="job" class="block mb-2 text-black font-bold">Job Title</label>
+            <label for="job" class="block mb-2 text-black font-bold">Designation</label>
             <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
         </div>
           <div>
@@ -108,16 +122,118 @@ function Register() {
 
 </select>           </div>
          <div>
-            <label for="batch" class="block mb-2 text-black font-bold">Batch</label>
-            <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+            <label for="dept" class="block mb-2 text-black font-bold">Batch</label>
+            <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
+  <option selected>Select Batch Year</option>
+  <option >A</option>
+  <option >B</option>
+  <option >C</option>
+  <option > D</option>
+  <option >E</option>
+  <option >F</option>
+  <option >G</option>
+  <option >H</option>
+  <option >I</option>
+  <option >J</option>
+  <option >K</option>
+  <option >L</option>
+
+</select>           </div>
+</div>
+      
+<div class="grid gap-6 mb-6 lg:grid-cols-2 mt-4">
+ <div>
+            <label for="dept" class="block mb-2 text-black font-bold">Gender</label>
+            <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
+  <option selected>Select the Gender</option>
+  <option >Male</option>
+  <option >Female</option>
+
+</select>           </div>
+  <div>
+        <div>
+            <label for="dept" class="block mb-2 text-black font-bold">Club</label>
+            <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
+  <option selected>Select the Club</option>
+  <option >AI/ML</option>
+  <option >Cyber Security</option>
+  <option >Devops</option>
+  <option >AR / VR</option>
+  <option >IOT</option>
+  <option >Robotics</option>
+  <option >CAD</option>
+  <option >Design & Architecture</option>
+
+      </select>           </div>
+   
         </div>
+        </div>
+       <div class="grid gap-6 lg:grid-cols-3  mt-2 mb-4">
+  <div> <label for="ad1" class="block mb-2 text-black font-bold">Country</label>
+  <div class="mt-2.5">
+ <Country />
+ <CountryState />
+  </div>
+  </div>
+   <div>
+   <label for="dept" class="block mb-2 text-black font-bold">State</label>
+            <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
+  <option selected>Select State</option>
+  <option >Andhra Pradesh</option>
+  <option >Arunachal Pradesh</option>
+  <option >Assam</option>
+  <option >Bihar</option>
+  <option >Chhattisgarh</option>
+  <option >Goa</option>
+  <option >Gujarat</option>
+  <option >Haryana</option>
+  <option >Himachal Pradesh</option>
+  <option >Jammu and Kashmir</option>
+  <option >Jharkhand</option>
+  <option >Karnataka</option>
+  <option >Kerala</option>
+  <option >Madhya Pradesh</option>
+  <option >Maharashtra</option>
+  <option >Manipur</option>
+  <option >Meghalaya</option>
+  <option >Mizoram</option>
+  <option >Nagaland</option>
+  <option >Odisha</option>
+  <option >Punjab</option>
+  <option >Rajasthan</option>
+  <option >Sikkim</option>
+  <option >Tamil Nadu</option>
+  <option >Telangana</option>
+  <option >Tripura</option>
+  <option >Uttar Pradesh</option>
+  <option >Uttarakhand</option>
+  <option >West Bengal</option>
+  <option >Andaman and Nicobar Islands</option>
+  <option >Chandigarh</option>
+  <option >Dadra and Nagar Haveli</option>
+  <option >Daman and Diu</option>
+  <option >Delhi</option>
+  <option >Ladakh</option>
+  <option >Lakshadweep</option>
+  <option >Puducherry</option>
+
+</select>     
+     </div>
+  <div> 
+    <label for="ad1" class="block mb-2 text-black font-bold">City</label>
+            <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+    </div>
+</div>
+        <div class="grid gap-6 mb-6 lg:grid-cols-2 mt-2">
+            <div>
+            <label for="ad1" class="block mb-2 text-black font-bold">Address line 1</label>
+            <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+
         </div>
         <div>
-        <label for="loc" class="block mb-2 text-black font-bold">Location</label>
+            <label for="ad2" class="block mb-2 text-black font-bold">Address line 2</label>
             <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
-      
-        </div>
-        <div class="grid gap-6 mb-6 lg:grid-cols-2 mt-2">
+ </div>
         <div>
             <label for="pass" class="block mb-2 text-black font-bold">Password</label>
             <input type="password"  name="password"
@@ -141,7 +257,7 @@ function Register() {
     </div>
 </form>
 </div>
-    </div>
+  </div>
    );
  }
 export default Register;
