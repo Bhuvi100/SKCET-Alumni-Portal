@@ -6,7 +6,7 @@ import Country from './Country'
 import { Link } from 'react-router-dom';
 import Home from './Home';
 
-function Register() {
+function InfoForm(props) {
   const [value, setValue] = useState()
   const [input, setInput] = useState({
      password: '',
@@ -27,6 +27,15 @@ function Register() {
      }));
      validateInput(e);
   }
+  function year() {
+   const d = new Date();
+   let years = ["Select Batch Year"];
+   for(let i=1998; i<=d.getFullYear(); i++){
+      years.push(i)
+   }
+
+   return <select class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring">{years.map((year) => <option value={year}>{year}</option>)} </select>
+}
   const validateInput = e => {
      let {
         name,
@@ -64,7 +73,12 @@ function Register() {
 return(
 <div id='bg' class="pt-6">
    <div class="max-w-2xl mx-auto bg-white p-5 rounded-lg shadow-inner border-solid border-2 border-gray-100 ">
+   <button  onClick = {() => props.next(0)} class="text-black bg-transparent  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm w-full sm:w-auto px-6 py-2.5 text-center" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+</svg>
+</button>
       <div class="font-lg mt-2" style = {{display : "flex", justifyContent : "center" ,alignItems : "center"}}>
+      
       <h4 class="text-3xl font-semibold mt-4 mb-4 pb-1">REGISTRATION
          <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300">FORM</span>
       </h4>
@@ -104,6 +118,8 @@ return(
             <input type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
          </div> */}
          <div>
+         
+
             <label for="org" class="block mb-2 text-black dark:text-gray-900">Organization Name</label>
             <input type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
          </div>
@@ -130,22 +146,16 @@ return(
             </select>
          </div>
          <div>
-            <label for="dept" class="block mt-2 mb-2 text-black dark:text-gray-900">Batch</label>
-            <select class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring">
-               <option selected>Select Batch Year</option>
-               <option >A</option>
-               <option >B</option>
-               <option >C</option>
-               <option >D</option>
-               <option >E</option>
-               <option >F</option>
-               <option >G</option>
-               <option >H</option>
-               <option >I</option>
-               <option >J</option>
-               <option >K</option>
-               <option >L</option>
-            </select>
+            <label for="dept" class="block mt-2 mb-2 text-black dark:text-gray-900">Batch From</label>                
+               {             
+               year()
+            }     
+         </div>
+         <div>
+            <label for="dept" class="block mt-2 mb-2 text-black dark:text-gray-900">Batch To</label>                
+               {             
+               year()
+            }     
          </div>
          <div>
             <label for="dept" class="block mt-2 mb-2 text-black dark:text-gray-900">Area of Expertise</label>
@@ -249,7 +259,8 @@ return(
             {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>}
          </div> */}
          <br />
-         <div class="flex items-center justify-center">
+         <div class="flex justify-center items-center pt-5 pb-6">
+         
          <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm w-full sm:w-auto px-6 py-2.5 text-center" style={{ background: "linear-gradient(to right, #2A2A72, #009FFD)" }}>SUBMIT</button>
       </div>
    </form>
@@ -257,4 +268,4 @@ return(
 </div>
 );
 }
-export default Register;
+export default InfoForm;
