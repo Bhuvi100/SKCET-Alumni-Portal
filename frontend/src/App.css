@@ -32,6 +32,17 @@ html {
   color: #61dafb;
 }
 
+@media screen and (min-width: 480px) {
+  #bg {
+    background: url('https://www.skcet.ac.in/images/admin%20front2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height : 100vh;
+    
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
