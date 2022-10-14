@@ -6,7 +6,7 @@ import InfoForm from "./InfoForm";
 import { useForm } from "@inertiajs/inertia-react";
 import InputError from "@/Components/InputError";
 
-function Register() {
+function Register({user, status, message}) {
     const [next, setNext] = useState(0);
     const [resetPage, setResetPage] = useState(false)
 
@@ -16,18 +16,17 @@ function Register() {
     });
 
     const { data, setData, post, processing, reset, errors } = useForm({
-        email: "",
         password: "",
-        name: "",
+        name: user.name,
         designation: "",
         city_state: "",
         password_confirmation: "",
-        phone: "",
+        phone: user.phone,
         organization: "",
         organization_email: "",
-        department: "",
-        batch_from: "",
-        batch_to: "",
+        department: user.department,
+        batch_from: user.batch_from,
+        batch_to: user.batch_to,
         areas_of_expertise: "",
         category: "",
         country: "India",
@@ -48,7 +47,7 @@ function Register() {
 
         setResetPage(false)
 
-        post(route("register"));
+        post(route("register.complete", user.id));
     }
 
     const validateInput = (e) => {
@@ -71,7 +70,7 @@ function Register() {
                     } else {
                         stateObj[
                             "password_confirmation"
-                        ] = data.password_confirmation
+                            ] = data.password_confirmation
                             ? ""
                             : error.password_confirmation;
                     }
@@ -164,16 +163,16 @@ function Register() {
                             </label>
                         </div>
                         <div class="grid gap-6 mb-6 lg:grid-cols-2 mt-2">
-                            <div>
+                            <div class="lg:col-span-2 flex flex-col items-center">
                                 <label
                                     for="Full Name"
-                                    class="block mb-2 text-black dark:text-gray-900"
+                                    class="block lg:text-center lg:mt-3 mb-2 text-black dark:text-gray-900"
                                 >
                                     Full Name
                                 </label>
                                 <input
                                     type="text"
-                                    class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
+                                    class="block w-full lg:text-center lg:w-3/4 px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
                                     required
                                     name="name"
                                     onChange={onInputChange}
@@ -181,27 +180,6 @@ function Register() {
                                 />
                                 <InputError
                                     message={errors.name}
-                                    class="mt-2"
-                                />
-                            </div>
-                            <div>
-                                <label
-                                    for="email"
-                                    class="block mb-2 text-black dark:text-gray-900"
-                                >
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
-                                    required
-                                    autoComplete="on"
-                                    name="email"
-                                    onChange={onInputChange}
-                                    value={data.email}
-                                />
-                                <InputError
-                                    message={errors.email}
                                     class="mt-2"
                                 />
                             </div>
@@ -362,6 +340,7 @@ function Register() {
                     onInputChange={onInputChange}
                     errors={errors}
                     processing={processing}
+                    completeProfile={true}
                 />
             )}
         </div>
