@@ -5,6 +5,7 @@ import Register from "./Register"
 import Home from './Home';
 import Landing from './Landing';
 import Profile from "../components/Profile";
+import ProfileNew from './Profie';
 import SuccessStoriesForm from '../components/SuccessStoriesForm';
 import JobOpportunities from '../components/JobOpportunities';
 import QueriesForm from '../components/QueriesForm';
@@ -12,9 +13,10 @@ import Clubs from '../components/Clubs';
 import Academictranscript from '../components/AcademicTranscriptForm';
 import Mediumofinstructionform from '../components/MediumOfInstructionForm';
 import Objectives from '../components/Objectives';
+import JobForm from '../components/JobForm';
 import MentorForm from '../components/MentorForm';
 import GuestSpeakerForm from '../components/GuestSpeakerForm';
-import Chats from '../components/Chats';
+
 
 const Base = () => {
   return (
@@ -29,6 +31,7 @@ const Base = () => {
               path="/register"
               element={<Register />}
             />
+
             <Route
               path="/home"
               element={<Home />}
@@ -42,6 +45,11 @@ const Base = () => {
             <Route
               path="/profile"
               element={<Profile />}
+            />
+
+            <Route
+              path="/profilenew"
+              element={<ProfileNew />}
             />
 
             <Route
@@ -84,21 +92,18 @@ const Base = () => {
             />
 
           <Route
-              path="/mentorform"
-              element={<MentorForm />}
-            />
-
+            path='/job'
+            element={ <JobForm />}
+          />
+          <Route 
+            path='/mentor'
+            element={<MentorForm />}
+          />
           <Route
-              path="/guestspeaker"
-              element={<GuestSpeakerForm />}
-            />
-
-          <Route
-              path="/chats"
-              element={<Chats />}
-            />
-             
-
+            path='/guest'
+            element={<GuestSpeakerForm />}
+          />
+          
           </Routes>
     </div>
   )

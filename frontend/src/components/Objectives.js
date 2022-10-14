@@ -5,9 +5,11 @@ import Navbar from './Navbar'
 
 const Objectives = () => {
   return (
-    
-   <div class="bg-gray-100 text-gray-800">
-    <Navbar />
+   <div>
+   <Navbar />
+   <br />
+   <br />
+   <div class="text-gray-800">
       <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
          <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-3xl font-extrabold sm:text-4xl mt-4">Skcet Alumni Association</h2>
@@ -113,6 +115,7 @@ const Objectives = () => {
          </dl>
       </div>
       <IndexFooter />
+   </div>
    </div>
   )
 }

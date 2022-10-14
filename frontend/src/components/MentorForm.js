@@ -2,36 +2,38 @@ import React from 'react'
 
 const MentorForm = () => {
   return (
-    <div id="bg">
-    <div class="max-w-2xl mx-auto bg-slate-200 p-5 mt-5">
-      <div class="flex flex-col justify-center items-center h-12 text-3xl font-extrabold bg-blue-600 mb-2">
-         <h3 class="text-lg text-white">Mentor Form</h3>
+    <div id="bg" class="pt-12">
+    <div class="max-w-2xl  mx-auto bg-white p-5 rounded-lg shadow-inner border-solid border-2 border-gray-100">
+      <div class="font-lg mb-2 mt-5" style = {{display : "flex", justifyContent : "center" ,alignItems : "center"}}>
+      <h4 class="text-2xl font-semibold mt-4 mb-4 pb-1">MENTOR
+         <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300">FORM</span>
+      </h4>
       </div>
       <form >
          <div class="grid gap-6 mb-6 lg:grid-cols-2 mt-2">
             <div>
-               <label for="name" class="block mb-2 text-black font-bold">Full Name</label>
-               <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+               <label for="name" class="block mb-2 text-black dark:text-gray-900">Full Name</label>
+               <input type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
             </div>
             <div>
-               <label for="email" class="block mb-2 text-black font-bold">Email</label>
-               <input type="email" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+               <label for="email" class="block mb-2 text-black dark:text-gray-900">Email</label>
+               <input type="email" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
             </div>
             <div>
-               <label for="mobile" class="block mb-2 text-black font-bold">Mobile Number</label>
-               <input type="tel" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+               <label for="mobile" class="block mb-2 text-black dark:text-gray-900">Mobile Number</label>
+               <input type="tel" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
             </div>
             <div>
-                <label for="method" class="block mb-2 text-black font-bold">Method Of Guidance</label>
-                <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
+                <label for="method" class="block mb-2 text-black dark:text-gray-900">Method Of Guidance</label>
+                <select class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring">
                   <option selected>Select Method</option>
                   <option >In Person</option>
                   <option>Virtual</option>
                 </select>
             </div>
             <div>
-               <label for="department" class="block mb-2 text-black font-bold">Department</label>
-               <select class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ">
+               <label for="department" class="block mb-2 text-black dark:text-gray-900">Department</label>
+               <select class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring">
                   <option selected>Choose the department</option>
                   <option>B.Tech Artificial Intelligence and Data Science</option>
                   <option>B.E. Civil Engineering</option>
@@ -48,21 +50,22 @@ const MentorForm = () => {
                </select>
             </div>
             <div>
-               <label for="expertise" class="block mb-2 text-black font-bold">Area Of Expertise</label>
-               <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+               <label for="expertise" class="block mb-2 text-black dark:text-gray-900">Area Of Expertise</label>
+               <input type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
             </div>
          </div>
          <div>
-            <label for="experience" class="block mb-2 text-black font-bold">Briefly describe prior experience you have with mentoring. </label>
-            <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+            <label for="experience" class="block mb-2 text-black dark:text-gray-900">Briefly describe prior experience you have with mentoring. </label>
+            <input type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
          </div>
          <div>
-            <label for="concern" class="block mt-5 mb-2 text-black font-bold">Do you have any specific concerns you'd want us to be aware of?</label>
-            <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+            <label for="concern" class="block mb-2 text-black dark:text-gray-900">Do you have any specific concerns you'd want us to be aware of?</label>
+            <input type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
          </div>
+         <br />
          <div class="flex items-center justify-center">
-            <a href="/login" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-2">Submit</a>
-         </div>
+         <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm w-full sm:w-auto px-6 py-2.5 text-center" style={{ background: "linear-gradient(to right, #2A2A72, #009FFD)" }}>SUBMIT</button>
+      </div>
       </form>
     </div>
     </div>

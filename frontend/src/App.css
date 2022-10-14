@@ -1,3 +1,7 @@
+html {
+  font-size: 80%;
+  scroll-behavior: smooth;
+}
 .App {
   text-align: center;
 }
@@ -40,9 +44,20 @@
   background: url('https://www.skcet.ac.in/images/admin%20front2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height : 97.6vh;
+  height : 100vh;
+  
 }
- 
+@media screen and (min-width: 480px) {
+  #bg {
+    background: url('https://www.skcet.ac.in/images/admin%20front2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height : 100vh;
+    
+  }
+}
+
 #d-wrapper	.zig-zag-bottom{
 		background: #2462EA;
 	}
@@ -81,14 +96,14 @@
   
   /* Dropdown button */
   .dropdown .dropbtn {
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     outline: none;
     color: white;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    margin:0; /* Important for vertical align on mobile phones */
   }
   
   /* Add a red background color to navbar links on hover */
@@ -102,6 +117,7 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 8px;
   }
   
   /* Links inside the dropdown */
@@ -117,11 +133,13 @@
   /* Add a grey background color to dropdown links on hover */
   .dropdown-content a:hover {
     background-color: #ddd;
+    border-radius: 8px;
   }
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     display: block;
+    border-radius: 8px;
   }
 
   .dropdown_menu{
@@ -194,4 +212,48 @@
     height:40px;
     min-height:40px;
   }
+}
+
+
+
+    :root {
+        --main-color: #4a76a8;
+    }
+
+    .bg-main-color {
+        background-color: var(--main-color);
+    }
+
+    .text-main-color {
+        color: var(--main-color);
+    }
+
+    .border-main-color {
+        border-color: var(--main-color);
+    }
+
+#Succ_bg{
+  background: url('https://www.skcet.ac.in/old%20website/NCRAC/images/bd1.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#qbg{
+  background: url('https://www.skcet.ac.in/images/air.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#mbg{
+  background: url('https://www.skcet.ac.in/depttop.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#jbg{
+  background: url('https://images.shiksha.com/mediadata/images/1550490587php7iX2A7.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#gbg{
+  background: url('https://www.skcet.ac.in/old%20website/NCRAC/images/bg5.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -1,10 +1,12 @@
 import React from 'react'
 import { useState } from 'react';
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div class = "mb-4">
-     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full sm:px-12  md:px-24 lg:px-5 fixed w-full z-30 top-0 text-white" id="header"  style={{  background: "linear-gradient(to right, #2A2A72, #009FFD)", position:"fixed" , top:"0" , left:"0" , width : "100vw"}}>
+    <div class = "mx-10">
+     <div className="px-8 py-2 mx-auto sm:max-w-xl md:max-w-full sm:px-12  md:px-24 lg:px-5 fixed w-full z-30 top-0 text-white" id="header"  style={{  background: "linear-gradient(to right, #2A2A72, #009FFD)", position:"fixed" , top:"0" , left:"0" , width : "100vw"}}>
         <div className="relative flex items-center justify-between">
         <div class="pl-4 flex items-center" >
           <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/">
@@ -17,16 +19,14 @@ const Navbar = () => {
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">About LinkUP</a>
             </li>
-            <div class="dropdown">
-              <button class="dropbtn">Services
-                <i class="fa fa-caret-down"></i>
-              </button>
+            <li class="dropdown">
+              <button class="dropbtn">Services</button>
               <div class="dropdown-content">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/queries">General Queries</a>
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/mediumofinstruction">Medium of Instruction Form</a>
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="https://www.skcet.ac.in/pdf/coe/APPLICATION_FOR_TRANSCRIPTS_2021.pdf" target="blank">Academic Transcript Form</a>
               </div>
-            </div>
+            </li>
 
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/objectives">Objectives</a>
@@ -37,10 +37,10 @@ const Navbar = () => {
                 <i class="fa fa-caret-down"></i>
               </button>
               <div class="dropdown-content">
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/mentorform">Mentor</a>
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/guestspeaker">Guest Speaker</a>
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/transcriptform">Job Opportunities</a>
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/transcriptform">Contributions</a>
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/mentor">Mentor</a>
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/guest">Guest Speaker</a>
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/job">Job Opportunities</a>
+              
               </div>
             </div>
           </ul>
