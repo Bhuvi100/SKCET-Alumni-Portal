@@ -1,108 +1,73 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Inertia\Inertia;
 use App\Models\SuccessStory;
 use Illuminate\Http\Request;
+use App\Providers\RouteServiceProvider;
 
 class SuccessStoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        return Inertia::render('SuccessStoriesForm',['auth'=>auth()->user()]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         
     $request->validate([
-        'name' => 'required|string|max:255',
-        'phone' => 'required|string',
         'achievement' => 'required|string',
+        'category'=> 'required|string',
         'description' => 'required|string',
         'date_of_achievement' => 'required|date',
         'video_url' => 'required|string',
-        'snapshot' => 'required|file',
-        
+        'snapshot' => 'required|file', 
     ]);
 
     $successStory = SuccessStory::create([
-        'name' => $request->name,
-        'phone' => $request->phone,
+   
+        'user_id' => auth()->user()->id,
         'achievement' => $request->achievement,
+        'category' => $request->category,
         'description' => $request->description,
         'date_of_achievement' => $request->date_of_achievement,
         'video_url' => $request->video_url,
-        'snapshot' => $request->snapshot,
+       // 'snapshot' => $request->snapshot,
     ]);
-    $successStory->save();
+   
     $successStory->snapshot = $request->file('snapshot')->store("SuccessStory/snapshot/{$successStory->id}");
     $successStory->save();
+
 
     return redirect(RouteServiceProvider::HOME);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\SuccessStory  $successStory
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show(SuccessStory $successStory)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\SuccessStory  $successStory
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(SuccessStory $successStory)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\SuccessStory  $successStory
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function update(Request $request, SuccessStory $successStory)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\SuccessStory  $successStory
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(SuccessStory $successStory)
     {
         //

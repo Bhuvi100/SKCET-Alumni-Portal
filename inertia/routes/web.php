@@ -38,21 +38,29 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
+Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
+Route::get('/updateProfile', function () {
+    return Inertia::render('UpdateProfile');
+})->name('updateProfile');
+
+
 Route::resource('posts', PostController::class);
 
 Route::get('/generalQuery', function () {
     return Inertia::render('QueriesForm');
 })->name('generalQuery');
-Route::post('/generalQuerySubmit', [\App\Http\Controllers\GeneralQueryController::class, 'store'])->name('generalQuerySubmit');;
+Route::post('/generalQuerySubmit', [\App\Http\Controllers\GeneralQueryController::class, 'store'])->name('generalQuerySubmit');
 
-Route::get('/successStory', function () {
-    return Inertia::render('SuccessStoriesForm');
-})->name('successStory');
-Route::post('/successStorySubmit', [\App\Http\Controllers\SuccessStoryController::class, 'store']);
+Route::get('/successStory', [\App\Http\Controllers\SuccessStoryController::class, 'index'])->name('successStory');
+Route::post('/successStorySubmit', [\App\Http\Controllers\SuccessStoryController::class, 'store'])->name('successStorySubmit');
 
-Route::get('/mentorForm', function () {
-    return Inertia::render('MentorForm');
-})->name('mentorForm');
-Route::post('/successStorySubmit', [\App\Http\Controllers\MentorFormController::class, 'store']);
+Route::get('/mentorForm',[\App\Http\Controllers\MentorFormController::class, 'index'])->name('mentorForm');
+Route::post('/mentorFormSubmit', [\App\Http\Controllers\MentorFormController::class, 'store'])->name('mentorFormSubmit');
 
+
+Route::get('/importUsers', function () {
+    return Inertia::render('ImportData');
+})->name('importUsers');
+Route::post('/uploadUsers', [\App\Http\Controllers\ProfileController::class, 'uploadUsers'])->name('uploadUsers');
 require __DIR__.'/auth.php';

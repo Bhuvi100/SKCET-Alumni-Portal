@@ -21,10 +21,7 @@ class PostController extends Controller
 
         return Inertia::render('Post/Index', ['posts' => $posts]); 
        
-        return [
-            $posts,
-            //"message" => "Spoc successfully created and added",
-        ];
+        
     }
 
     /**

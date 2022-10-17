@@ -1,38 +1,25 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Inertia\Inertia;
+use App\Providers\RouteServiceProvider;
 use App\Models\MentorForm;
 use Illuminate\Http\Request;
 
 class MentorFormController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
+        return Inertia::render('MentorForm',['auth'=>auth()->user()]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
            
@@ -56,46 +43,23 @@ class MentorFormController extends Controller
     return redirect(RouteServiceProvider::HOME);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\MentorForm  $mentorForm
-     * @return \Illuminate\Http\Response
-     */
     public function show(MentorForm $mentorForm)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\MentorForm  $mentorForm
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(MentorForm $mentorForm)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MentorForm  $mentorForm
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, MentorForm $mentorForm)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\MentorForm  $mentorForm
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(MentorForm $mentorForm)
     {
         //
