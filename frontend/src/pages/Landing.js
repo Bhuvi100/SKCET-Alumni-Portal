@@ -9,7 +9,6 @@ const Landing = () => {
     <div>
         <IndexHeader />
         <StarAlumni />
-        <SuccessStories />
         <IndexFooter />
     </div>
     )

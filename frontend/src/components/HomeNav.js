@@ -21,7 +21,7 @@ const HomeNav = () => {
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             
 
-            <li><h1 class = "text-white mr-3">Ajay Ganapathy K H</h1>
+            <li><h1 class = "text-white mr-3">User 1</h1>
            
             </li>
 
