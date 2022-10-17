@@ -1,5 +1,6 @@
 html {
   font-size: 80%;
+  scroll-behavior: smooth;
 }
 .App {
   text-align: center;
@@ -31,6 +32,17 @@ html {
   color: #61dafb;
 }
 
+@media screen and (min-width: 480px) {
+  #bg {
+    background: url('https://www.skcet.ac.in/images/admin%20front2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height : 100vh;
+    
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -44,8 +56,19 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   height : 100vh;
+  
 }
- 
+@media screen and (min-width: 480px) {
+  #bg {
+    background: url('https://www.skcet.ac.in/images/admin%20front2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height : 100vh;
+    
+  }
+}
+
 #d-wrapper	.zig-zag-bottom{
 		background: #2462EA;
 	}
@@ -84,14 +107,14 @@ html {
   
   /* Dropdown button */
   .dropdown .dropbtn {
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     outline: none;
     color: white;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    margin:0; /* Important for vertical align on mobile phones */
   }
   
   /* Add a red background color to navbar links on hover */
@@ -105,6 +128,7 @@ html {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 8px;
   }
   
   /* Links inside the dropdown */
@@ -120,11 +144,13 @@ html {
   /* Add a grey background color to dropdown links on hover */
   .dropdown-content a:hover {
     background-color: #ddd;
+    border-radius: 8px;
   }
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     display: block;
+    border-radius: 8px;
   }
 
   .dropdown_menu{
@@ -216,3 +242,156 @@ html {
     .border-main-color {
         border-color: var(--main-color);
     }
+
+#Succ_bg{
+  background: url('https://www.skcet.ac.in/old%20website/NCRAC/images/bd1.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#qbg{
+  background: url('https://www.skcet.ac.in/images/air.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#mbg{
+  background: url('https://www.skcet.ac.in/depttop.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#jbg{
+  background: url('https://images.shiksha.com/mediadata/images/1550490587php7iX2A7.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#gbg{
+  background: url('https://www.skcet.ac.in/old%20website/NCRAC/images/bg5.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-container{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 40px;
+}
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card{
+  border-radius: 25px;
+  background-color: #FFF;
+  
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #2A2A72, #009FFD);
+  border-radius: 25px 25px 25px 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070F4;
+}
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #4070F4;
+  border-radius: 6px;
+  margin: 14px 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #265DF2;
+}
+
+.swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}
+
+

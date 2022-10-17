@@ -46,6 +46,8 @@ return [
     'doesnt_end_with' => 'The :attribute may not end with one of the following: :values.',
     'doesnt_start_with' => 'The :attribute may not start with one of the following: :values.',
     'email' => 'The :attribute must be a valid email address.',
+    'email_not_found' => ['The email is not present in our database! Please register to continue'],
+    'email_not_signed' => ['You haven\'t completed your profile yet. Please set your password to continue'],
     'ends_with' => 'The :attribute must end with one of the following: :values.',
     'enum' => 'The selected :attribute is invalid.',
     'exists' => 'The selected :attribute is invalid.',
