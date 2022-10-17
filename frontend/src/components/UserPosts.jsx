@@ -55,8 +55,8 @@ const UserPosts = () => {
     <div class="container px-0 mx-auto sm:px-5">
 
         <div
-            class="flex-col w-full py-4 mx-auto bg-white border-b-2 border-r-2 border-gray-200 sm:px-4 sm:py-4 md:px-4 sm:rounded-lg sm:shadow-sm md:w-2/3">
-            <div class="flex flex-row ">
+            class="flex-col w-full py-4 mx-auto bg-white border-b-2 border-r-2 border-gray-200 ">
+            <div class="flex flex-row " >
                 <img class="object-cover w-12 h-12 border-2 border-gray-300 rounded-full" alt="Noob master's avatar"
                     src="https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&faces=1&faceindex=1&facepad=2.5&w=500&h=500&q=80" />
                 <div class="flex-col mt-1">
@@ -115,7 +115,7 @@ const UserPosts = () => {
         </div>
 
         <div
-            class="flex-col w-full py-4 mx-auto mt-3 bg-white border-b-2 border-r-2 border-gray-200 sm:px-4 sm:py-4 md:px-4 sm:rounded-lg sm:shadow-sm md:w-2/3">
+            class="flex-col w-full py-4 mx-auto mt-3 bg-white border-b-2 border-r-2 border-gray-200">
             <div class="flex flex-row md-10">
                 <img class="w-12 h-12 border-2 border-gray-300 rounded-full" alt="Anonymous's avatar"
                     src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&faces=1&faceindex=1&facepad=2.5&w=500&h=500&q=80" />
