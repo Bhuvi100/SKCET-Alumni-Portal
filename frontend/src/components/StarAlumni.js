@@ -1,6 +1,29 @@
 import React from 'react'
 
 const StarAlumni = () => {
+
+  function Card(){
+   const arr = new Array()
+    for(let i=0; i<4;i++){
+      arr.push(
+        
+      <div class="flex-initial-w-96 rounded-md overflow-hidden shadow-xl mt-5 mr-5 ml-5" >
+      <img class="h-80 w-96 p-5"  src="/assets/user.png" alt=""/>
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-1 text-center">Name {i}</div>
+        <p class="text-gray-700 mb-1 text-base text-center">
+          Designation
+        </p>
+        <p class="text-gray-700 text-base text-center">
+          Department, Batch
+        </p>
+      
+      </div>
+    </div>)
+      
+    }
+    return <div  className="flex flex-row">{arr.map((a) => a)}</div>
+  }
   return (
     <div id={"initiatives"}>
       <section className="text-black mt-12">
@@ -8,7 +31,7 @@ const StarAlumni = () => {
           <div class="max-w-lg mx-auto text-center">
            
             <h1 className={" mb-16 pb-2 font-bold sm:text-xl text-2xl md:text-3xl text-center"}>
-              Notable
+                Notable
               <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300" >
                 Alumni
               </span>
@@ -16,60 +39,23 @@ const StarAlumni = () => {
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
-            <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
-             
-            <img className="m-auto" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
-              <h3 className="mt-4 text-xl font-bold text-center text-indblue">
-               Working at Google
-              </h3>
-              <div className="m-4" >
-              <a href="#" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
-              </div>
-            </div>
+        <marquee id="mq-scroll" behavior="scroll" direction="rtl" onMouseOver={() => {
+          document.getElementById("mq-scroll").stop();
+        }} onMouseOut={() => {
+          document.getElementById("mq-scroll").start();
+        }}>
+          
 
-            <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
-             
-             <img className="m-auto" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
-               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
-                Working at Google
-               </h3>
-               <div className="m-4">
-               <a href="#" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
-               </div>
-             </div>
-             <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
-             
-             <img className="m-auto" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
-               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
-                Working at Google
-               </h3>
-               <div className="m-4">
-               <a href="#" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
-               </div>
-             </div>
-             <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
-             
-             <img className="m-auto" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
-               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
-                Working at Google
-               </h3>
-               <div className="m-4">
-               <a href="#" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
-               </div>
-             </div>
-             <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
-             
-             <img className="m-auto" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
-               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
-                Working at Google
-               </h3>
-               <div className="m-4">
-               <a href="#" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
-               </div>
-             </div>
+          {
+            Card()
+          }
+                      
+                      
 
-          </div>
+              
+
+          
+          </marquee>
           
         </div>
       </section>

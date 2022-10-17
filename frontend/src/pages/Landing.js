@@ -1,4 +1,5 @@
 import React  from "react"
+import Alumni from "../components/Alumni"
 import IndexFooter from "../components/IndexFooter"
 import IndexHeader from "../components/IndexHeader"
 import StarAlumni from "../components/StarAlumni"
@@ -8,8 +9,9 @@ const Landing = () => {
     return (
     <div>
         <IndexHeader />
-        <StarAlumni />
-        <SuccessStories />
+        {/* <StarAlumni /> */}
+        <Alumni />
+        {/* <SuccessStories /> */}
         <IndexFooter />
     </div>
     )
