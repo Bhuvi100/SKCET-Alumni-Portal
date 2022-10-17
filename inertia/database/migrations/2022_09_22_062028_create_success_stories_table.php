@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('success_stories', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('phone', 20);
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('achievement');
             $table->string('description');
+            $table->string('category');
             $table->date('date_of_achievement');
-            $table->string('video_url');
-            $table->string('snapshot');
+            $table->string('video_url')->nullable();;
+            $table->string('snapshot')->nullable();
             $table->timestamps();
         });
     }

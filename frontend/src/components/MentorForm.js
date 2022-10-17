@@ -5,8 +5,8 @@ const MentorForm = () => {
     <div id="bg" class="pt-12">
     <div class="max-w-2xl  mx-auto bg-white p-5 rounded-lg shadow-inner border-solid border-2 border-gray-100">
       <div class="font-lg mb-2 mt-5" style = {{display : "flex", justifyContent : "center" ,alignItems : "center"}}>
-      <h4 class="text-2xl font-semibold mt-4 mb-4 pb-1">GENERAL
-         <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300">QUERIES</span>
+      <h4 class="text-2xl font-semibold mt-4 mb-4 pb-1">MENTOR
+         <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300">FORM</span>
       </h4>
       </div>
       <form >

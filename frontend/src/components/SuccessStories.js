@@ -2,102 +2,98 @@ import React from 'react'
 
 const SuccessStories = () => {
   return (
-    <div>
-       <div className="px-4 mt-20  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-0">
-       <h1 className={" mb-16 pb-2 font-bold sm:text-xl text-2xl md:text-3xl text-center"}>
-              Success 
-              <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300">
-                Stories
+    <div id={"initiatives"}>
+      <section className="text-black mt-12">
+        <div class="max-w-screen-xl px-4 py-15 mx-auto sm:px-6 lg:px-8">
+          <div class="max-w-lg mx-auto text-center">
+           
+            <h1 className={" mb-16 pb-2 font-bold sm:text-xl text-2xl md:text-3xl text-center"}>
+             Success
+              <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300" >
+               Stories
               </span>
               <div className=""></div>
             </h1>
-        <div class="flex flex-wrap -mx-4 overflow-hidden">
-          <div class="my-4 px-4 w-full overflow-hidden lg:w-1/3">
-            <a class="mb-5 block overflow-hidden shadow-xl rounded-3xl" href="">
-              <img
-                class="object-cover w-full h-64"
-                src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide"
-              />
-
-              <div class="relative w-full p-6 -mt-8 bg-white rounded-3xl">
-                <h5 class="text-xl font-bold text-gray-900">
-                  My first day at the campus
-                </h5>
-
-                <p class="hidden mt-0 text-gray-500 sm:block">by Sakshi</p>
-                <p class="hidden mt-5 text-gray-500 sm:block">
-                  After being stuck in enormous traffic for hours, finally you
-                  manage to somehow find a blue colored board proclaiming 'IIT
-                  Bombay, Gyanaarth Praveshan...!
-                </p>
-
-                <dl class="items-center mt-3 sm:flex">
-                  <dl class="items-center sm:flex text-indblue font-bold">
-                    Read more
-                  </dl>
-                </dl>
-              </div>
-            </a>
           </div>
 
-          <div class="my-4 px-4 w-full overflow-hidden lg:w-1/3">
-            <a class="mb-5 block overflow-hidden shadow-xl rounded-3xl" href="">
-              <img
-                class="object-cover w-full h-64"
-                src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide"
-              />
-
-              <div class="relative w-full p-6 -mt-8 bg-white rounded-3xl">
-                <h5 class="text-xl font-bold text-gray-900">
-                  My first day at the campus
-                </h5>
-
-                <p class="hidden mt-0 text-gray-500 sm:block">by Sakshi</p>
-                <p class="hidden mt-5 text-gray-500 sm:block">
-                  After being stuck in enormous traffic for hours, finally you
-                  manage to somehow find a blue colored board proclaiming 'IIT
-                  Bombay, Gyanaarth Praveshan...!
-                </p>
-
-                <dl class="items-center mt-3 sm:flex">
-                  <dl class="items-center sm:flex text-indblue font-bold">
-                    Read more
-                  </dl>
-                </dl>
+          <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
+            <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
+             
+            <img className="m-auto" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
+              <h3 className="mt-4 text-xl font-bold text-center text-indblue">
+               Working at Google
+              </h3>
+              <div className="m-4" >
+              <a href="#" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
               </div>
-            </a>
+            </div>
+
+            <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
+             
+             <img className="m-auto" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
+               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
+                Working at Google
+               </h3>
+               <div className="m-4">
+               <a href="#" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
+               </div>
+             </div>
+             <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
+             
+             <img className="m-auto" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
+               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
+                Working at Google
+               </h3>
+               <div className="m-4">
+               <a href="#" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
+               </div>
+             </div>
+             <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
+             
+             <img className="m-auto rounded-lg" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
+               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
+                Working at Google
+               </h3>
+               <div className="m-4">
+               <a href="#" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
+               </div>
+             </div>
+             <div className={" block p-8 transition shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"}>
+             
+             <img className="m-auto" src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide" style={{'width':'220px','height':'210px'}} />
+               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
+                Working at Google
+               </h3>
+               <div className="m-4">
+               <a href="#" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center' target="_blank" >View Profile</a>
+               </div>
+             </div>
+
           </div>
-
-          <div class="my-4 px-4 w-full overflow-hidden lg:w-1/3">
-            <a class="mb-5 block overflow-hidden shadow-xl rounded-3xl" href="">
-              <img
-                class="object-cover w-full h-64"
-                src="https://skcet.ac.in/images/testimonials.jpg" alt="First slide"
-               
-              />
-
-              <div class="relative w-full p-6 -mt-8 bg-white rounded-3xl">
-                <h5 class="text-xl font-bold text-gray-900">
-                  My first day at the campus
-                </h5>
-
-                <p class="hidden mt-0 text-gray-500 sm:block">by Sakshi</p>
-                <p class="hidden mt-5 text-gray-500 sm:block">
-                  After being stuck in enormous traffic for hours, finally you
-                  manage to somehow find a blue colored board proclaiming 'IIT
-                  Bombay, Gyanaarth Praveshan...!
-                </p>
-
-                <dl class="items-center mt-3 sm:flex">
-                  <dl class="items-center sm:flex text-indblue font-bold">
-                    Read more
-                  </dl>
-                </dl>
-              </div>
-            </a>
-          </div>
+          
         </div>
+      </section>
+      <div>
+      <ul class="card-wrapper">
+  <li class="card">
+    <img src='https://images.unsplash.com/photo-1611916656173-875e4277bea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt='' />
+    <h3><a href="">A Super Wonderful Headline</a></h3>
+    <p>Lorem ipsum sit dolor amit</p>
+  </li>
+  <li class="card">
+    <img src='https://images.unsplash.com/photo-1611083360739-bdad6e0eb1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt='' />
+    <h3><a href="">What a Fantabulous Title!</a></h3>
+    <p>Lorem ipsum sit dolor amit</p>
+  </li>
+  <li class="card">
+    <img src='https://images.unsplash.com/photo-1613230485186-2e7e0fca1253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt='' />
+    <h3><a href="">Positively Terrific Title</a></h3>
+    <p>Lorem ipsum sit dolor amit</p>
+  </li>
+</ul>
       </div>
+
+      
     </div>
   )
 }

@@ -25,7 +25,7 @@ const Chats = () => {
               ></path>
             </svg>
           </div>
-          <div class="ml-2 font-bold text-2xl">Link Up</div>
+          <div class="ml-2 font-bold text-2xl">Ajay Ganapathy K H</div>
         </div>
         <div
           class="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg"

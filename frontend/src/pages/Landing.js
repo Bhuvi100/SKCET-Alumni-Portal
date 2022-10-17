@@ -9,9 +9,7 @@ const Landing = () => {
     return (
     <div>
         <IndexHeader />
-        {/* <StarAlumni /> */}
-        <Alumni />
-        {/* <SuccessStories /> */}
+        <StarAlumni />
         <IndexFooter />
     </div>
     )

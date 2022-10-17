@@ -31,6 +31,18 @@ const Navbar = () => {
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/objectives">Objectives</a>
             </li>
+
+            <div class="dropdown">
+              <button class="dropbtn">Giving Back
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/mentor">Mentor</a>
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/guest">Guest Speaker</a>
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/job">Job Opportunities</a>
+              
+              </div>
+            </div>
           </ul>
           <a
             href = "/login"

@@ -1,16 +1,29 @@
-import React, { useState, useMemo } from 'react'
-import Select from 'react-select'
-import countryList from 'react-select-country-list'
+import React, { useMemo } from "react";
+import Select from "react-select";
+import countryList from "react-select-country-list";
 
-function Country() {
-  const [value, setValue] = useState('')
-  const options = useMemo(() => countryList().getData(), [])
+function Country(props) {
+    let options = useMemo(() => countryList().getLabels(), []);
 
-  const changeHandler = value => {
-    setValue(value)
-  }
+    options = options.map((label) => {
+        return {
+            value: label,
+            label: label,
+        };
+    });
 
-  return <Select options={options} value={value} onChange={changeHandler} />
+    return (
+        <Select
+            options={options}
+            defaultInputValue={props.value}
+            onChange={({ label, value }) => {
+                props.onChange("country", value);
+            }}
+            name={props.name}
+            required={true}
+            defaultValue={{ label: props.value, value: props.value }}
+        />
+    );
 }
 
-export default Country
+export default Country;

@@ -7,7 +7,9 @@ export default function Authenticated({ auth, header, children }) {
         <div className="bg-slate-200">
             <div className="flex">
                 <SideBar />
-                <main>{children}</main>
+               
+                <main>
+                    {children}</main>
             </div>
         </div>
     );

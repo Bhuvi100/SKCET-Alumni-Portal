@@ -97,11 +97,11 @@ const Base = () => {
           />
           <Route 
             path='/mentor'
-            element={<MentorForm/>}
+            element={<MentorForm />}
           />
           <Route
             path='/guest'
-            element={<GuestSpeakerForm/>}
+            element={<GuestSpeakerForm />}
           />
           
           </Routes>
