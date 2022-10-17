@@ -92,7 +92,7 @@ const StarAlumni = () => {
                 </div>
                     <div class="card-content">
                         <h2 class="name">S.Priyadarshini,IAS</h2>
-                        <p class="description">ECE (2005 - 2009 Batch)</p>
+                        <p class="description">EEE (2005 - 2009 Batch)</p>
                         <p class="description">Asst. Magistrate & Asst. Colllector, Office of District Magistrate</p>
                         <p class="description">Kolkata</p>                    
                     </div>
