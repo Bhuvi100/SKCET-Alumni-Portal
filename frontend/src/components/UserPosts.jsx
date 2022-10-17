@@ -27,7 +27,7 @@ const UserPosts = () => {
                   </div>
                   <div class="border-b border-gray-100 p-4"></div>
         
-                  <div class="text-gray-600 font-semibold  mb-2 mx-3 px-2">User's Random Post</div>
+                  <div class="text-gray-600 font-semibold  mb-2 mx-3 px-2" >User's Random Post</div>
                   <div class="text-gray-500 text-sm mb-6 mx-3 px-2">Love and gratitude to both The Prime Minister, The Honorable Mia Amor Mottley and our President, Her Excellency The Most Honorable Dame Sandra Mason for trusting me with this honor!</div>
                   <div class="flex justify-start mb-4 border-t border-gray-100">
                       <div class="flex w-full mt-1 pt-2 pl-5">                         
