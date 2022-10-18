@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\PostController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -44,9 +43,6 @@ Route::get('/updateProfile', function () {
     return Inertia::render('UpdateProfile');
 })->name('updateProfile');
 
-
-Route::resource('posts', PostController::class);
-
 Route::get('/generalQuery', function () {
     return Inertia::render('QueriesForm');
 })->name('generalQuery');
@@ -58,9 +54,15 @@ Route::post('/successStorySubmit', [\App\Http\Controllers\SuccessStoryController
 Route::get('/mentorForm',[\App\Http\Controllers\MentorFormController::class, 'index'])->name('mentorForm');
 Route::post('/mentorFormSubmit', [\App\Http\Controllers\MentorFormController::class, 'store'])->name('mentorFormSubmit');
 
-
+// import excel data
 Route::get('/importUsers', function () {
     return Inertia::render('ImportData');
 })->name('importUsers');
 Route::post('/uploadUsers', [\App\Http\Controllers\ProfileController::class, 'uploadUsers'])->name('uploadUsers');
+
+// post and comments
+Route::post('/addPost', [\App\Http\Controllers\PostController::class, 'store'])->name('addPost');
+Route::post('/post/addComment/{post}', [\App\Http\Controllers\CommentController::class, 'store'])->name('addComment');
+
+
 require __DIR__.'/auth.php';
