@@ -15,7 +15,6 @@ const Dashboard = () => {
    <div class="col-span-2">
       <div class="pt-10">
         <Posts /> 
-        <Modal />
   </div>
   
   

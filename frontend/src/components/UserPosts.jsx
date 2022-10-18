@@ -4,8 +4,9 @@ import { useState } from 'react'
 const UserPosts = () => {
 
   const [com,setCom] = useState(false)
+  const [tr,setTr] = useState(false)
   const [showModal, setShowModal] =useState(false)
-  
+  const [liked,setLiked] = useState('none')
   return (
     <div>
         <div class="bg-white shadow rounded-lg pb-4 mt-7">
@@ -88,17 +89,19 @@ const UserPosts = () => {
                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
                               </svg>
                           </span>
-                          <span class="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer">
-                              <svg class="h-4 w-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-                              </svg>
+                          <span class="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer" onClick = {() => {setTr(!tr)                            
+                           tr ? setLiked("blue") : setLiked("none")}} >
+                          <svg xmlns="http://www.w3.org/2000/svg" fill={liked} viewBox="0 0 24 24" stroke-width="1.5" stroke="blue" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+</svg>
+
                           </span>
                       </div>
                   </div>
                   <div class="flex w-full border-t border-gray-100">
                       <div class="mt-3 mx-5 flex flex-row text-xs">
                           <button class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center" onClick = {() => setCom(!com)}>Comments:<div class="ml-1 text-gray-400 text-ms"> 30</div></button>
-                          <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Views: <div class="ml-1 text-gray-400 text-ms"> 60k</div></div>
+                          <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Likes <div class="ml-1 text-gray-400 text-ms"> 60k</div></div>
                       </div>
                   </div>
                   {com && <section class="relative flex items-center justify-center p-3 antialiased bg-white bg-gray-100 min-w-screen">
@@ -162,6 +165,9 @@ const UserPosts = () => {
                     </button>
                 </div>
             </div>
+        </div>
+        <div>
+            <h1 style = {{ color : "red"}}>Hello</h1>
         </div>
 
         <div
