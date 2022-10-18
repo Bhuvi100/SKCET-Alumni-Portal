@@ -29,8 +29,21 @@ const StarAlumni = () => {
           disableOnInteraction: false,
         }}
         pagination={{
-            
           clickable: true,
+        }}
+        breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
         }}
         modules={[Autoplay, Pagination, Navigation]}
        className="text-white"

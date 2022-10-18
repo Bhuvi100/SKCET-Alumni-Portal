@@ -1,10 +1,12 @@
 import React from 'react'
 
 const Posts = () => {
+  
   return (
     <div>
       <form class="bg-white shadow rounded-lg mb-5 p-4 w-full md:w-full">
-    <h2 class="mb-1 font-medium ">Start a post</h2>
+    <h2 class="mb-1 font-medium mb-3">Start a post</h2>
+    <input type = "text" name = "head" placeholder = "Enter Title" class=" focus:outline-none  w-full rounded-lg p-2 mb-3 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400" />
               <textarea name="message" placeholder="Type something..." class=" focus:outline-none  w-full rounded-lg p-2 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400"></textarea>
               <footer class="flex justify-between mt-2">
                   <div class="flex gap-2">
