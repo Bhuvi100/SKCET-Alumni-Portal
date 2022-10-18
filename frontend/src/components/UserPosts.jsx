@@ -166,10 +166,7 @@ const UserPosts = () => {
                 </div>
             </div>
         </div>
-        <div>
-            <h1 style = {{ color : "red"}}>Hello</h1>
-        </div>
-
+      
         <div
             class="flex-col w-full py-4 mx-auto mt-3 bg-white border-b-2 border-r-2 border-gray-200">
             <div class="flex flex-row md-10">
