@@ -1,10 +1,13 @@
+import HomeNav from "../components/HomeNav";
+
 export default function UpdateProfile(){
     return(
         <div className="w-full">
+        <HomeNav />
             
 
 
-<div class="bg-gray-100">
+<div class=" mt-28 bg-gray-100">
 
     <div class="container mx-auto my-5 p-5">
         <div class="md:flex no-wrap md:-mx-2 ">
