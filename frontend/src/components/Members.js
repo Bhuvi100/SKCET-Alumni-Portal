@@ -52,7 +52,7 @@ const Members = () => {
             </div>
 
             <div className=" h-80 w-96 transition shadow-xl rounded-lg hover:shadow-blue-500/10 ">
-            <img className="mx-auto mt-6 rounded-full" src="/assets/user.png" alt="First slide" style={{'width':'180px','height':'170px'}}/>
+            <img className="mx-auto mt-6 rounded-full" src="/assets/Alumni-Images/Thamarai.jpeg" alt="First slide" style={{'width':'180px','height':'170px'}}/>
               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
               Mr. S. Thamarai Kannan
               </h3>
@@ -62,7 +62,7 @@ const Members = () => {
             </div>
 
             <div className=" h-80 w-96 transition shadow-xl rounded-lg hover:shadow-blue-500/10 ">
-            <img className="mx-auto mt-6 rounded-full" src="/assets/user.png" alt="First slide" style={{'width':'180px','height':'170px'}}/>
+            <img className="mx-auto mt-6 rounded-full" src="/assets/Alumni-Images/Vignesh.jpg" alt="First slide" style={{'width':'180px','height':'170px'}}/>
               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
               Mr. S. S. Vignesh
               </h3>
