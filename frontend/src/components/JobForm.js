@@ -61,6 +61,10 @@ const JobForm = () => {
                 <label for="description" class="block mb-2 text-black dark:text-gray-900">Job Description</label>
                 <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
         </div>
+        <div>
+                <label for="description" class="block mt-2 mb-2 text-black dark:text-gray-900">Link</label>
+                <input type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
+            </div>
         <br />
         <div class="flex items-center justify-center">
          <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm w-full sm:w-auto px-6 py-2.5 text-center" style={{ background: "linear-gradient(to right, #2A2A72, #009FFD)" }}>SUBMIT</button>
