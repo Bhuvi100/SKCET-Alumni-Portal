@@ -16,7 +16,7 @@ import Objectives from '../components/Objectives';
 import JobForm from '../components/JobForm';
 import MentorForm from '../components/MentorForm';
 import GuestSpeakerForm from '../components/GuestSpeakerForm';
-
+import Members from '../components/Members';
 
 const Base = () => {
   return (
@@ -102,6 +102,10 @@ const Base = () => {
           <Route
             path='/guest'
             element={<GuestSpeakerForm />}
+          />      
+          <Route
+            path='/members'
+            element={<Members />}
           />
           
           </Routes>

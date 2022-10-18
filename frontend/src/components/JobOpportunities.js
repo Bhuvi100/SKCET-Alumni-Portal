@@ -14,7 +14,7 @@ const JobOpportunities = () => {
                 Opportunities
               </span>
               <div className=""></div>
-            </h1>
+        </h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
         <div class="relative mx-auto w-full">
         <div class="relative inline-block duration-300 ease-in-out transition-transform transform hover:-translate-y-2 w-full">
