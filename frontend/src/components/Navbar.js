@@ -18,6 +18,9 @@ const Navbar = () => {
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/members">About LinkUP</a>
             </li>
+            <li class="mr-3">
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/gallery">Gallery</a>
+            </li>
             <li class="dropdown">
               <button class="dropbtn">Services</button>
               <div class="dropdown-content">

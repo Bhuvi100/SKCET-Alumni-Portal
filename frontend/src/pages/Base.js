@@ -17,6 +17,9 @@ import JobForm from '../components/JobForm';
 import MentorForm from '../components/MentorForm';
 import GuestSpeakerForm from '../components/GuestSpeakerForm';
 import Members from '../components/Members';
+import Gallery from '../components/Gallery';
+import ProfileUpdate from './UpdateProfile';
+import UpdateProfile from './UpdateProfile';
 
 const Base = () => {
   return (
@@ -43,7 +46,7 @@ const Base = () => {
             />
 
             <Route
-              path="/profile"
+              path="/profile1"
               element={<Profile />}
             />
 
@@ -106,6 +109,15 @@ const Base = () => {
           <Route
             path='/members'
             element={<Members />}
+          />
+          <Route
+            path='/gallery'
+            element={<Gallery />}
+          />
+
+          <Route
+            path='/profile'
+            element={<UpdateProfile />}
           />
           
           </Routes>
