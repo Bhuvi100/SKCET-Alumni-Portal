@@ -119,7 +119,7 @@ const UserPosts = () => {
                   </div>
                   <div class="flex w-full border-t border-gray-100">
                       <div class="mt-3 mx-5 flex flex-row text-xs">
-                          <button class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center" onClick = {() => setComs(ar.id)}>Comments:<div class="ml-1 text-gray-400 text-ms"> 30</div></button>
+                          <button class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center" onClick = {() => setComs(ar.post_id)}>Comments:<div class="ml-1 text-gray-400 text-ms"> 30</div></button>
                           <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Likes <div class="ml-1 text-gray-400 text-ms"> 60k</div></div>
                       </div>
                   </div>
