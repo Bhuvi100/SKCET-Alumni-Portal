@@ -6,9 +6,28 @@ const UserPosts = () => {
   const [com,setCom] = useState(false)
   const [tr,setTr] = useState(false)
   const [showModal, setShowModal] =useState(false)
+  const [pid,setPid] = useState(0)
   const [liked,setLiked] = useState('none')
+  const arr = [{"id" : 1},{"id" : 2}]
+  const ara = [
+    {"id":6,"user_id":1,"post_id":2,"comment_id":null,"description":"wooow nice post",replies : [{"id":7,"user_id":1,"post_id":2,"comment_id":6,"description":"yup good one","created_at":null,"updated_at":null},{"id":8,"user_id":1,"post_id":2,"comment_id":6,"description":"ohh","created_at":null,"updated_at":null},],"created_at":null,"updated_at":null},
+    {"id":123,"user_id":1,"post_id":2,"comment_id":null,"description":"wooow 2nd nice post","created_at":null,"updated_at":null},
+  {"id":10,"user_id":1,"post_id":2,"comment_id":9,"description":"not bad", replies : [{"id":7,"user_id":1,"post_id":2,"comment_id":6,"description":"yup good one","created_at":null,"updated_at":null},{"id":8,"user_id":1,"post_id":2,"comment_id":6,"description":"ohh","created_at":null,"updated_at":null},],"created_at":null,"updated_at":null},
+  {"id":11,"user_id":1,"post_id":2,"comment_id":null,"description":"wooow nice post", replies : [{"id":7,"user_id":1,"post_id":2,"comment_id":6,"description":"yup good one","created_at":null,"updated_at":null},{"id":8,"user_id":1,"post_id":2,"comment_id":6,"description":"ohh","created_at":null,"updated_at":null},{"id":8,"user_id":1,"post_id":2,"comment_id":6,"description":"ohh Great","created_at":null,"updated_at":null},],"created_at":null,"updated_at":null},
+]
+
+  const setComs = (id) => {
+    {setCom(!com);
+         setPid(id)}
+  }
   return (
     <div>
+        {
+            
+
+        arr.map((ar) => (
+
+        
         <div class="bg-white shadow rounded-lg pb-4 mt-7">
                   <div class="flex flex-row px-2 py-3 mx-3">
                       <div class="w-auto h-auto rounded-full border-2 border-green-500">
@@ -100,24 +119,25 @@ const UserPosts = () => {
                   </div>
                   <div class="flex w-full border-t border-gray-100">
                       <div class="mt-3 mx-5 flex flex-row text-xs">
-                          <button class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center" onClick = {() => setCom(!com)}>Comments:<div class="ml-1 text-gray-400 text-ms"> 30</div></button>
+                          <button class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center" onClick = {() => setComs(ar.id)}>Comments:<div class="ml-1 text-gray-400 text-ms"> 30</div></button>
                           <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Likes <div class="ml-1 text-gray-400 text-ms"> 60k</div></div>
                       </div>
                   </div>
-                  {com && <section class="relative flex items-center justify-center p-3 antialiased bg-white bg-gray-100 min-w-screen">
+                  {com   && ara.map((d) => ( 
+                    <section class="relative flex items-center justify-center p-3 antialiased bg-white bg-gray-100 min-w-screen">
     <div class="container px-0 mx-auto sm:px-5">
-
-        <div
+        {
+            d.comment_id === null &&
+            <div
             class="flex-col w-full py-4 mx-auto bg-white border-b-2 border-r-2 border-gray-200 ">
             <div class="flex flex-row " >
                 <img class="object-cover w-12 h-12 border-2 border-gray-300 rounded-full" alt="Noob master's avatar"
                     src="https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&faces=1&faceindex=1&facepad=2.5&w=500&h=500&q=80" />
                 <div class="flex-col mt-1">
-                    <div class="flex items-center flex-1 px-4 font-bold leading-tight">Noob master
+                    <div class="flex items-center flex-1 px-4 font-bold leading-tight">{d.id}
                         <span class="ml-2 text-xs font-normal text-gray-500">2 weeks ago</span>
                     </div>
-                    <div class="flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600">Wow!!! how you did you
-                        create this?
+                    <div class="flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600">{d.description}
                     </div>
                     <button class="inline-flex items-center px-1 pt-2 ml-1 flex-column">
                         <svg class="w-5 h-5 ml-2 text-gray-600 cursor-pointer fill-current hover:text-gray-900"
@@ -138,15 +158,14 @@ const UserPosts = () => {
                 </div>
             </div>
             <hr class="my-2 ml-16 border-gray-200" />
-            <div class="flex flex-row pt-1 md-10 md:ml-16">
+            { d.replies && d.replies.map((das) => <div class="flex flex-row pt-1 md-10 md:ml-16">
                 <img class="w-12 h-12 border-2 border-gray-300 rounded-full" alt="Emily's avatar"
                     src="https://images.unsplash.com/photo-1581624657276-5807462d0a3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&faces=1&faceindex=1&facepad=2.5&w=500&h=500&q=80" />
                 <div class="flex-col mt-1" >
-                    <div class="flex items-center flex-1 px-4 font-bold leading-tight">Emily
+                    <div class="flex items-center flex-1 px-4 font-bold leading-tight">{das.id} Replied to {d.id} 
                         <span class="ml-2 text-xs font-normal text-gray-500">5 days ago</span>
                     </div>
-                    <div class="flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600">I created it using
-                        TailwindCSS
+                    <div class="flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600">{das.description}
                     </div>
                     <button class="inline-flex items-center px-1 pt-2 ml-1 flex-column">
                         <svg class="w-5 h-5 ml-2 text-gray-600 cursor-pointer fill-current hover:text-gray-900"
@@ -164,10 +183,13 @@ const UserPosts = () => {
                         </svg>
                     </button>
                 </div>
-            </div>
+            </div> )  }
+            
         </div>
       
-        <div
+        }
+        
+        {/* <div
             class="flex-col w-full py-4 mx-auto mt-3 bg-white border-b-2 border-r-2 border-gray-200">
             <div class="flex flex-row md-10">
                 <img class="w-12 h-12 border-2 border-gray-300 rounded-full" alt="Anonymous's avatar"
@@ -197,10 +219,11 @@ const UserPosts = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </div> */}
 
     </div>
 </section>
+                  )) 
 }
                   <div class="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400">
                       <img class="w-10 h-10 object-cover rounded-full shadow mr-2 cursor-pointer" alt="User avatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2000&amp;q=80"/>
@@ -217,6 +240,8 @@ const UserPosts = () => {
                      
                   </div>
               </div>
+        ))
+              }
     </div>
   )
 }
