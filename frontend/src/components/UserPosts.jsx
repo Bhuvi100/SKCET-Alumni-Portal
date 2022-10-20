@@ -4,10 +4,30 @@ import { useState } from 'react'
 const UserPosts = () => {
 
   const [com,setCom] = useState(false)
+  const [tr,setTr] = useState(false)
   const [showModal, setShowModal] =useState(false)
-  
+  const [pid,setPid] = useState(0)
+  const [liked,setLiked] = useState('none')
+  const arr = [{"id" : 1},{"id" : 2}]
+  const ara = [
+    {"id":6,"user_id":1,"post_id":2,"comment_id":null,"description":"wooow nice post",replies : [{"id":7,"user_id":1,"post_id":2,"comment_id":6,"description":"yup good one","created_at":null,"updated_at":null},{"id":8,"user_id":1,"post_id":2,"comment_id":6,"description":"ohh","created_at":null,"updated_at":null},],"created_at":null,"updated_at":null},
+    {"id":123,"user_id":1,"post_id":2,"comment_id":null,"description":"wooow 2nd nice post","created_at":null,"updated_at":null},
+  {"id":10,"user_id":1,"post_id":2,"comment_id":9,"description":"not bad", replies : [{"id":7,"user_id":1,"post_id":2,"comment_id":6,"description":"yup good one","created_at":null,"updated_at":null},{"id":8,"user_id":1,"post_id":2,"comment_id":6,"description":"ohh","created_at":null,"updated_at":null},],"created_at":null,"updated_at":null},
+  {"id":11,"user_id":1,"post_id":2,"comment_id":null,"description":"wooow nice post", replies : [{"id":7,"user_id":1,"post_id":2,"comment_id":6,"description":"yup good one","created_at":null,"updated_at":null},{"id":8,"user_id":1,"post_id":2,"comment_id":6,"description":"ohh","created_at":null,"updated_at":null},{"id":8,"user_id":1,"post_id":2,"comment_id":6,"description":"ohh Great","created_at":null,"updated_at":null},],"created_at":null,"updated_at":null},
+]
+
+  const setComs = (id) => {
+    {setCom(!com);
+         setPid(id)}
+  }
   return (
     <div>
+        {
+            
+
+        arr.map((ar) => (
+
+        
         <div class="bg-white shadow rounded-lg pb-4 mt-7">
                   <div class="flex flex-row px-2 py-3 mx-3">
                       <div class="w-auto h-auto rounded-full border-2 border-green-500">
@@ -88,33 +108,36 @@ const UserPosts = () => {
                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
                               </svg>
                           </span>
-                          <span class="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer">
-                              <svg class="h-4 w-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-                              </svg>
+                          <span class="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer" onClick = {() => {setTr(!tr)                            
+                           tr ? setLiked("blue") : setLiked("none")}} >
+                          <svg xmlns="http://www.w3.org/2000/svg" fill={liked} viewBox="0 0 24 24" stroke-width="1.5" stroke="blue" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+</svg>
+
                           </span>
                       </div>
                   </div>
                   <div class="flex w-full border-t border-gray-100">
                       <div class="mt-3 mx-5 flex flex-row text-xs">
-                          <button class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center" onClick = {() => setCom(!com)}>Comments:<div class="ml-1 text-gray-400 text-ms"> 30</div></button>
-                          <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Views: <div class="ml-1 text-gray-400 text-ms"> 60k</div></div>
+                          <button class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center" onClick = {() => setComs(ar.post_id)}>Comments:<div class="ml-1 text-gray-400 text-ms"> 30</div></button>
+                          <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Likes <div class="ml-1 text-gray-400 text-ms"> 60k</div></div>
                       </div>
                   </div>
-                  {com && <section class="relative flex items-center justify-center p-3 antialiased bg-white bg-gray-100 min-w-screen">
+                  {com   && ara.map((d) => ( 
+                    <section class="relative flex items-center justify-center p-3 antialiased bg-white bg-gray-100 min-w-screen">
     <div class="container px-0 mx-auto sm:px-5">
-
-        <div
+        {
+            d.comment_id === null &&
+            <div
             class="flex-col w-full py-4 mx-auto bg-white border-b-2 border-r-2 border-gray-200 ">
             <div class="flex flex-row " >
                 <img class="object-cover w-12 h-12 border-2 border-gray-300 rounded-full" alt="Noob master's avatar"
                     src="https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&faces=1&faceindex=1&facepad=2.5&w=500&h=500&q=80" />
                 <div class="flex-col mt-1">
-                    <div class="flex items-center flex-1 px-4 font-bold leading-tight">Noob master
+                    <div class="flex items-center flex-1 px-4 font-bold leading-tight">{d.id}
                         <span class="ml-2 text-xs font-normal text-gray-500">2 weeks ago</span>
                     </div>
-                    <div class="flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600">Wow!!! how you did you
-                        create this?
+                    <div class="flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600">{d.description}
                     </div>
                     <button class="inline-flex items-center px-1 pt-2 ml-1 flex-column">
                         <svg class="w-5 h-5 ml-2 text-gray-600 cursor-pointer fill-current hover:text-gray-900"
@@ -135,15 +158,14 @@ const UserPosts = () => {
                 </div>
             </div>
             <hr class="my-2 ml-16 border-gray-200" />
-            <div class="flex flex-row pt-1 md-10 md:ml-16">
+            { d.replies && d.replies.map((das) => <div class="flex flex-row pt-1 md-10 md:ml-16">
                 <img class="w-12 h-12 border-2 border-gray-300 rounded-full" alt="Emily's avatar"
                     src="https://images.unsplash.com/photo-1581624657276-5807462d0a3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&faces=1&faceindex=1&facepad=2.5&w=500&h=500&q=80" />
                 <div class="flex-col mt-1" >
-                    <div class="flex items-center flex-1 px-4 font-bold leading-tight">Emily
+                    <div class="flex items-center flex-1 px-4 font-bold leading-tight">{das.id} Replied to {d.id} 
                         <span class="ml-2 text-xs font-normal text-gray-500">5 days ago</span>
                     </div>
-                    <div class="flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600">I created it using
-                        TailwindCSS
+                    <div class="flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600">{das.description}
                     </div>
                     <button class="inline-flex items-center px-1 pt-2 ml-1 flex-column">
                         <svg class="w-5 h-5 ml-2 text-gray-600 cursor-pointer fill-current hover:text-gray-900"
@@ -161,10 +183,13 @@ const UserPosts = () => {
                         </svg>
                     </button>
                 </div>
-            </div>
+            </div> )  }
+            
         </div>
-
-        <div
+      
+        }
+        
+        {/* <div
             class="flex-col w-full py-4 mx-auto mt-3 bg-white border-b-2 border-r-2 border-gray-200">
             <div class="flex flex-row md-10">
                 <img class="w-12 h-12 border-2 border-gray-300 rounded-full" alt="Anonymous's avatar"
@@ -194,10 +219,11 @@ const UserPosts = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </div> */}
 
     </div>
 </section>
+                  )) 
 }
                   <div class="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400">
                       <img class="w-10 h-10 object-cover rounded-full shadow mr-2 cursor-pointer" alt="User avatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2000&amp;q=80"/>
@@ -214,6 +240,8 @@ const UserPosts = () => {
                      
                   </div>
               </div>
+        ))
+              }
     </div>
   )
 }
