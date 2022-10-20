@@ -8,7 +8,7 @@ const UserPosts = () => {
   const [showModal, setShowModal] =useState(false)
   const [pid,setPid] = useState(0)
   const [liked,setLiked] = useState('none')
-  const arr = [{"id" : 1},{"id" : 2}]
+  const arr = [{"id" : 1, "description" : "Heloo 1", "title" : "OPost1 "},{"id" : 2,  "description" : "Heloo 2", "title" : "OPost2 "}]
   const ara = [
     {"id":6,"user_id":1,"post_id":2,"comment_id":null,"description":"wooow nice post",replies : [{"id":7,"user_id":1,"post_id":2,"comment_id":6,"description":"yup good one","created_at":null,"updated_at":null},{"id":8,"user_id":1,"post_id":2,"comment_id":6,"description":"ohh","created_at":null,"updated_at":null},],"created_at":null,"updated_at":null},
     {"id":123,"user_id":1,"post_id":2,"comment_id":null,"description":"wooow 2nd nice post","created_at":null,"updated_at":null},
@@ -22,23 +22,8 @@ const UserPosts = () => {
   }
   return (
     <div>
-        {
-            
 
-        arr.map((ar) => (
-
-        
-        <div class="bg-white shadow rounded-lg pb-4 mt-7">
-                  <div class="flex flex-row px-2 py-3 mx-3">
-                      <div class="w-auto h-auto rounded-full border-2 border-green-500">
-                          <img class="w-12 h-12 object-cover rounded-full shadow cursor-pointer" alt="User avatar" src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=200&amp;q=200"/>
-                      </div>
-                      <div class="flex flex-col mb-2 ml-4 mt-1">
-                          <div class="flex text-gray-600 text-sm font-semibold"><span class="flex-1 flex-shrink-0">Sara_Lauren</span>
-                          <span class="mx-1 flex-1 flex-shrink-0"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g data-name="21. Verified" id="_21._Verified"><path d="M22.51,13.76a3,3,0,0,1,0-3.52l.76-1.05a1,1,0,0,0,.14-.9,1.018,1.018,0,0,0-.64-.64l-1.23-.4A2.987,2.987,0,0,1,19.47,4.4V3.1a1,1,0,0,0-1.31-.95l-1.24.4a3,3,0,0,1-3.35-1.09L12.81.41a1.036,1.036,0,0,0-1.62,0l-.76,1.05A3,3,0,0,1,7.08,2.55l-1.24-.4a1,1,0,0,0-1.31.95V4.4A2.987,2.987,0,0,1,2.46,7.25l-1.23.4a1.018,1.018,0,0,0-.64.64,1,1,0,0,0,.14.9l.76,1.05a3,3,0,0,1,0,3.52L.73,14.81a1,1,0,0,0-.14.9,1.018,1.018,0,0,0,.64.64l1.23.4A2.987,2.987,0,0,1,4.53,19.6v1.3a1,1,0,0,0,1.31.95l1.23-.4a2.994,2.994,0,0,1,3.36,1.09l.76,1.05a1.005,1.005,0,0,0,1.62,0l.76-1.05a3,3,0,0,1,3.36-1.09l1.23.4a1,1,0,0,0,1.31-.95V19.6a2.987,2.987,0,0,1,2.07-2.85l1.23-.4a1.018,1.018,0,0,0,.64-.64,1,1,0,0,0-.14-.9Zm-5.8-3.053-5,5a1,1,0,0,1-1.414,0l-3-3a1,1,0,1,1,1.414-1.414L11,13.586l4.293-4.293a1,1,0,0,1,1.414,1.414Z"/></g></svg></span>
-                          <button onClick={() => setShowModal(true) }><small>Edit</small></button>
-                          {showModal ? (
-        <>
+{showModal !== false && <>
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
 >
@@ -59,8 +44,8 @@ const UserPosts = () => {
                 </div>
                 {/*body*/}
                     <div class="editor mx-auto w-full flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl ">
-                        <input class="title w-full bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" value="User's Random Post" placeholder="Title" type="text"/>
-                        <textarea class="w-96 bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none" spellcheck="false" placeholder="Describe everything about this post here" value="Love and gratitude to both The Prime Minister, The Honorable Mia Amor Mottley and our President, Her Excellency The Most Honorable Dame Sandra Mason for trusting me with this honor!"></textarea>
+                        <input class="title w-full bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" defaultValue={arr[showModal].title} placeholder="Title" type="text"/>
+                        <textarea class="w-96 bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none" spellcheck="false" placeholder="Describe everything about this post here" >{arr[showModal].description}</textarea>
                     </div>
 
                     <div class="icons flex text-gray-500 m-2">
@@ -82,8 +67,25 @@ const UserPosts = () => {
             </div>
           </div>
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-        </>
-      ) : null}
+        </>}
+
+        {
+
+            
+
+        arr.map((ar,index) => (
+
+        
+        <div class="bg-white shadow rounded-lg pb-4 mt-7">
+                  <div class="flex flex-row px-2 py-3 mx-3">
+                      <div class="w-auto h-auto rounded-full border-2 border-green-500">
+                          <img class="w-12 h-12 object-cover rounded-full shadow cursor-pointer" alt="User avatar" src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=200&amp;q=200"/>
+                      </div>
+                      <div class="flex flex-col mb-2 ml-4 mt-1">
+                          <div class="flex text-gray-600 text-sm font-semibold"><span class="flex-1 flex-shrink-0">Sara_Lauren</span>
+                          <span class="mx-1 flex-1 flex-shrink-0"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g data-name="21. Verified" id="_21._Verified"><path d="M22.51,13.76a3,3,0,0,1,0-3.52l.76-1.05a1,1,0,0,0,.14-.9,1.018,1.018,0,0,0-.64-.64l-1.23-.4A2.987,2.987,0,0,1,19.47,4.4V3.1a1,1,0,0,0-1.31-.95l-1.24.4a3,3,0,0,1-3.35-1.09L12.81.41a1.036,1.036,0,0,0-1.62,0l-.76,1.05A3,3,0,0,1,7.08,2.55l-1.24-.4a1,1,0,0,0-1.31.95V4.4A2.987,2.987,0,0,1,2.46,7.25l-1.23.4a1.018,1.018,0,0,0-.64.64,1,1,0,0,0,.14.9l.76,1.05a3,3,0,0,1,0,3.52L.73,14.81a1,1,0,0,0-.14.9,1.018,1.018,0,0,0,.64.64l1.23.4A2.987,2.987,0,0,1,4.53,19.6v1.3a1,1,0,0,0,1.31.95l1.23-.4a2.994,2.994,0,0,1,3.36,1.09l.76,1.05a1.005,1.005,0,0,0,1.62,0l.76-1.05a3,3,0,0,1,3.36-1.09l1.23.4a1,1,0,0,0,1.31-.95V19.6a2.987,2.987,0,0,1,2.07-2.85l1.23-.4a1.018,1.018,0,0,0,.64-.64,1,1,0,0,0-.14-.9Zm-5.8-3.053-5,5a1,1,0,0,1-1.414,0l-3-3a1,1,0,1,1,1.414-1.414L11,13.586l4.293-4.293a1,1,0,0,1,1.414,1.414Z"/></g></svg></span>
+                          <button onClick={() => setShowModal(index) }><small>Edit</small></button>
+                          
                           </div>
                           <div class="flex w-full mt-1">
                               <div class="text-blue-700 font-base text-xs mr-1 cursor-pointer">
@@ -98,7 +100,7 @@ const UserPosts = () => {
                   <div class="border-b border-gray-100 p-4"></div>
         
                   <div class="text-gray-600 font-semibold  mb-2 mx-3 px-2" >User's Random Post</div>
-                  <div class="text-gray-500 text-sm mb-6 mx-3 px-2">Love and gratitude to both The Prime Minister, The Honorable Mia Amor Mottley and our President, Her Excellency The Most Honorable Dame Sandra Mason for trusting me with this honor!</div>
+                  <div class="text-gray-500 text-sm mb-6 mx-3 px-2">{ar.description}</div>
                   <div class="flex justify-start mb-4 border-t border-gray-100">
                       <div class="flex w-full mt-1 pt-2 pl-5">                         
                       </div>

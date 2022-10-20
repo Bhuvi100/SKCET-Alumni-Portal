@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Country from '../pages/Country'
 const UpdateProfile = () => {
   return (
     <form style = {{margin : "5rem" }} className = "m-5 p-5 border border-gray-300">
@@ -28,12 +28,10 @@ const UpdateProfile = () => {
               
 
               <div class="col-span-6 sm:col-span-3">
-                <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
-                <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                  <option>United States</option>
-                  <option>Canada</option>
-                  <option>Mexico</option>
-                </select>
+                <label for="ad1" class="block mb-2 text-black dark:text-gray-900">Country</label>
+                <div class="mt-2.5">
+                  <Country/>
+                </div>
               </div>
 
               <div class="col-span-6 sm:col-span-3 lg:col-span-3">
