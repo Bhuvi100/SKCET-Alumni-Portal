@@ -4,7 +4,7 @@ import Login from './Login';
 import Register from "./Register"
 import Home from './Home';
 import Landing from './Landing';
-import Profile from "../components/Profile";
+import Profile from "./Profile";
 import ProfileNew from './Profie';
 import SuccessStoriesForm from '../components/SuccessStoriesForm';
 import JobOpportunities from '../components/JobOpportunities';
@@ -18,8 +18,8 @@ import MentorForm from '../components/MentorForm';
 import GuestSpeakerForm from '../components/GuestSpeakerForm';
 import Members from '../components/Members';
 import Gallery from '../components/Gallery';
-import ProfileUpdate from './UpdateProfile';
-import UpdateProfile from './UpdateProfile';
+import UpdateProfile from '../components/UpdateProfile';
+
 
 const Base = () => {
   return (
@@ -117,8 +117,13 @@ const Base = () => {
 
           <Route
             path='/profile'
+            element={<Profile />}
+          />
+          <Route
+            path='/updateprofile'
             element={<UpdateProfile />}
           />
+          
           
           </Routes>
     </div>

@@ -5,7 +5,7 @@ import ExtraInfo from "../components/Profile Components/ExtraInfo";
 import UserInfo from "../components/Profile Components/UserInfo";
 import UserPosts from "../components/UserPosts";
 
-export default function UpdateProfile(){
+export default function Profile(){
     return(
         <div className="w-full">
         <HomeNav />
