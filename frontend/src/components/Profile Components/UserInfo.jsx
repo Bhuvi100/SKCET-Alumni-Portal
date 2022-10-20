@@ -9,7 +9,11 @@ const UserInfo = () => {
             src="/assets/user.png"
             alt=""/>
     </div>
+    <div className='flex flex-row justify-between'>
     <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">User One</h1>
+    <button ><small>Edit</small></button>
+    </div>
+    
     <h3 class="text-gray-600 font-lg text-semibold leading-6">Owner at Her Company Inc.</h3>
     <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
         consectetur adipisicing elit.
