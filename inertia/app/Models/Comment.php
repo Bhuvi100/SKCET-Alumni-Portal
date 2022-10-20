@@ -23,5 +23,10 @@ class Comment extends Model
         return $this->belongsTo(Post::class);
     }
 
+    public function replies()
+    {
+        return $this->hasMany(Comment::class,'comment_id');
+    }
+
     use HasFactory;
 }

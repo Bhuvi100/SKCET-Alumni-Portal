@@ -60,9 +60,16 @@ Route::get('/importUsers', function () {
 })->name('importUsers');
 Route::post('/uploadUsers', [\App\Http\Controllers\ProfileController::class, 'uploadUsers'])->name('uploadUsers');
 
-// post and comments
+// adding/update post and comments
 Route::post('/addPost', [\App\Http\Controllers\PostController::class, 'store'])->name('addPost');
-Route::post('/post/addComment/{post}', [\App\Http\Controllers\CommentController::class, 'store'])->name('addComment');
+Route::post('/updatePost/{post}', [\App\Http\Controllers\PostController::class, 'update'])->name('updatePost');
+
+Route::get('/Posts', [\App\Http\Controllers\PostController::class, 'index'])->name('Posts');
+Route::get('/MyPosts', function () {
+    return Inertia::render('MyPosts');
+})->name('MyPosts');
+Route::get('/getComment/{post}', [\App\Http\Controllers\CommentController::class, 'index'])->name('getComment');
+Route::post('/addComment/{post}', [\App\Http\Controllers\CommentController::class, 'store'])->name('addComment');
 
 
 require __DIR__.'/auth.php';
