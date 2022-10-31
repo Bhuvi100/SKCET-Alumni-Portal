@@ -77,3 +77,29 @@ Route::post('/addComment/{post}', [\App\Http\Controllers\CommentController::clas
 
 
 require __DIR__.'/auth.php';
+
+
+
+Route::get('/members', function () {
+    return Inertia::render('Members');
+});
+
+Route::get('/objectives', function () {
+    return Inertia::render('Objectives');
+});
+
+Route::get('/gallery', function () {
+    return Inertia::render('Gallery');
+});
+
+Route::get('/job', function () {
+    return Inertia::render('JobForm');
+});
+
+Route::get('/guestspeaker', function () {
+    return Inertia::render('GuestSpeakerform');
+});
+
+Route::get('/mediumofinstruction', function () {
+    return Inertia::render('MediumOfInstructionForm');
+});

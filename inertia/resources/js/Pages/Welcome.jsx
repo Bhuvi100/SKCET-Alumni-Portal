@@ -1,3 +1,4 @@
+import Members from "@/Components/Members";
 import React from "react";
 import IndexFooter from "../Components/IndexFooter";
 import IndexHeader from "../Components/IndexHeader";
@@ -7,9 +8,9 @@ import SuccessStories from "../Components/SuccessStories";
 const Landing = () => {
     return (
         <div>
-            <IndexHeader />
+            <IndexHeader />      
+            <Members />
             <StarAlumni />
-            <SuccessStories />
             <IndexFooter />
         </div>
     );
