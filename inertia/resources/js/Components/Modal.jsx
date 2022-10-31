@@ -1,60 +1,113 @@
-// import React from 'react'
-// import { useState } from 'react'
+import React from 'react'
+import { useState,useEffect } from 'react'
+import { Inertia } from '@inertiajs/inertia';
+import { Link } from "@inertiajs/inertia-react";
+import { InertiaLink, useForm } from "@inertiajs/inertia-react";
+// import axios from '../utils/axios';
+import axios from '@/utils/axios';
 
-// const Modal = () => {
-//     const [mod,setMod] = useState(false)
-//   return (
-//     <div>
+const Modal = (props) => {
+   
+    const { data, setData, setDefaults, errors, post, reset, transform } = useForm({
+        title: props.data.title,
+        description:props.data.description
+     });
+     
+     function handleSubmit(e) {
+      e.preventDefault();
 
-// <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="authentication-modal" onClick={() => setMod(true)}>
-//   Toggle modal
-// </button>
-// {
-//     mod && <>
-//     <div tabindex="-1" aria-hidden="true" class=" overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
-//     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-      
-//         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-//             <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal" onClick={() => setMod(false)}>
-//                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-//                 <span class="sr-only">Close modal</span>
-//             </button>
-//             <div class="py-6 px-6 lg:px-8">
-//                 <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
-//                 <form class="space-y-6" action="#">
-//                     <div>
-//                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-//                         <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required="" />
-//                     </div>
-//                     <div>
-//                         <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
-//                         <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="" />
-//                     </div>
-//                     <div class="flex justify-between">
-//                         <div class="flex items-start">
-//                             <div class="flex items-center h-5">
-//                                 <input id="remember" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="" />
-//                             </div>
-//                             <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-//                         </div>
-//                         <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-//                     </div>
-//                     <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
-//                     <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-//                         Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-//                     </div>
-//                 </form>
-//             </div>
-//         </div>
-//     </div>
-// </div> 
-//     </>
+    
+       console.log(props.data.title)
+       console.log(props.data.pid);
+        
+        post(route('updatePost',`${props.data.id}`, {
+          onSuccess: (res) => {
+            console.log(
+              "sucessfull"
+            );
+        onFinish: () => props.setShowModal(false);
+    
+          }
+        }));
+        console.log(pid);
+        
+      }
+  return (
+    <div>
+        
 
-// }
+        <>
+          <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+>
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+              {/*content*/}
 
 
-//     </div>
-//   )
-// }
 
-// export default Modal
+        <form onSubmit={handleSubmit} >
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                {/*header*/}
+            
+                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                  <h3 className="text-3xl font-semibold">
+                    Update post
+                  </h3>
+                  {/* <button
+                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setShowModal(false)
+                    }>
+                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                    </span>
+                  </button> */}
+                </div>
+                {/*body*/}
+                {}
+                    <div class="editor mx-auto w-full flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl ">
+                        <input class="title w-full bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false"  placeholder="Title" type="text"
+                        name="title"
+                        onChange={(e) => {
+                          setData("title", e.target.value)
+                          console.log(dtitle + ddescription) }
+                         }
+                         defaultValue={props.data.title}
+                      
+                        />
+                        <textarea class="w-96 bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none" spellcheck="false" placeholder="Describe everything about this post here" 
+                        name="description" defaultValue ={props.data.description}
+                        onChange={(e) =>
+                          setData("description", e.target.value)
+                         }
+                         ></textarea>
+                    </div>
+
+                    <div class="icons flex text-gray-500 m-2">
+                        <label>
+                        <svg class="mr-2 cursor-pointer hover:text-gray-700 border rounded-full p-1 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" /></svg>
+                        <input type="file" accept=".png, .jpg, .jpeg" class="hidden"></input>
+                        </label>
+                    </div>
+                {/*footer*/}
+                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                  <button
+                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button" onClick={() => props.setShowModal(false)}>Close </button>
+                  <button
+                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="submit" 
+                    >Save Changes </button>
+                </div>
+              </div>
+       </form>
+
+
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+    
+    </div>
+  )
+}
+
+export default Modal

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@inertiajs/inertia-react";
 import UserPosts from "@/Components/UserPosts";
 
-const MyPosts = () => {
+const MyPosts = ({posts}) => {
     return(
         <UserPosts  />
     )

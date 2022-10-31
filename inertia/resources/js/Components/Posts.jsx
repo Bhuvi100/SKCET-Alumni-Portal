@@ -1,13 +1,39 @@
 import React from 'react'
+import { InertiaLink, useForm } from "@inertiajs/inertia-react";
 
 const Posts = () => {
-  
+
+  const { data, setData, errors, post } = useForm({
+    title: "",
+    description: "",
+ });
+ 
+ function handleSubmit(e) {
+    e.preventDefault();
+    post(route("addPost", {
+      onSuccess: (res) => {
+        console.log(
+          "sucessfull"
+        );
+      }
+    }));
+ }
+
   return (
     <div>
-      <form class="bg-white shadow rounded-lg mb-5 p-4 w-full md:w-full">
+      <form class="bg-white shadow rounded-lg mb-5 p-4 w-full md:w-full"  onSubmit={handleSubmit}>
+    
     <h2 class="mb-1 font-medium mb-3">Start a post</h2>
-    <input type = "text" name = "head" placeholder = "Enter Title" class=" focus:outline-none  w-full rounded-lg p-2 mb-3 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400" />
-              <textarea name="message" placeholder="Type something..." class=" focus:outline-none  w-full rounded-lg p-2 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400"></textarea>
+    <input type = "text" name = "title" placeholder = "Enter Title" class=" focus:outline-none  w-full rounded-lg p-2 mb-3 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400" 
+                onChange={(e) =>
+                  setData("title", e.target.value)
+              }
+    />
+              <textarea name="description" placeholder="Type something..." class=" focus:outline-none  w-full rounded-lg p-2 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400"
+                  onChange={(e) =>
+                    setData("description", e.target.value)
+                } 
+                  ></textarea>
               <footer class="flex justify-between mt-2">
                   <div class="flex gap-2">
                       <span class="flex items-center transition ease-out duration-300 hover:bg-blue-500 hover:text-white bg-blue-100 w-8 h-8 px-2 rounded-full text-blue-400 cursor-pointer">
@@ -22,7 +48,7 @@ const Posts = () => {
   </svg>
                       </span>
                   </div>
-                  <button class="flex items-center py-2 px-4 rounded-lg text-sm bg-blue-600 text-white shadow-lg                 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800
+                  <button type="submit" class="flex items-center py-2 px-4 rounded-lg text-sm bg-blue-600 text-white shadow-lg                 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800
   ">Post
                       <svg class="ml-1" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                   </button>

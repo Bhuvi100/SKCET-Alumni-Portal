@@ -58,7 +58,18 @@ class PostController extends Controller
  
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title' => 'required|string',
+            'description' => 'required|string',
+        ]);
+    
+   
+        $post->title = $request->title;
+        $post->description = $request->description;
+        $post->update();
+
+    
+        return redirect(RouteServiceProvider::HOME);
     }
 
 

@@ -37,12 +37,13 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-
+// profile
 Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
 Route::get('/updateProfile', function () {
     return Inertia::render('UpdateProfile');
 })->name('updateProfile');
 
+// forms ->->-> generalQuery successStory mentorForm
 Route::get('/generalQuery', function () {
     return Inertia::render('QueriesForm');
 })->name('generalQuery');
@@ -68,8 +69,11 @@ Route::get('/Posts', [\App\Http\Controllers\PostController::class, 'index'])->na
 Route::get('/MyPosts', function () {
     return Inertia::render('MyPosts');
 })->name('MyPosts');
+
+
 Route::get('/getComment/{post}', [\App\Http\Controllers\CommentController::class, 'index'])->name('getComment');
 Route::post('/addComment/{post}', [\App\Http\Controllers\CommentController::class, 'store'])->name('addComment');
+
 
 
 require __DIR__.'/auth.php';
