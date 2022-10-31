@@ -18,13 +18,13 @@ const MentorForm = (props) => {
 
 function handleSubmit(e) {
    e.preventDefault();
-   post(route("mentorFormSubmit", {
+   post(route("mentorFormSubmit"), {
      onSuccess: (res) => {
        console.log(
          "sucessfull"
        );
      }
-   }));
+   });
 }
 
 

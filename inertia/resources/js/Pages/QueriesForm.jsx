@@ -15,13 +15,13 @@ const QueriesForm = () => {
 
 function handleSubmit(e) {
     e.preventDefault();
-    post(route("generalQuerySubmit", {
+    post(route("generalQuerySubmit"), {
       onSuccess: (res) => {
         console.log(
           "sucessfull"
         );
       }
-    }));
+    });
 }
   
 
