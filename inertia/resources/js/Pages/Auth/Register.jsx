@@ -51,6 +51,24 @@ function Register() {
         post(route("register"));
     }
 
+    const checkEmail = (e) => {
+        post(route("validate_email"), {
+            onSuccess: (e) => {
+                setEmailNotFound(false);
+                setEmailNotSigned(false);
+            },
+            onError: (res) => {
+                setEmailNotFound(false);
+                setEmailNotSigned(false);
+                if (res.email === email_not_found) {
+                    setEmailNotFound(true);
+                } else if (res.email === email_not_signed) {
+                    setEmailNotSigned(true);
+                }
+            },
+        });
+    };
+
     const validateInput = (e) => {
         let { name, value } = e.target;
         setError((prev) => {

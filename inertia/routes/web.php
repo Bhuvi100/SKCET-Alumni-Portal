@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use Illuminate\Foundation\Auth\EmailVerificationRequest;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +22,7 @@ Route::get('/email/verify', function () {
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
- 
+
     return redirect('/home');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
@@ -33,15 +35,16 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth', 'verified'])->group(function() {
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
 
-// profile
-Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
-Route::get('/updateProfile', function () {
-    return Inertia::render('UpdateProfile');
-})->name('updateProfile');
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
+    Route::get('/profile/{user}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+});
+
+
 
 // forms ->->-> generalQuery successStory mentorForm
 Route::get('/generalQuery', function () {
