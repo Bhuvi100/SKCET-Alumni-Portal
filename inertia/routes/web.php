@@ -51,7 +51,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
 
 
 // forms ->->-> generalQuery successStory mentorForm
-Route::get('/generalQuery', function () {
+Route::get('/queries', function () {
     return Inertia::render('QueriesForm');
 })->name('generalQuery');
 Route::post('/generalQuerySubmit', [\App\Http\Controllers\GeneralQueryController::class, 'store'])->name('generalQuerySubmit');
@@ -109,4 +109,8 @@ Route::get('/guestspeaker', function () {
 
 Route::get('/mediumofinstruction', function () {
     return Inertia::render('MediumOfInstructionForm');
+});
+
+Route::get('/chats', function () {
+    return Inertia::render('Chats');
 });

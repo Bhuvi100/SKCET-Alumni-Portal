@@ -109,16 +109,15 @@ const UserPosts = (props) => {
                     </div>
                     <div class="border-b border-gray-100 p-4"></div>
 
-                    <div class="text-gray-600 font-semibold  mb-2 mx-3 px-2">
+                    <div class="text-gray-600 font-semibold mt-2  mb-2 mx-3 px-2">
                         {posts.title}
                     </div>
                     <div class="text-gray-500 text-sm mb-6 mx-3 px-2">
                         {posts.description}
                     </div>
-                    <div class="flex justify-start mb-4 border-t border-gray-100">
-                        <div class="flex w-full mt-1 pt-2 pl-5"></div>
-                        <div class="flex justify-end w-full mt-1 pt-2 pr-5">
-                            <span class="transition ease-out duration-300 hover:bg-blue-50 bg-blue-100 w-8 h-8 px-2 py-2 text-center rounded-full text-blue-400 cursor-pointer mr-2">
+                    <div class="flex w-full border-t border-gray-100">
+                        <div class="mx-4 mt-2 flex flex-row"><span
+                            className="transition ease-out duration-300 hover:bg-blue-50 bg-blue-100 w-8 h-8 px-2 py-2 text-center rounded-full text-blue-400 cursor-pointer mr-2">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -135,7 +134,7 @@ const UserPosts = (props) => {
                                 </svg>
                             </span>
                             <span
-                                class="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer"
+                                className="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer"
                                 onClick={() => {
                                     setTr(!tr);
                                     tr ? setLiked("blue") : setLiked("none");
@@ -147,7 +146,7 @@ const UserPosts = (props) => {
                                     viewBox="0 0 24 24"
                                     stroke-width="1.5"
                                     stroke="blue"
-                                    class="w-6 h-6"
+                                    className="w-6 h-6"
                                 >
                                     <path
                                         stroke-linecap="round"
@@ -155,10 +154,7 @@ const UserPosts = (props) => {
                                         d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z"
                                     />
                                 </svg>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="flex w-full border-t border-gray-100">
+                            </span></div>
                         <div class="mt-3 mx-5 flex flex-row text-xs">
                             <button
                                 class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center"
@@ -167,14 +163,14 @@ const UserPosts = (props) => {
                                 Comments:
                                 <div class="ml-1 text-gray-400 text-ms">
                                     {" "}
-                                    30
+                                    0
                                 </div>
                             </button>
                             <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">
                                 Likes{" "}
                                 <div class="ml-1 text-gray-400 text-ms">
                                     {" "}
-                                    60k
+                                    0
                                 </div>
                             </div>
                         </div>

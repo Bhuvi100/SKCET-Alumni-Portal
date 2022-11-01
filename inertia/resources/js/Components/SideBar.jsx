@@ -114,6 +114,7 @@ export default function SideBar() {
                                         </span>
                                     </a>
                                 </li>
+
                                 <li>
                                     <a
                                         href="#"
@@ -176,7 +177,7 @@ export default function SideBar() {
                                 </li>
                                 <li>
                                     <a
-                                        href="#"
+                                        href="/chats"
                                         class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"

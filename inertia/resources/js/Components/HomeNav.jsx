@@ -46,7 +46,7 @@ const HomeNav = ({ auth }) => {
                             <li>
                                 {" "}
                                 <img
-                                    src={auth?.picture_url}
+                                    src="http://127.0.0.1:8000/storage/images/users/photo-1535713875002-d1d0cf377fde.webp"
                                     className="rounded-full h-25 w-10 mr-3"
                                 />
                             </li>
