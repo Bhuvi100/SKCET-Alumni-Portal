@@ -87,10 +87,10 @@ const IndexHeader = () => {
                 </svg>
                 <p class="leading-relaxed mb-6">Reconnect and Relive - To reconnect with the peers and buds who blossomed together in the SKCET campus and relive the golden moments from the memoire which tunes the rhythm of their successors with Global significance.</p>
                 <div class="inline-flex items-center">
-                  <img alt="testimonial" src="/assets/Principal.jpg" class="w-36 h-36 rounded-full flex-shrink-0 object-center" />
+                  <img alt="testimonial" src="/assets/Aadthiya.jpg" class="w-36 h-36 rounded-full flex-shrink-0 object-center" />
                   <span class="flex-grow flex flex-col pl-4">
-                    <span class="title-font font-medium text-gray-900 ">Smt. J. Janet , Principal</span>
-                    <span class="text-gray-500 text-sm">Sri Krishna College of Engineering and Technology</span>
+                    <span class="title-font font-medium text-gray-900 ">Shri K . Adhithya, Trustee</span>
+                    <span class="text-gray-500 text-sm">Sri Krishna Institutions</span>
                   </span>
                 </div>
               </div>
