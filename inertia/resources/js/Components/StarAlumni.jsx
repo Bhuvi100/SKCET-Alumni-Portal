@@ -29,8 +29,21 @@ const StarAlumni = () => {
           disableOnInteraction: false,
         }}
         pagination={{
-            
           clickable: true,
+        }}
+        breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
         }}
         modules={[Autoplay, Pagination, Navigation]}
        className="text-white"
@@ -92,7 +105,7 @@ const StarAlumni = () => {
                 </div>
                     <div class="card-content">
                         <h2 class="name">S.Priyadarshini,IAS</h2>
-                        <p class="description">EEE (2005 - 2009 Batch)</p>
+                        <p class="description">ECE (2005 - 2009 Batch)</p>
                         <p class="description">Asst. Magistrate & Asst. Colllector, Office of District Magistrate</p>
                         <p class="description">Kolkata</p>                    
                     </div>
@@ -217,3 +230,4 @@ const StarAlumni = () => {
 }
 
 export default StarAlumni
+
