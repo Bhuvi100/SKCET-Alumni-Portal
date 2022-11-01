@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use Illuminate\Foundation\Auth\EmailVerificationRequest;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +22,7 @@ Route::get('/email/verify', function () {
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
- 
+
     return redirect('/home');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
@@ -33,16 +35,18 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth', 'verified'])->group(function() {
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
+    Route::get('/profile/{user}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+});
 
 
-Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
-Route::get('/updateProfile', function () {
-    return Inertia::render('UpdateProfile');
-})->name('updateProfile');
 
+// forms ->->-> generalQuery successStory mentorForm
 Route::get('/generalQuery', function () {
     return Inertia::render('QueriesForm');
 })->name('generalQuery');
@@ -60,9 +64,45 @@ Route::get('/importUsers', function () {
 })->name('importUsers');
 Route::post('/uploadUsers', [\App\Http\Controllers\ProfileController::class, 'uploadUsers'])->name('uploadUsers');
 
-// post and comments
+// adding/update post and comments
 Route::post('/addPost', [\App\Http\Controllers\PostController::class, 'store'])->name('addPost');
-Route::post('/post/addComment/{post}', [\App\Http\Controllers\CommentController::class, 'store'])->name('addComment');
+Route::post('/updatePost/{post}', [\App\Http\Controllers\PostController::class, 'update'])->name('updatePost');
+
+Route::get('/Posts', [\App\Http\Controllers\PostController::class, 'index'])->name('Posts');
+Route::get('/MyPosts', function () {
+    return Inertia::render('MyPosts');
+})->name('MyPosts');
+
+
+Route::get('/getComment/{post}', [\App\Http\Controllers\CommentController::class, 'index'])->name('getComment');
+Route::post('/addComment/{post}', [\App\Http\Controllers\CommentController::class, 'store'])->name('addComment');
+
 
 
 require __DIR__.'/auth.php';
+
+
+
+Route::get('/members', function () {
+    return Inertia::render('Members');
+});
+
+Route::get('/objectives', function () {
+    return Inertia::render('Objectives');
+});
+
+Route::get('/gallery', function () {
+    return Inertia::render('Gallery');
+});
+
+Route::get('/job', function () {
+    return Inertia::render('JobForm');
+});
+
+Route::get('/guestspeaker', function () {
+    return Inertia::render('GuestSpeakerform');
+});
+
+Route::get('/mediumofinstruction', function () {
+    return Inertia::render('MediumOfInstructionForm');
+});

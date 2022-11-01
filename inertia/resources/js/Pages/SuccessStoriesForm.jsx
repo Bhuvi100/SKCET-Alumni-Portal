@@ -16,7 +16,7 @@ const SuccessStoriesForm = (props) => {
  
  function handleSubmit(e) {
     e.preventDefault();
-    post(route("successStorySubmit", {
+    post(route("successStorySubmit"), {
       onSuccess: (res) => {
         console.log(
           "sucessfull"
@@ -24,7 +24,7 @@ const SuccessStoriesForm = (props) => {
       }
     }), {
       forceFormData: true,
-    });
+    };
  }
   
 

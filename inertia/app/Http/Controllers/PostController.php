@@ -1,19 +1,23 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Providers\RouteServiceProvider;
 
+
 class PostController extends Controller
 {
 
     public function index()
-    {
-        //
+    {   
+        $posts = Post::with('user')->get();
+        return  response()->json([
+            "posts" => $posts
+        ]); 
+   
     }
+
 
 
     public function create()
@@ -54,7 +58,18 @@ class PostController extends Controller
  
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title' => 'required|string',
+            'description' => 'required|string',
+        ]);
+    
+   
+        $post->title = $request->title;
+        $post->description = $request->description;
+        $post->update();
+
+    
+        return redirect(RouteServiceProvider::HOME);
     }
 
 

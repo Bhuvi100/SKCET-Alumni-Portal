@@ -1,162 +1,95 @@
 import React from 'react'
-
 const Profile = () => {
   return (
-    <div style = {{margin : "2rem"}}>
-      <div>
-  <div class="md:grid md:grid-cols-3 md:gap-6">
-    <div class="md:col-span-1">
-      <div class="px-4 sm:px-0">
-        <h3 class="text-lg font-medium leading-6 text-gray-900">Profile</h3>
-        <p class="mt-1 text-sm text-gray-600">This information will be displayed publicly so be careful what you share.</p>
-      </div>
+   
+<main class="profile-page">
+  <section class="relative block h-500-px">
+    <div class="absolute top-0 w-full h-full bg-center bg-cover" >
+      <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
     </div>
-    <div class="mt-5 md:col-span-2 md:mt-0">
-      <form action="#" method="POST">
-        <div class="shadow sm:overflow-hidden sm:rounded-md">
-          <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
-            <div class="grid grid-cols-3 gap-6">
-              <div class="col-span-3 sm:col-span-2">
-                <label for="company-website" class="block text-sm font-medium text-gray-700">Website</label>
-                <div class="mt-1 flex rounded-md shadow-sm">
-                  <span class="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">http://</span>
-                  <input type="text" name="company-website" id="company-website" class="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="www.example.com" />
+    <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style={{transform: 'translateZ(0)'}}>
+      <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+        <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+  <section class="relative py-16 bg-blueGray-200">
+    <div class="container mx-auto px-4">
+      <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+        <div class="px-6">
+          <div class="flex flex-wrap justify-center">
+            <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+              <div class="relative">
+                <img alt="..." src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px" />
+              </div>
+            </div>
+            <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
+              <div class="py-6 px-3 mt-32 sm:mt-0">
+                <button class="bg-pink-500 active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
+                  Connect
+                </button>
+              </div>
+            </div>
+            <div class="w-full lg:w-4/12 px-4 lg:order-1">
+              <div class="flex justify-center py-4 lg:pt-4 pt-8">
+                <div class="mr-4 p-3 text-center">
+                  <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">22</span><span class="text-sm text-blueGray-400">Friends</span>
                 </div>
-              </div>
-            </div>
-
-            <div>
-              <label for="about" class="block text-sm font-medium text-gray-700">About</label>
-              <div class="mt-1">
-                <textarea id="about" name="about" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="you@example.com"></textarea>
-              </div>
-              <p class="mt-2 text-sm text-gray-500">Brief description for your profile. URLs are hyperlinked.</p>
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-gray-700">Photo</label>
-              <div class="mt-1 flex items-center">
-                <span class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
-                  <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </span>
-                <button type="button" class="ml-5 rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Change</button>
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-gray-700">Cover photo</label>
-              <div class="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
-                <div class="space-y-1 text-center">
-                  <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                  <div class="flex text-sm text-gray-600">
-                    <label for="file-upload" class="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500">
-                      <span>Upload a file</span>
-                      <input id="file-upload" name="file-upload" type="file" class="sr-only" />
-                    </label>
-                    <p class="pl-1">or drag and drop</p>
-                  </div>
-                  <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                <div class="mr-4 p-3 text-center">
+                  <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">10</span><span class="text-sm text-blueGray-400">Photos</span>
+                </div>
+                <div class="lg:mr-4 p-3 text-center">
+                  <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">89</span><span class="text-sm text-blueGray-400">Comments</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
-            <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
+          <div class="text-center mt-12">
+            <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+              Jenna Stones
+            </h3>
+            <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+              <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
+              Los Angeles, California
+            </div>
+            <div class="mb-2 text-blueGray-600 mt-10">
+              <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>Solution Manager - Creative Tim Officer
+            </div>
+            <div class="mb-2 text-blueGray-600">
+              <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i>University of Computer Science
+            </div>
+          </div>
+          <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
+            <div class="flex flex-wrap justify-center">
+              <div class="w-full lg:w-9/12 px-4">
+                <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
+                  An artist of considerable range, Jenna the name taken by
+                  Melbourne-raised, Brooklyn-based Nick Murphy writes,
+                  performs and records all of his own music, giving it a
+                  warm, intimate feel with a solid groove structure. An
+                  artist of considerable range.
+                </p>
+                <a href="#pablo" class="font-normal text-pink-500">Show more</a>
+              </div>
+            </div>
           </div>
         </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<div class="hidden sm:block" aria-hidden="true">
-  <div class="py-5">
-    <div class="border-t border-gray-200"></div>
-  </div>
-</div>
-
-<div class="mt-10 sm:mt-0">
-  <div class="md:grid md:grid-cols-3 md:gap-6">
-    <div class="md:col-span-1">
-      <div class="px-4 sm:px-0">
-        <h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
-        <p class="mt-1 text-sm text-gray-600">Use a permanent address where you can receive mail.</p>
-        <div class = "mt-16">
-                <img class="object-center object-cover rounded-full h-50 w-50" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="photo"/>
-            </div>
       </div>
     </div>
-    <div class="mt-5 md:col-span-2 md:mt-0">
-      <form action="#" method="POST">
-        <div class="overflow-hidden shadow sm:rounded-md">
-          <div class="bg-white px-4 py-5 sm:p-6">
-            <div class="grid grid-cols-6 gap-6">
-              <div class="col-span-6 sm:col-span-3">
-                <label for="first-name" class="block text-sm font-medium text-gray-700">First name</label>
-                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
-              </div>
-
-              <div class="col-span-6 sm:col-span-3">
-                <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
-                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
-              </div>
-
-              <div class="col-span-6 sm:col-span-4">
-                <label for="email-address" class="block text-sm font-medium text-gray-700">Email address</label>
-                <input type="text" name="email-address" id="email-address" autocomplete="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
-              </div>
-
-              <div class="col-span-6 sm:col-span-3">
-                <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
-                <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                  <option>United States</option>
-                  <option>Canada</option>
-                  <option>Mexico</option>
-                </select>
-              </div>
-
-              <div class="col-span-6">
-                <label for="street-address" class="block text-sm font-medium text-gray-700">Street address</label>
-                <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
-              </div>
-
-              <div class="col-span-6 sm:col-span-6 lg:col-span-2">
-                <label for="city" class="block text-sm font-medium text-gray-700">City</label>
-                <input type="text" name="city" id="city" autocomplete="address-level2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
-              </div>
-
-              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                <label for="region" class="block text-sm font-medium text-gray-700">State / Province</label>
-                <input type="text" name="region" id="region" autocomplete="address-level1" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
-              </div>
-
-              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                <label for="postal-code" class="block text-sm font-medium text-gray-700">ZIP / Postal code</label>
-                <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
-              </div>
-            </div>
-          </div>
-          <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
-            <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
-          </div>
+    <footer class="relative bg-blueGray-200 pt-8 pb-6 mt-8">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap items-center md:justify-between justify-center">
+      <div class="w-full md:w-6/12 px-4 mx-auto text-center">
+        <div class="text-sm text-blueGray-500 font-semibold py-1">
+          Made with <a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank">Notus JS</a> by <a href="https://www.creative-tim.com" class="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Creative Tim</a>.
         </div>
-      </form>
+      </div>
     </div>
   </div>
-</div>
-
-<div class="hidden sm:block" aria-hidden="true">
-  <div class="py-5">
-    <div class="border-t border-gray-200"></div>
-  </div>
-</div>
-
-
-    </div>
+</footer>
+  </section>
+  
+</main>
   )
 }
 
