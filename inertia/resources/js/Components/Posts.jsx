@@ -10,13 +10,13 @@ const Posts = () => {
  
  function handleSubmit(e) {
     e.preventDefault();
-    post(route("addPost", {
+    post(route("addPost"), {
       onSuccess: (res) => {
         console.log(
           "sucessfull"
         );
       }
-    }));
+    });
  }
 
   return (
