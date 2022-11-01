@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const HomeNav = () => {
+const HomeNav = ({ auth }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div class="mb-4">
@@ -46,7 +46,7 @@ const HomeNav = () => {
                             <li>
                                 {" "}
                                 <img
-                                    src="/assets/person.jpg"
+                                    src={auth?.picture_url}
                                     className="rounded-full h-25 w-10 mr-3"
                                 />
                             </li>
