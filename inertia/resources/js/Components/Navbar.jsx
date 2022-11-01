@@ -21,6 +21,15 @@ const Navbar = () => {
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/gallery">Gallery</a>
             </li>
+            <li>
+            <div class="w-full mt-1">
+                <a
+                    target="_blank"
+                   href="assets/Magazine 2018.pdf"
+                   className='text-black bg-white m-4 p-3 rounded'
+                   >Magazine 2018</a>
+   </div>
+            </li>
             <li class="dropdown">
               <button class="dropbtn">Services</button>
               <div class="dropdown-content">
@@ -29,6 +38,7 @@ const Navbar = () => {
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="https://www.skcet.ac.in/pdf/coe/APPLICATION_FOR_TRANSCRIPTS_2021.pdf" target="blank">Academic Transcript Form</a>
               </div>
             </li>
+
 
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/objectives">Objectives</a>
