@@ -12,7 +12,7 @@ const UserPosts = () => {
         <div class="bg-white shadow rounded-lg pb-4 mt-7">
                   <div class="flex flex-row px-2 py-3 mx-3">
                       <div class="w-auto h-auto rounded-full border-2 border-green-500">
-                          <img class="w-12 h-12 object-cover rounded-full shadow cursor-pointer" alt="User avatar" src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=200&amp;q=200"/>
+                          <img class="w-12 h-12 object-cover rounded-full shadow cursor-pointer" alt="" src="/assets/person.jpg"/>
                       </div>
                       <div class="flex flex-col mb-2 ml-4 mt-1">
                           <div class="flex text-gray-600 text-sm font-semibold"><span class="flex-1 flex-shrink-0">Sara_Lauren</span>
@@ -203,7 +203,7 @@ const UserPosts = () => {
 </section>
 }
                   <div class="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400">
-                      <img class="w-10 h-10 object-cover rounded-full shadow mr-2 cursor-pointer" alt="User avatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2000&amp;q=80"/>
+                      <img class="w-10 h-10 object-cover rounded-full shadow mr-2 cursor-pointer" alt="User avatar" src="/assets/person.jpg"/>
                       <span class="absolute inset-y-0 right-0 flex items-center pr-6">
                           <button type="submit" class="p-1 focus:outline-none focus:shadow-none hover:text-blue-500">
                           <svg class="w-6 h-6 transition ease-out duration-300 hover:text-blue-500 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
