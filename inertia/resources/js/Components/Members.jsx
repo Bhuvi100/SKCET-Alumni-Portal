@@ -109,7 +109,7 @@ const Members = () => {
             </h1>
           </div>
 
-          <div className="flex align-center justify-center flex-row m-5">
+          <div className="flex align-center justify-center flex-row mx-12">
 
           
 

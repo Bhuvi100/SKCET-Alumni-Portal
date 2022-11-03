@@ -38,15 +38,15 @@ function handleSubmit(e) {
          <div class="grid gap-6 mb-6 lg:grid-cols-2 mt-2">
             <div>
                <label for="name" class="block mb-2 text-black font-bold">Full Name</label>
-               <input type="text" placeholder={props.auth.name} class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+               <input type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
             <div>
                <label for="email" class="block mb-2 text-black font-bold">Email</label>
-               <input type="email" placeholder={props.auth.email} class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+               <input type="email" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
             <div>
                <label for="mobile" class="block mb-2 text-black font-bold">Mobile Number</label>
-               <input type="tel" placeholder={props.auth.phone} class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+               <input type="tel" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
             <div>
                 <label for="method_of_guidance" class="block mb-2 text-black font-bold">Method Of Guidance</label>
