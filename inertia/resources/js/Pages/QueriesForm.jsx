@@ -26,65 +26,67 @@ function handleSubmit(e) {
   
 
   return (
-    <div id="bg">
+    <div id="bg" class="pt-12">
   
-    <div class="max-w-2xl  mx-auto bg-slate-200 p-5 mt-5">
-  <div class="flex flex-col justify-center items-center h-12 text-3xl font-extrabold bg-blue-600 mb-2 mt-5" style = {{display : "flex", justifyContent : "center" ,alignItems : "center"}}>
-       <h3 class="text-lg text-white">General Queries</h3>
+    <div class="max-w-2xl  mx-auto bg-white p-5 rounded-lg shadow-inner border-solid border-2 border-gray-100">
+    <div class="font-lg mb-2 mt-5" style = {{display : "flex", justifyContent : "center" ,alignItems : "center"}}>
+      <h4 class="text-2xl font-semibold mt-4 mb-4 pb-1">GENERAL
+         <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300">QUERIES</span>
+      </h4>
      </div>
      <form  onSubmit={handleSubmit}>
        
  
    <div >
-       <div>
-           <label for="name" class="block mb-2 text-black font-bold"> Name</label>
+       <div class="mt-4 mb-4">
+           <label for="name" class="block mb-2 text-black dark:text-gray-900"> Name</label>
            <input type="text" 
            name="name"
            value={data.name}
            onChange={(e) =>
                setData("name", e.target.value)
            }
-           class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+           class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
               <span className="text-red-600">
                                     {errors.name}
                                 </span>
        </div>
        
-        <div>
-           <label for="Mob" class="block mb-2 text-black font-bold">Mobile Number</label>
+        <div class="mt-4 mb-4">
+           <label for="Mob" class="block mb-2 text-black dark:text-gray-900">Mobile Number</label>
            <input type="text" 
            name="phone"
            value={data.phone}
            onChange={(e) =>
                setData("phone", e.target.value)
            }
-           class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+           class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
               <span className="text-red-600">
                                     {errors.phone}
                                 </span>
        </div>
-       <div>
-           <label for="subject" class="block mb-2 text-black font-bold">Subject</label>
+       <div class="mt-4 mb-4">
+           <label for="subject" class="block mb-2 text-black dark:text-gray-900">Subject</label>
            <input type="text" 
            name="subject"
            value={data.subject}
            onChange={(e) =>
                setData("subject", e.target.value)
            }
-           class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+           class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required/>
                <span className="text-red-600">
                                     {errors.subject}
                                 </span>
        </div>
-        <div>
-           <label for="job" class="block mb-2 text-black font-bold">Query</label>
+        <div class="mt-4 mb-4">
+           <label for="job" class="block mb-2 text-black dark:text-gray-900">Query</label>
            <textarea id="message" rows="4" 
            name="query"
            value={data.query}
            onChange={(e) =>
                setData("query", e.target.value)
            }
-           class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 mb-3 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Post your queries..."></textarea>
+           class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" placeholder="Post your queries..."></textarea>
 
                               <span className="text-red-600">
                                     {errors.query}
@@ -103,7 +105,7 @@ function handleSubmit(e) {
        </div>
        
    <div class="flex items-center justify-center">
-   <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+   <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm w-full sm:w-auto px-6 py-2.5 text-center mt-2" style={{ background: "linear-gradient(to right, #2A2A72, #009FFD)" }}>SUBMIT</button>
    </div>
 </form>
 </div>

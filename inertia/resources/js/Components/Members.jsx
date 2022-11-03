@@ -19,7 +19,7 @@ const Members = () => {
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 ml-5 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
 
           <div className=" h-80 w-96 transition shadow-xl rounded-lg hover:shadow-blue-500/10 ">
             <img className="mx-auto mt-6 rounded-full" src="/assets/Chairperson.jpg" alt="First slide" style={{'width':'180px','height':'170px'}}/>
@@ -109,7 +109,7 @@ const Members = () => {
             </h1>
           </div>
 
-          <div className="flex align-center justify-center flex-row mx-12">
+          <div className="lg:flex align-center justify-center flex-row mx-12 sm:grid grid-cols-1 ml-5">
 
           
 
@@ -117,7 +117,7 @@ const Members = () => {
       
             
 
-            <div className=" h-90 w-96 m-5  transition shadow-xl rounded-lg hover:shadow-blue-500/10 ">
+            <div className=" h-90 w-96 m-5  transition shadow-xl rounded-lg hover:shadow-blue-500/10">
             <img className="mx-auto mt-6 rounded-full" src="/assets/Alumni-Images/Jayasudha.jfif" alt="First slide" style={{'width':'180px','height':'170px'}}/>
               <h3 className="mt-4 text-xl font-bold text-center text-indblue">
               Dr.Jayasudha Subburaj
