@@ -32,6 +32,10 @@ const StarAlumni = () => {
           clickable: true,
         }}
         breakpoints={{
+            360:{
+              slidesPerView: 1,
+              spaceBetween: 50,
+            },
             640: {
               slidesPerView: 2,
               spaceBetween: 50,

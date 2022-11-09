@@ -29,28 +29,30 @@ function handleSubmit(e) {
 
 
   return (
-    <div id="bg">
-    <div class="max-w-2xl mx-auto bg-slate-200 p-5 mt-5">
-      <div class="flex flex-col justify-center items-center h-12 text-3xl font-extrabold bg-blue-600 mb-2">
-         <h3 class="text-lg text-white">Mentor Form</h3>
+    <div id="bg" class="pt-12">
+    <div class="max-w-2xl  mx-auto bg-white p-5 rounded-lg shadow-inner border-solid border-2 border-gray-100">
+      <div class="font-lg mb-2 mt-5" style = {{display : "flex", justifyContent : "center" ,alignItems : "center"}}>
+      <h4 class="text-2xl font-semibold mt-4 mb-4 pb-1">MENTOR
+         <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300">FORM</span>
+      </h4>
       </div>
       <form onSubmit={handleSubmit} >
          <div class="grid gap-6 mb-6 lg:grid-cols-2 mt-2">
             <div>
-               <label for="name" class="block mb-2 text-black font-bold">Full Name</label>
-               <input type="text" placeholder={props.auth.name} class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+               <label for="name" class="block mb-2 text-black dark:text-gray-900">Full Name</label>
+               <input type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" />
             </div>
             <div>
-               <label for="email" class="block mb-2 text-black font-bold">Email</label>
-               <input type="email" placeholder={props.auth.email} class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+               <label for="email" class="block mb-2 text-black dark:text-gray-900">Email</label>
+               <input type="email" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" />
             </div>
             <div>
-               <label for="mobile" class="block mb-2 text-black font-bold">Mobile Number</label>
-               <input type="tel" placeholder={props.auth.phone} class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+               <label for="mobile" class="block mb-2 text-black dark:text-gray-900">Mobile Number</label>
+               <input type="tel" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" />
             </div>
             <div>
-                <label for="method_of_guidance" class="block mb-2 text-black font-bold">Method Of Guidance</label>
-                <select name="method_of_guidance" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 "
+                <label for="method_of_guidance" class="block mb-2 text-black dark:text-gray-900">Method Of Guidance</label>
+                <select name="method_of_guidance" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
                 value={data.method_of_guidance}
                 onChange={(e) =>
                     setData("method_of_guidance", e.target.value)
@@ -62,8 +64,8 @@ function handleSubmit(e) {
                 </select>
             </div>
             <div>
-               <label for="department" class="block mb-2 text-black font-bold">Department</label>
-               <select name="department" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 "
+               <label for="department" class="block mb-2 text-black dark:text-gray-900">Department</label>
+               <select name="department" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring "
                value={data.department}
                onChange={(e) =>
                    setData("department", e.target.value)
@@ -85,8 +87,8 @@ function handleSubmit(e) {
                </select>
             </div>
             <div>
-               <label for="expertise" class="block mb-2 text-black font-bold">Area Of Expertise</label>
-               <input name="area_of_expertise" type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+               <label for="expertise" class="block mb-2 text-black dark:text-gray-900">Area Of Expertise</label>
+               <input name="area_of_expertise" type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required
                 value={data.area_of_expertise}
                 onChange={(e) =>
                     setData("area_of_expertise", e.target.value)
@@ -95,8 +97,8 @@ function handleSubmit(e) {
             </div>
          </div>
          <div>
-            <label for="experience" class="block mb-2 text-black font-bold">Briefly describe prior experience you have with mentoring. </label>
-            <input name="mentor_experience" type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+            <label for="experience" class="block mb-2 text-black dark:text-gray-900">Briefly describe prior experience you have with mentoring. </label>
+            <input name="mentor_experience" type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required
             value={data.mentor_experience}
             onChange={(e) =>
                 setData("mentor_experience", e.target.value)
@@ -104,8 +106,8 @@ function handleSubmit(e) {
             />
          </div>
          <div>
-            <label for="specific_concern" class="block mt-5 mb-2 text-black font-bold">Do you have any specific concerns you'd want us to be aware of?</label>
-            <input name="specific_concern" type="text" class="bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+            <label for="specific_concern" class="block mt-5 mb-2 text-black dark:text-gray-900">Do you have any specific concerns you'd want us to be aware of?</label>
+            <input name="specific_concern" type="text" class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" required
             value={data.specific_concern}
             onChange={(e) =>
                 setData("specific_concern", e.target.value)
@@ -113,7 +115,7 @@ function handleSubmit(e) {
             />
          </div>
          <div class="flex items-center mt-4 justify-center">
-               <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+         <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm w-full sm:w-auto px-6 py-2.5 text-center mt-2" style={{ background: "linear-gradient(to right, #2A2A72, #009FFD)" }}>SUBMIT</button>
          </div>
       </form>
     </div>
