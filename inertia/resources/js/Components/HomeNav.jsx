@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import SideBar from "./SideBar";
 
 const HomeNav = ({ auth }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <div class="mb-4" >
+        <div class="mb-4">
+           
             <div
                 className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full sm:px-12  md:px-24 lg:px-5 fixed w-full z-30 top-0 text-white"
                 id="header"
@@ -17,6 +19,7 @@ const HomeNav = ({ auth }) => {
                 }}
             >
                 <div className="relative flex items-center justify-between">
+                <SideBar />
                     <div class="pl-4 flex items-center">
                         <a
                             href="#"
