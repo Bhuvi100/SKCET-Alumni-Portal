@@ -4,6 +4,8 @@ import Country from "@/Components/Country";
 import InputError from "@/Components/InputError";
 
 const Edit = ({ user, auth, errors }) => {
+    let data;
+    let setData;
     return (
         <AuthenticatedLayout
             auth={auth}
@@ -58,7 +60,7 @@ const Edit = ({ user, auth, errors }) => {
                                                 />
                                             </div>
 
-                                            <div>
+                                            <div className = "col-span-6 sm:col-span-3">
                                                 <label
                                                     htmlFor="ad1"
                                                     className="block mb-2 text-black dark:text-gray-900"
@@ -70,8 +72,8 @@ const Edit = ({ user, auth, errors }) => {
                                                         name="country"
                                                         onChange={setData}
                                                         value={
-                                                            data.country !== undefined
-                                                                ? data.country
+                                                            data !== undefined
+                                                                ? data
                                                                 : "India"
                                                         }
                                                     />
@@ -80,8 +82,10 @@ const Edit = ({ user, auth, errors }) => {
                                                         class="mt-2"
                                                     />
                                                 </div>
-                                            </
-                                            div>
+                                            </div>
+                                            
+
+                                           
 
                                             <div class="col-span-6 sm:col-span-3 lg:col-span-3">
                                                 <label

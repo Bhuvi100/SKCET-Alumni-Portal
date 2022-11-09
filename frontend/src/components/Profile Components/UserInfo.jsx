@@ -5,7 +5,7 @@ const UserInfo = () => {
   return (
     <div class="bg-white p-3 border-t-4 border-blue-400 shadow-lg">
     <div class="image overflow-hidden">
-        <img class="h-96 w-auto mb-4 mx-auto"
+        <img class="h-96 w-auto mb-4 mx-auto "
             src="/assets/user.png"
             alt=""/>
     </div>

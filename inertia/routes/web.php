@@ -114,3 +114,5 @@ Route::get('/mediumofinstruction', function () {
 Route::get('/chats', function () {
     return Inertia::render('Chats');
 });
+
+
