@@ -2,8 +2,36 @@ import React from "react";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import Country from "@/Components/Country";
 import InputError from "@/Components/InputError";
+import { InertiaLink, useForm } from "@inertiajs/inertia-react";
 
-const Edit = ({ user, auth, errors }) => {
+const Edit = ({ user, auth }) => {
+
+
+    const { data, setData, errors, post } = useForm({
+        name:              auth.user.name,
+        phone:             auth.user.phone,
+        country:           auth.user.country,
+        city_state:        auth.user.city_state,
+        designation:       auth.user.designation,
+        organization:      auth.user.organization,
+        organization_email:auth.user.organization_email,
+        areas_of_expertise:auth.user.areas_of_expertise,
+        category:          auth.user.category,
+     });
+
+
+     function handleSubmit(e) {
+        e.preventDefault();
+        post(route("profileUpdate",`${auth.user.id}`), {
+          onSuccess: (res) => {
+            console.log(
+              "sucessfull"
+            );
+          }
+        });
+     }
+     
+
     return (
         <AuthenticatedLayout
             auth={auth}
@@ -17,6 +45,7 @@ const Edit = ({ user, auth, errors }) => {
             <form
                 style={{ margin: "5rem" }}
                 className="m-5 p-5 border border-gray-300"
+                onSubmit={handleSubmit}
             >
                 <div>
                     <div class="md:grid md:grid-cols-3 md:gap-6">
@@ -44,15 +73,19 @@ const Edit = ({ user, auth, errors }) => {
                                         <div class="grid grid-cols-6 gap-6">
                                             <div class="col-span-6 sm:col-span-3">
                                                 <label
-                                                    for="first-name"
+                                                    for="name"
                                                     class="block text-sm font-medium text-gray-700"
                                                 >
                                                     Name
                                                 </label>
                                                 <input
                                                     type="text"
-                                                    name="first-name"
-                                                    id="first-name"
+                                                    name="name"
+                                                    id="name"
+                                                    value={data.name}
+                                                    onChange={(e) =>
+                                                        setData("name", e.target.value)
+                                                    }
                                                     autocomplete="given-name"
                                                     class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                                 />
@@ -68,8 +101,10 @@ const Edit = ({ user, auth, errors }) => {
                                                 <div className="mt-2.5">
                                                     <Country
                                                         name="country"
-                                                        onChange={setData}
-                                                        value={
+                                                        onChange={(e) =>
+                                                            setData("country", e.target.value)
+                                                        }
+                                                        value = {
                                                             data.country !== undefined
                                                                 ? data.country
                                                                 : "India"
@@ -92,8 +127,13 @@ const Edit = ({ user, auth, errors }) => {
                                                 </label>
                                                 <input
                                                     type="text"
-                                                    name="postal-code"
-                                                    id="postal-code"
+                                                    name="phone"
+                                                    id="phone"
+                                                    value={data.phone}
+                                                    onChange={(e) =>
+                                                        setData("phone", e.target.value)
+                                                    }
+                                                    au
                                                     autocomplete="postal-code"
                                                     class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                                 />
@@ -108,8 +148,12 @@ const Edit = ({ user, auth, errors }) => {
                                                 </label>
                                                 <input
                                                     type="text"
-                                                    name="postal-code"
-                                                    id="postal-code"
+                                                    name="city_state"
+                                                    id="city_state"
+                                                    value={data.city_state}
+                                                    onChange={(e) =>
+                                                        setData("city_state", e.target.value)
+                                                    }
                                                     autocomplete="postal-code"
                                                     class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                                 />
@@ -162,14 +206,14 @@ const Edit = ({ user, auth, errors }) => {
                                         </div>
                                     </div>
 
-                                    <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                                    {/* <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
                                         <button
                                             type="submit"
                                             class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                                         >
                                             Save
                                         </button>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </form>
                         </div>
@@ -207,8 +251,12 @@ const Edit = ({ user, auth, errors }) => {
                                             </label>
                                             <input
                                                 type="text"
-                                                name="postal-code"
-                                                id="postal-code"
+                                                name="organization"
+                                                id="organization"
+                                                value={data.organization}
+                                                onChange={(e) =>
+                                                        setData("city_state", e.target.value)
+                                                    }
                                                 autocomplete="postal-code"
                                                 class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                             />
@@ -223,8 +271,12 @@ const Edit = ({ user, auth, errors }) => {
                                                 </label>
                                                 <input
                                                     type="text"
-                                                    name="postal-code"
-                                                    id="postal-code"
+                                                    name="organization_email"
+                                                    id="organization_email"
+                                                    value={data.organization_email}
+                                                    onChange={(e) =>
+                                                            setData("organization_email", e.target.value)
+                                                        }
                                                     autocomplete="postal-code"
                                                     class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                                 />
@@ -240,8 +292,12 @@ const Edit = ({ user, auth, errors }) => {
                                             </label>
                                             <input
                                                 type="text"
-                                                name="postal-code"
-                                                id="postal-code"
+                                                name="designation"
+                                                id="designation"
+                                                value={data.designation}
+                                                    onChange={(e) =>
+                                                            setData("designation", e.target.value)
+                                                        }
                                                 autocomplete="postal-code"
                                                 class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                             />
@@ -253,18 +309,25 @@ const Edit = ({ user, auth, errors }) => {
                                             >
                                                 Select the Area of Expertise
                                             </label>
-                                            <select class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring">
+                                            <select class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
+                                            name="areas_of_expertise"
+                                            id="areas_of_expertise"
+                                            value={data.areas_of_expertise}
+                                            onChange={(e) =>
+                                                    setData("areas_of_expertise", e.target.value)
+                                                }
+                                            >
                                                 <option selected>
                                                     Select the Area of Expertise
                                                 </option>
-                                                <option>AI/ML</option>
-                                                <option>Cyber Security</option>
-                                                <option>Devops</option>
-                                                <option>AR / VR</option>
-                                                <option>IOT</option>
-                                                <option>Robotics</option>
-                                                <option>CAD</option>
-                                                <option>
+                                                <option value="AI/ML">AI/ML</option>
+                                                <option value="Cyber Security">Cyber Security</option>
+                                                <option value="Devops">Devops</option>
+                                                <option value="AR / VR">AR / VR</option>
+                                                <option value="IOT">IOT</option>
+                                                <option value="Robotics">Robotics</option>
+                                                <option value="CAD">CAD</option>
+                                                <option  value="Design & Architecture">
                                                     Design & Architecture
                                                 </option>
                                             </select>
@@ -272,25 +335,38 @@ const Edit = ({ user, auth, errors }) => {
 
                                         <div>
                                             <label
-                                                for="dept"
+                                                for="category"
                                                 class="block  mt-2 mb-2 text-black dark:text-gray-900"
                                             >
                                                 Categories
                                             </label>
-                                            <select class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring">
+                                            <select class="block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"   
+                                                    name="category"
+                                                    id="category"
+                                                    value={data.category}
+                                                    onChange={(e) =>
+                                                            setData("category", e.target.value)
+                                                        }
+                                                >
                                                 <option selected>
                                                     Select an option
                                                 </option>
-                                                <option>Engineering</option>
-                                                <option>
+                                                <option value="Engineering">Engineering</option>
+                                                <option value="Information Technology">
                                                     Information Technology
                                                 </option>
-                                                <option>Entrepreneurs</option>
-                                                <option>Others</option>
+                                                <option value="Entrepreneurs">Entrepreneurs</option>
+                                                <option value="Others">Others</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                                   
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
                                         <button
                                             type="submit"
                                             class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -298,11 +374,6 @@ const Edit = ({ user, auth, errors }) => {
                                             Save
                                         </button>
                                     </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
             </form>
         </AuthenticatedLayout>
     );

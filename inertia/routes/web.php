@@ -44,8 +44,10 @@ Route::middleware(['auth', 'verified'])->group(function() {
         return Inertia::render('Chapters', ['auth' => auth()->user()]);
     });
 
+    // profile user edit
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
-    Route::get('/profile/{user}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile/{user}', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::post('/profile/{user}', [ProfileController::class, 'update'])->name('profileUpdate');
 });
 
 
@@ -68,7 +70,7 @@ Route::get('/importUsers', function () {
 })->name('importUsers');
 Route::post('/uploadUsers', [\App\Http\Controllers\ProfileController::class, 'uploadUsers'])->name('uploadUsers');
 
-// adding/update post and comments
+// view/adding/update post and comments
 Route::post('/addPost', [\App\Http\Controllers\PostController::class, 'store'])->name('addPost');
 Route::post('/updatePost/{post}', [\App\Http\Controllers\PostController::class, 'update'])->name('updatePost');
 
@@ -77,15 +79,9 @@ Route::get('/MyPosts', function () {
     return Inertia::render('MyPosts');
 })->name('MyPosts');
 
-
+// adding/update comments
 Route::get('/getComment/{post}', [\App\Http\Controllers\CommentController::class, 'index'])->name('getComment');
 Route::post('/addComment/{post}', [\App\Http\Controllers\CommentController::class, 'store'])->name('addComment');
-
-
-
-require __DIR__.'/auth.php';
-
-
 
 Route::get('/members', function () {
     return Inertia::render('Members');
@@ -114,3 +110,5 @@ Route::get('/mediumofinstruction', function () {
 Route::get('/chats', function () {
     return Inertia::render('Chats');
 });
+
+require __DIR__.'/auth.php';

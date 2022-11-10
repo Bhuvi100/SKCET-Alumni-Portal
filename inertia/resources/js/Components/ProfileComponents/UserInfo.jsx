@@ -11,12 +11,14 @@ const UserInfo = ({ user }) => {
                     alt="Profile Picture"
                 />
             </div>
+           
             <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">
                 {user.name}
             </h1>
             <h3 class="text-gray-600 font-lg text-semibold leading-6">
                 {user.designation} at {user.organization}
             </h3>
+            
             {/*<p class="text-sm text-gray-500 hover:text-gray-600 leading-6">*/}
             {/*    Lorem ipsum dolor sit amet consectetur adipisicing elit.*/}
             {/*    Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur*/}
@@ -32,10 +34,17 @@ const UserInfo = ({ user }) => {
                 {/*    </span>*/}
                 {/*</li>*/}
                 <li class="flex items-center py-3">
-                    <span>Member since</span>
+                    <span>Member since </span>
                     <span class="ml-auto">{ user.created_at }</span>
                 </li>
             </ul>
+            <div className='flex justify-center'>
+                     <a
+                    target="_blank"
+                   href={`/profile/${user.id}/`}
+                   className='text-white bg-black m-4 p-3 rounded'
+                   >Edit Profile</a>
+            </div>
         </div>
     );
 };

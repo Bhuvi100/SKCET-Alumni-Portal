@@ -35,7 +35,33 @@ class ProfileController extends Controller
 
 
     public function update(Request $request, User $user)
-    {
+    {   
+
+        $request->validate([
+          
+            'name'=> 'required|string',
+            'phone'=> 'required|string',
+            'country'=> 'required|string',
+            'city_state'=> 'required|string',
+            'designation'=> 'required|string',
+
+            'organization'=> 'nullable|string',
+            'organization_email'=> 'nullable|string',
+            'areas_of_expertise'=> 'nullable|string',
+            'category'=> 'nullable|string',
+        ]);
+        $user->name = $request->name;
+        $user->phone = $request->phone;
+        $user->country = $request->country;
+        $user->city_state = $request->city_state;
+        $user->designation = $request->designation;
+        $user->organization = $request->organization;
+        $user->organization_email = $request->organization_email;
+        $user->areas_of_expertise = $request->areas_of_expertise;
+        $user->category = $request->category;
+        $user->update();
+
+        return redirect('profile');
     }
 
     public function destroy(User $user)
