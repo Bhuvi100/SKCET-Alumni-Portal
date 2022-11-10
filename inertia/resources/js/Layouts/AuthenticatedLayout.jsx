@@ -8,10 +8,15 @@ export default function Authenticated({ auth, header, children }) {
         <div className="bg-slate-200">
             <div className="flex">
                 <HomeNav user={auth}/>
-               
-                <main className="w-full ml-8 mt-24">
+                
+                {
+                    window.innerWidth>700 && <SideBar />
+                }
+                <main className="w-full m-2 md:ml-80 mt-24">
                     {children}
                 </main>
+               
+                
             </div>
         </div>
     );

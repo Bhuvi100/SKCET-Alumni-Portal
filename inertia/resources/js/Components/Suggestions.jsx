@@ -4,7 +4,7 @@ const Suggestions = () => {
   return (
     <div>
         <div class="max-w-2xl mx-auto mt-3">
-    <div class="p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8 border-gray-200">
+    <div class="p-4 max-w-2xl bg-white rounded-lg border shadow-md sm:p-8 border-gray-200">
       <div class="flex justify-between items-center mb-4">
           <h3 class="text-xl font-bold leading-none text-black">Suggestions</h3>
      </div>
