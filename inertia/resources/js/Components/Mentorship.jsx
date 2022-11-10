@@ -3,7 +3,7 @@ import React from 'react'
 const Mentorship = () => {
   return (
     <div>
-    <a href="#" class="mt-3 block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md ">
+    <a href="#" class="mt-3 block p-6 max-w-2xl mx-auto mt-3 bg-white rounded-lg border border-gray-200 shadow-md ">
         <h5 class="mb-2 text-xl font-bold tracking-tight text-black">Mentorship Program</h5>
         <p class="font-medium">Be a mentor to provide support and feedback or Register as a mentee to seek help and career guidance from your alumni.</p>
         <div class="flex items-center justify-center">

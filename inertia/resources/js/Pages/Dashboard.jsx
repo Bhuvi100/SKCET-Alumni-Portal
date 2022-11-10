@@ -71,7 +71,7 @@ export default function Dashboard(props) {
                                         </div>
                                     </form>
                                 </div>
-                                <div class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md mt-2">
+                                <div class="p-6 max-w-2xl mx-auto mt-3 bg-white rounded-lg border border-gray-200 shadow-md mt-2">
                                     <div class="flex items-center justify-center">
                                         <h2 class="text-black text-lg font-semibold">
                                             Job Offers

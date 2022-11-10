@@ -3,13 +3,14 @@ import { useState } from "react";
 import { Link } from "@inertiajs/inertia-react";
 import route from "../../../vendor/tightenco/ziggy/src/js";
 
-export default function SideBar() {
-    const [showSidebar, setShowSidebar] = useState(false);
+export default function SideBar(props) {
+    const [showSidebar, setShowSidebar] = useState(true);
     return (
         <div>
-            <div className="sticky top-40 left-4">
+            <div className="fixed  top-8 lg:top-40 left-4">
                 <div className="">
-                    <button
+                    {
+                        window.innerWidth<700 && <button
                         type="button"
                         class="text-white hover:bg-black font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 "
                         onClick={() => setShowSidebar(!showSidebar)}
@@ -29,6 +30,8 @@ export default function SideBar() {
                             />
                         </svg>
                     </button>
+                    }
+                    
                 </div>
                 {
                     showSidebar && 

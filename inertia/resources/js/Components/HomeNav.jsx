@@ -19,7 +19,8 @@ const HomeNav = ({ auth }) => {
                 }}
             >
                 <div className="relative flex items-center justify-between">
-                <SideBar />
+                {console.log(window.innerWidth)}
+                {window.innerWidth <500 && <SideBar />}
                     <div class="pl-4 flex items-center">
                         <a
                             href="#"
