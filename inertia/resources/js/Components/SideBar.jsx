@@ -76,7 +76,7 @@ export default function SideBar() {
                                     </li>
                                     <li>
                                         <a
-                                            href="/addsuccessstories"
+                                            href="/successStory"
                                             class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:text-white hover:bg-blue-600"
                                         >
                                             <svg
