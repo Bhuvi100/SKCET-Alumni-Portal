@@ -91,7 +91,7 @@ const Edit = ({ user, auth }) => {
                                                 />
                                             </div>
 
-                                            <div>
+                                            <div className = "col-span-6 sm:col-span-3">
                                                 <label
                                                     htmlFor="ad1"
                                                     className="block mb-2 text-black dark:text-gray-900"
@@ -115,8 +115,10 @@ const Edit = ({ user, auth }) => {
                                                         class="mt-2"
                                                     />
                                                 </div>
-                                            </
-                                            div>
+                                            </div>
+                                            
+
+                                           
 
                                             <div class="col-span-6 sm:col-span-3 lg:col-span-3">
                                                 <label

@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div class = "mx-10">
+    <div class = "mx-10 w-full" >
      <div className="px-8 py-2 mx-auto sm:max-w-xl md:max-w-full sm:px-12  md:px-24 lg:px-5 fixed w-full z-30 top-0 text-white" id="header"  style={{  background: "linear-gradient(to right, #2A2A72, #009FFD)", position:"fixed" , top:"0" , left:"0" , width : "100vw"}}>
         <div className="relative flex items-center justify-between">
         <div class="pl-4 flex items-center" >
@@ -15,37 +15,37 @@ const Navbar = () => {
         </div>
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            {/* <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/members">Members</a>
-            </li> */}
-            <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/gallery">Gallery</a>
-            </li>
+
             <li>
-            <div class="w-full mt-1">
-                <a
-                    target="_blank"
-                   href="assets/Magazine 2018.pdf"
-                   className='text-black bg-white m-4 p-3 rounded'
-                   >Magazine 2018</a>
-   </div>
+                <a class="inline-block text-white text-lg no-underline py-2 px-4" href="/gallery" >Gallery</a>
             </li>
+
             <li class="dropdown">
-              <button class="dropbtn">Services</button>
+              <button class="dropbtn text-lg">Services</button>
               <div class="dropdown-content">
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/generalQuery">General Queries</a>
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/mediumofinstruction">Medium of Instruction Form</a>
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="https://www.skcet.ac.in/pdf/coe/APPLICATION_FOR_TRANSCRIPTS_2021.pdf" target="blank">Academic Transcript Form</a>
+              <a class="inline-block text-white no-underline py-2 px-4" href="/generalQuery">General Queries</a>
+              <a class="inline-block text-white no-underline py-2 px-4" href="/mediumofinstruction">Medium of Instruction Form</a>
+              <a class="inline-block text-white no-underline py-2 px-4" href="https://www.skcet.ac.in/pdf/coe/APPLICATION_FOR_TRANSCRIPTS_2021.pdf" target="-blank">Academic Transcript Form</a>
               </div>
             </li>
 
+            <li class="dropdown">
+              <button class="dropbtn text-lg">Magazines</button>
+              <div class="dropdown-content">
+              <a class="inline-block text-white no-underline py-2 px-4" target="_blank" href="https://www.skcet.ac.in/pdf/Alumni/Alumni%20Magazine%20Dec%202017.pdf">Alumni Magazine 2018</a>
+              <a class="inline-block text-white no-underline py-2 px-4" target="_blank" href="https://www.skcet.ac.in/pdf/Alumni/Alumni%20Magazine%20Dec%202018.pdf">Alumni Magazine 2019</a>
+              <a class="inline-block text-white no-underline py-2 px-4" target="_blank" href="https://www.skcet.ac.in/pdf/Alumni/Alumni%20Magazine%20Dec%202019.pdf">Alumni Magazine 2020</a>
+              <a class="inline-block text-white no-underline py-2 px-4" target="_blank" href="https://www.skcet.ac.in/pdf/Alumni/Alumni%20E-Magazine%202021.pdf">Alumni Magazine 2021</a>
 
-            <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/objectives">Objectives</a>
+              </div>
             </li>
 
-            <div class="dropdown">
-              <button class="dropbtn">Giving Back
+            <li>
+              <a class="inline-block text-white text-lg no-underline py-2 px-4" href="/objectives">Objectives</a>
+            </li>
+
+            <li class="dropdown">
+              <button class="dropbtn text-lg">Giving Back
                 <i class="fa fa-caret-down"></i>
               </button>
               <div class="dropdown-content">
@@ -54,7 +54,7 @@ const Navbar = () => {
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/job">Job Opportunities</a>
               
               </div>
-            </div>
+            </li>
           </ul>
           <a
             href = "/login"
@@ -178,7 +178,7 @@ const Navbar = () => {
                       <li>
                         <a
                           href="/login"
-                          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded flex items-center justify-center"
+                          className="bg-blue-500 text-white font-bold py-2 px-4 rounded flex items-center justify-center hover:bg-black-500"
                         >
                           Login
                         </a>

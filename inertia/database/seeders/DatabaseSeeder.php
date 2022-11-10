@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
              'name' => 'Test User',
              'email' => 'test@example.com',
              'phone' => '1234567899',
+             'password' => \Hash::make('password')
          ]);
     }
 }

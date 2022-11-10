@@ -56,6 +56,9 @@ Route::middleware(['auth', 'verified'])->group(function() {
 Route::get('/queries', function () {
     return Inertia::render('QueriesForm');
 })->name('generalQuery');
+Route::get('/generalQuery', function () {
+    return Inertia::render('QueriesForm');
+})->name('generalQuery');
 Route::post('/generalQuerySubmit', [\App\Http\Controllers\GeneralQueryController::class, 'store'])->name('generalQuerySubmit');
 
 Route::get('/successStory', [\App\Http\Controllers\SuccessStoryController::class, 'index'])->name('successStory');
