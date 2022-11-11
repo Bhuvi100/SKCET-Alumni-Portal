@@ -19,7 +19,14 @@ class DatabaseSeeder extends Seeder
              'name' => 'Test User',
              'email' => 'test@example.com',
              'phone' => '1234567899',
-             'password' => \Hash::make('password')
+             'password' => \Hash::make('password'),
+             'designation' => 'manager',
+             'city_state' => 'cuddalore',
+             'country' => 'India',
+             'organization' => 'intel',
+             'organization_email' => 'balatest@intel.co.in',
+             'category' => 'Entrepreneurs',
+             'role' => 'user',
          ]);
     }
 }

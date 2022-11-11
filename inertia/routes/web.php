@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Resources\UserResource;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,24 +49,53 @@ Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
     Route::get('/profile/{user}', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::post('/profile/{user}', [ProfileController::class, 'update'])->name('profileUpdate');
+
+
+            
+        // forms ->->-> generalQuery successStory mentorForm
+        Route::get('/queries', function () {
+            return Inertia::render('QueriesForm');
+        })->name('generalQuery');
+        Route::get('/generalQuery', function () {
+            return Inertia::render('QueriesForm');
+        })->name('generalQuery');
+        Route::post('/generalQuerySubmit', [\App\Http\Controllers\GeneralQueryController::class, 'store'])->name('generalQuerySubmit');
+
+        Route::get('/successStory', [\App\Http\Controllers\SuccessStoryController::class, 'index'])->name('successStory');
+        Route::post('/successStorySubmit', [\App\Http\Controllers\SuccessStoryController::class, 'store'])->name('successStorySubmit');
+
+        Route::get('/mentorForm',[\App\Http\Controllers\MentorFormController::class, 'index'])->name('mentorForm');
+        Route::post('/mentorFormSubmit', [\App\Http\Controllers\MentorFormController::class, 'store'])->name('mentorFormSubmit');
+
+        
+        // view/adding/update post and comments
+        Route::post('/addPost', [\App\Http\Controllers\PostController::class, 'store'])->name('addPost');
+        Route::post('/updatePost/{post}', [\App\Http\Controllers\PostController::class, 'update'])->name('updatePost');
+
+        Route::get('/Posts', [\App\Http\Controllers\PostController::class, 'index'])->name('Posts');
+        Route::get('/MyPosts', function () {
+            return Inertia::render('MyPosts');
+        })->name('MyPosts');
+
+        // adding/update comments
+        Route::get('/getComment/{post}', [\App\Http\Controllers\CommentController::class, 'index'])->name('getComment');
+        Route::post('/addComment/{post}', [\App\Http\Controllers\CommentController::class, 'store'])->name('addComment');
+
+
+        // job oppurtunity and guest speaker form
+        Route::get('/job', function () {
+            return Inertia::render('JobForm',['auth' => auth()->user()]);
+        });
+        Route::post('/jobSubmit',[\App\Http\Controllers\FormsController::class, 'jobSubmit'])->name('jobSubmit');
+
+        Route::get('/guestspeaker', function () {
+            return Inertia::render('GuestSpeakerform',['auth' => auth()->user()]);
+        });
+        Route::post('/guestspeakerSubmit',[\App\Http\Controllers\FormsController::class, 'guestSpeakerSubmit'])->name('guestspeakerSubmit');
 });
 
 
 
-// forms ->->-> generalQuery successStory mentorForm
-Route::get('/queries', function () {
-    return Inertia::render('QueriesForm');
-})->name('generalQuery');
-Route::get('/generalQuery', function () {
-    return Inertia::render('QueriesForm');
-})->name('generalQuery');
-Route::post('/generalQuerySubmit', [\App\Http\Controllers\GeneralQueryController::class, 'store'])->name('generalQuerySubmit');
-
-Route::get('/successStory', [\App\Http\Controllers\SuccessStoryController::class, 'index'])->name('successStory');
-Route::post('/successStorySubmit', [\App\Http\Controllers\SuccessStoryController::class, 'store'])->name('successStorySubmit');
-
-Route::get('/mentorForm',[\App\Http\Controllers\MentorFormController::class, 'index'])->name('mentorForm');
-Route::post('/mentorFormSubmit', [\App\Http\Controllers\MentorFormController::class, 'store'])->name('mentorFormSubmit');
 
 // import excel data
 Route::get('/importUsers', function () {
@@ -73,18 +103,6 @@ Route::get('/importUsers', function () {
 })->name('importUsers');
 Route::post('/uploadUsers', [\App\Http\Controllers\ProfileController::class, 'uploadUsers'])->name('uploadUsers');
 
-// view/adding/update post and comments
-Route::post('/addPost', [\App\Http\Controllers\PostController::class, 'store'])->name('addPost');
-Route::post('/updatePost/{post}', [\App\Http\Controllers\PostController::class, 'update'])->name('updatePost');
-
-Route::get('/Posts', [\App\Http\Controllers\PostController::class, 'index'])->name('Posts');
-Route::get('/MyPosts', function () {
-    return Inertia::render('MyPosts');
-})->name('MyPosts');
-
-// adding/update comments
-Route::get('/getComment/{post}', [\App\Http\Controllers\CommentController::class, 'index'])->name('getComment');
-Route::post('/addComment/{post}', [\App\Http\Controllers\CommentController::class, 'store'])->name('addComment');
 
 Route::get('/members', function () {
     return Inertia::render('Members');
@@ -98,13 +116,7 @@ Route::get('/gallery', function () {
     return Inertia::render('Gallery');
 });
 
-Route::get('/job', function () {
-    return Inertia::render('JobForm');
-});
 
-Route::get('/guestspeaker', function () {
-    return Inertia::render('GuestSpeakerform');
-});
 
 Route::get('/mediumofinstruction', function () {
     return Inertia::render('MediumOfInstructionForm');
