@@ -114,4 +114,8 @@ Route::get('/chats', function () {
     return Inertia::render('Chats');
 });
 
+Route::get('/construction', function () {
+    return Inertia::render('UnderConstruction');
+});
+
 require __DIR__.'/auth.php';

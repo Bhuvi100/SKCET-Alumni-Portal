@@ -3,7 +3,7 @@ import React from "react";
 const UserInfo = ({ user }) => {
     console.log(user)
     return (
-        <div class="bg-white p-3 border-t-4 border-blue-400 shadow-lg md:h-50 w-full m-3 sm:h-50 w-full m-3  ">
+        <div class="bg-white p-3 border-t-4 border-blue-400 shadow-lg md:h-50 w-full m-3 sm:h-50 w-full m-3  mr-8">
             <div class="lg:image overflow-hidden md:h-30 ">
                 <img
                     class="h-96 w-auto mb-4 mx-auto sm:w-50"

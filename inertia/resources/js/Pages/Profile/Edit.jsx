@@ -47,7 +47,7 @@ const Edit = ({ user, auth }) => {
                 className="m-5 p-5 border border-gray-300"
                 onSubmit={handleSubmit}
             >
-                <div>
+                <div className = "bg-white">
                     <div class="md:grid md:grid-cols-3 md:gap-6">
                         <div class="md:col-span-1">
                             <div class="px-4 sm:px-0">

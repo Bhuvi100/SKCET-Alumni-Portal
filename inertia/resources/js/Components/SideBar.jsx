@@ -59,7 +59,7 @@ export default function SideBar(props) {
                                     </a>
                                 </div>
                                 <ul class="space-y-2">
-                                    <li class="mt-12">
+                                    <li class="mt-4">
                                         <a
                                             href={route('dashboard')}
                                             class={"flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-blue-600 " + (route('dashboard') === window.location.href ? 'bg-blue-100' : '')}

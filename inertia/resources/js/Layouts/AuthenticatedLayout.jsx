@@ -5,7 +5,7 @@ import HomeNav from "@/Components/HomeNav";
 export default function Authenticated({ auth, header, children }) {
 
     return (
-        <div className="bg-slate-200">
+        <div className="">
             <div className="flex">
                 <HomeNav user={auth}/>
                 
