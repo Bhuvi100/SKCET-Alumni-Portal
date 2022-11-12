@@ -3,7 +3,6 @@ import { useState } from "react";
 import SideBar from "./SideBar";
 
 const HomeNav = ({ auth }) => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div class="mb-4">
            
@@ -19,7 +18,6 @@ const HomeNav = ({ auth }) => {
                 }}
             >
                 <div className="relative flex items-center justify-between">
-                {console.log(window.innerWidth)}
                 {window.innerWidth <500 && <SideBar />}
                     <div class="pl-4 flex items-center">
                         <a
@@ -44,15 +42,14 @@ const HomeNav = ({ auth }) => {
 
                         <ul class="list-reset lg:flex justify-end flex-1 items-center">
                             <li>
-                                <h1 class="text-white mr-3">Test User</h1>
+                                <h1 class="text-white mr-3">{auth.name}</h1>
                             </li>
 
                             <li>
-                                {" "}
                                 <img
-                                    src="http://127.0.0.1:8000/storage/images/users/photo-1535713875002-d1d0cf377fde.webp"
+                                    src={user.picture_url}
                                     className="rounded-full h-25 w-10 mr-3"
-                                />
+                                 alt={'Profile '}/>
                             </li>
                         </ul>
                         <a
