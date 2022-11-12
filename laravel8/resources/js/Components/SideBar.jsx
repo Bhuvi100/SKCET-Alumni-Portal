@@ -3,7 +3,7 @@ import { Link } from "@inertiajs/inertia-react";
 import route from "../../../vendor/tightenco/ziggy/src/js";
 
 export default function SideBar(props) {
-    const [showSidebar, setShowSidebar] = useState(true);
+    const [showSidebar, setShowSidebar] = useState(window.innerWidth >= 700);
     return (
         <div>
             <div className="fixed mr-3 top-8 lg:top-40 left-4">
