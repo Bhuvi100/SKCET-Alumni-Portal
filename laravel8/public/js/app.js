@@ -81112,7 +81112,7 @@ function Authenticated(_ref) {
       }), window.innerWidth > 700 && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_Components_SideBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("main", {
         className: "w-full m-3 md:ml-80  mt-24",
         children: children
-      }), "A"]
+      })]
     })]
   });
 }

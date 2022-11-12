@@ -17,7 +17,7 @@ export default function Authenticated({ auth, header, children }) {
             <div className="flex">
                 <HomeNav auth={auth} />
                 {window.innerWidth > 700 && <SideBar />}
-                <main className="w-full m-3 md:ml-80  mt-24">{children}</main>A
+                <main className="w-full m-3 md:ml-80  mt-24">{children}</main>
             </div>
         </div>
     );
