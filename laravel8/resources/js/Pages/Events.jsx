@@ -18,7 +18,7 @@ export default function Dashboard(props) {
             <Head title="Events" />
             <div>
             <div class="bg-white p-3 shadow-sm rounded-sm mt-8">
-                <div class="flex flex-column md:flex-row items-center space-x-2 font-semibold text-gray-900 leading-8" style = {{width : "80vw", height : "100vh"}}>
+                <div class="flex flex-col md:flex-row items-center space-x-2 font-semibold text-gray-900 leading-8" style = {{width : "80vw", height : "100vh"}}>
 
                
                                             <img
