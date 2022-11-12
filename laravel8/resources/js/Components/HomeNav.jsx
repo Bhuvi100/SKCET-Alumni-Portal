@@ -47,7 +47,7 @@ const HomeNav = ({ auth }) => {
 
                             <li>
                                 <img
-                                    src={user.picture_url}
+                                    src={auth.picture_url}
                                     className="rounded-full h-25 w-10 mr-3"
                                  alt={'Profile '}/>
                             </li>

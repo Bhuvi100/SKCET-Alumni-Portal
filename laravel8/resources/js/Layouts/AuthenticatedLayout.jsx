@@ -7,7 +7,7 @@ export default function Authenticated({ auth, header, children }) {
     return (
         <div className="bg-gray-300">
             <div className="flex">
-                <HomeNav user={auth}/>
+                <HomeNav auth={auth}/>
                 
                 {
                     window.innerWidth>700 && <SideBar />
