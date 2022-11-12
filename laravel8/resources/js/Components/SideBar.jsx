@@ -202,7 +202,7 @@ export default function SideBar(props) {
                                     </li>
                                     <li>
                                         <a
-                                            href="/construction"
+                                            href="/events"
                                             class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600"
                                         >
                                             <svg

@@ -130,4 +130,8 @@ Route::get('/construction', function () {
     return Inertia::render('UnderConstruction');
 });
 
+Route::get('/events', function () {
+    return Inertia::render('Events');
+});
+
 require __DIR__.'/auth.php';

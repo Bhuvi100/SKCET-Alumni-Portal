@@ -79893,7 +79893,7 @@ function SideBar(props) {
                 })
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("li", {
                 children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("a", {
-                  href: "/construction",
+                  href: "/events",
                   "class": "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600",
                   children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
@@ -81173,6 +81173,8 @@ var map = {
 	"./Chats.jsx": "./resources/js/Pages/Chats.jsx",
 	"./Dashboard": "./resources/js/Pages/Dashboard.jsx",
 	"./Dashboard.jsx": "./resources/js/Pages/Dashboard.jsx",
+	"./Events": "./resources/js/Pages/Events.jsx",
+	"./Events.jsx": "./resources/js/Pages/Events.jsx",
 	"./Gallery": "./resources/js/Pages/Gallery.jsx",
 	"./Gallery.jsx": "./resources/js/Pages/Gallery.jsx",
 	"./GuestSpeakerform": "./resources/js/Pages/GuestSpeakerform.jsx",
@@ -83097,7 +83099,7 @@ function Dashboard(props) {
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
         className: "flex flex-col flex-1",
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("main", {
-          className: "pb-16 overflow-y-auto",
+          className: "pb-16 overflow-y-auto mt-16",
           children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
             className: "block md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3 ",
             children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
@@ -84257,6 +84259,78 @@ function Dashboard(props) {
         })
       })
     })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Events.jsx":
+/*!***************************************!*\
+  !*** ./resources/js/Pages/Events.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Dashboard; });
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Components_Posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/Posts */ "./resources/js/Components/Posts.jsx");
+/* harmony import */ var _Components_TrendingPosts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/TrendingPosts */ "./resources/js/Components/TrendingPosts.jsx");
+/* harmony import */ var _Components_UserPosts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/UserPosts */ "./resources/js/Components/UserPosts.jsx");
+/* harmony import */ var _Layouts_AuthenticatedLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Layouts/AuthenticatedLayout */ "./resources/js/Layouts/AuthenticatedLayout.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+function Dashboard(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])(_Layouts_AuthenticatedLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    auth: props.auth,
+    errors: props.errors,
+    header: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("h2", {
+      className: "font-semibold text-xl text-gray-800 leading-tight",
+      children: "Events"
+    }),
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__["Head"], {
+      title: "Events"
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+        "class": "bg-white p-3 shadow-sm rounded-sm mt-8",
+        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
+          "class": "flex flex-column md:flex-row items-center space-x-2 font-semibold text-gray-900 leading-8",
+          style: {
+            width: "80vw",
+            height: "100vh"
+          },
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("img", {
+            className: "w-50 h-50",
+            style: {
+              width: "70vw",
+              height: "70vh"
+            },
+            src: "/assets/invitation.jfif",
+            alt: "Sunset in the mountains"
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
+              className: "px-6 py-4",
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+                className: "font-bold text-4xl mb-4",
+                children: "Alumni Meeting"
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("p", {
+                className: "text-gray-700 text-base",
+                children: "As the branches of a tree, each one of us grow in different directions, yet our roots remain as one. One such cherished root is our home, SKCET, where not only skilled engineers but good citizens are born. Our home, SKCET has been constantly developing since the day it was rooted and shines brighter day by day. So are the children of SKCET. We introduce you, SKCET's LinkUp, Reconnect and Relive, the official and indigenous Alumni Network of SKCET where we could stay connected to cherish the memories and to create new ones."
+              })]
+            })
+          })]
+        })
+      })
+    })]
   });
 }
 
@@ -85776,15 +85850,18 @@ var Edit = function Edit(_ref) {
                               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
                                 "class": "flex text-sm text-gray-600",
                                 children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("label", {
-                                  "for": "file-upload",
+                                  "for": "picture",
                                   "class": "relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500",
                                   children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("span", {
                                     children: "Upload a file"
                                   }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("input", {
-                                    id: "file-upload",
-                                    name: "file-upload",
+                                    id: "picture",
+                                    name: "picture",
                                     type: "file",
-                                    "class": "sr-only"
+                                    "class": "sr-only",
+                                    onChange: function onChange(e) {
+                                      setData("picture", e.target.files[0]);
+                                    }
                                   })]
                                 }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("p", {
                                   "class": "pl-1",

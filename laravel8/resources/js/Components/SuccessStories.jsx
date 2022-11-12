@@ -2,8 +2,8 @@ import React from 'react'
 
 const SuccessStories = () => {
   return (
-    <div>
-       <div className="px-4 mt-20  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-0">
+    <div className='bg-white'>
+       <div className="px-4 mt-20  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-0 ">
        <h1 className={" mb-16 pb-2 font-bold sm:text-xl text-2xl md:text-3xl text-center"}>
               Success 
               <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300">

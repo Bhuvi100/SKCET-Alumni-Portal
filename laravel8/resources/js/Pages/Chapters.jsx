@@ -18,7 +18,7 @@ export default function Dashboard(props) {
             <Head title="Chapters" />
             <div>
                 <div className="flex flex-col flex-1">
-                    <main className="pb-16 overflow-y-auto">
+                    <main className="pb-16 overflow-y-auto mt-16">
                         <div className="block md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3 ">
                             <div className="col-span-2">
                                 <div className="flex flex-row mt-5 justify-center">
