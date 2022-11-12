@@ -4,22 +4,18 @@ import "../../css/app.css"
 const UnderConstruction = () => {
   return (
     <div >
-     <main class="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]">
+     <main class="h-screen w-full flex flex-col justify-center items-center "  style={{
+                    background: "linear-gradient(to right, #2A2A72, #009FFD)",
+                    position: "fixed",
+                    top: "0",
+                    left: "0",
+                    width: "100vw",
+                }}>
 	<h1 class="text-9xl font-extrabold text-white tracking-widest">	Site under construction</h1>
 	
-	<button class="mt-5 ">
-      <a
-        class="relative inline-block text-sm font-medium text-[#FF6A3D] group active:text-orange-500 focus:outline-none focus:ring"
-      >
-        <span
-          class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] group-hover:translate-y-0 group-hover:translate-x-0"
-        ></span>
-
-        <span class="relative block text-lg px-8 py-3 bg-[#1A2238] border border-current">
-          <a href="/dashboard">Go Home</a>
-        </span>
-      </a>
-    </button>
+  <a href = "/dashboard" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            Go Home 
+          </a>
 </main>
     </div>
   )

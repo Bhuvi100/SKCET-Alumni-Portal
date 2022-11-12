@@ -91,6 +91,12 @@ html {
     top:12px;
 }
 
+.bgcons{
+    background:
+            linear-gradient(-45deg, transparent 16px, #2462EA 0),
+            linear-gradient(45deg, transparent 16px, #2462EA  0);
+}
+
 .dropdown {
     float: left;
     overflow: hidden;
