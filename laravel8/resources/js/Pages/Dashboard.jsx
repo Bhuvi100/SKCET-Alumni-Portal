@@ -19,8 +19,6 @@ export default function Dashboard(props) {
                 </h2>
             }
         >
-            <Head title="Dashboard" />
-
             <div>
                 <div class="flex flex-col flex-1 ">
                     <main class="pb-16 overflow-y-auto">
