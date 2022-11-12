@@ -122,7 +122,7 @@ export default function SideBar(props) {
     
                                     <li>
                                         <a
-                                            href="#"
+                                            href="/construction"
                                             class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600"
                                         >
                                             <svg
@@ -142,7 +142,7 @@ export default function SideBar(props) {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="/construction"
                                             class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600"
                                         >
                                             <svg
@@ -165,7 +165,7 @@ export default function SideBar(props) {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="/construction"
                                             class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600"
                                         >
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -217,7 +217,7 @@ export default function SideBar(props) {
                                     <li>
                                         <a
                                             href="/profile"
-                                            class={"flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-blue-600 " + (route('profile') === window.location.href ? 'bg-blue-100' : '')}
+                                            class={"flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-blue-600 hover:text-white " + (route('profile') === window.location.href ? 'bg-blue-100' : '')}
                                         >
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                                  className="w-6 h-6">

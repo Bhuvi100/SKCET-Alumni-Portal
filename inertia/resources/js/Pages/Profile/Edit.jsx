@@ -44,7 +44,7 @@ const Edit = ({ user, auth }) => {
         >
             <form
                 style={{ margin: "5rem" }}
-                className="m-5 p-5 border border-gray-300"
+                className="m-5 p-5 border bg-white border-gray-300"
                 onSubmit={handleSubmit}
             >
                 <div className = "bg-white">

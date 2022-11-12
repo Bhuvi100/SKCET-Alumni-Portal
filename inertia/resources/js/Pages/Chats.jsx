@@ -6,16 +6,7 @@ const Chats = ({ user, auth, errors }) => {
   const [mob,setMob] = useState(true)
   return (
     <div>
-       <AuthenticatedLayout
-            auth={auth}
-            errors={errors}
-            header={
-                <h2 className="font-semibold text-xl text-gray-800 leading-tight">
-                    Edit Profile
-                </h2>
-            }
-        ></AuthenticatedLayout>
-      
+     
         <div class="flex h-screen antialiased text-gray-800">
     <div class="flex flex-row h-full w-full overflow-x-hidden">
       {mob && window.innerWidth < 500 ?<div class="flex flex-col py-8 pl-6 pr-2 w-full bg-white flex-shrink-0 ">
