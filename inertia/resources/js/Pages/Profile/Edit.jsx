@@ -1,7 +1,7 @@
 import React from "react";
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import Country from "@/Components/Country";
-import InputError from "@/Components/InputError";
+import AuthenticatedLayout from "../../Layouts/AuthenticatedLayout";
+import Country from "../../Components/Country";
+import InputError from "../../Components/InputError";
 import { InertiaLink, useForm } from "@inertiajs/inertia-react";
 
 const Edit = ({ user, auth }) => {

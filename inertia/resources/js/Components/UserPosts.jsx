@@ -86,7 +86,7 @@ const UserPosts = (props) => {
                         <div class="flex flex-col mb-2 ml-4 mt-1">
                             <div class="flex text-blue-700 text-sm font-semibold">
                                 {posts.user.name}
-                                <div className="ml-5 text-gray-600 text-sm mr-1 cursor-pointer">
+                                <div className="ml-3 text-gray-600 text-sm mr-1 cursor-pointer">
                                     {posts.user.designation} at
                                     {" " + posts.user.organization}
                                 </div>

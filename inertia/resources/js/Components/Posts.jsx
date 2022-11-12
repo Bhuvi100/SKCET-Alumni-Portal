@@ -1,24 +1,20 @@
-import React from 'react'
+import React from "react";
 import { InertiaLink, useForm } from "@inertiajs/inertia-react";
 
 const Posts = () => {
-
-  const { data, setData, errors, post } = useForm({
-    title: "",
-    description: "",
- });
- 
- function handleSubmit(e) {
-    e.preventDefault();
-    post(route("addPost"), {
-      onSuccess: (res) => {
-        console.log(
-          "sucessfull"
-        );
-      }
+    const { data, setData, errors, post } = useForm({
+        title: "",
+        description: "",
     });
- }
 
+    function handleSubmit(e) {
+        e.preventDefault();
+        post(route("addPost"), {
+            onSuccess: (res) => {
+                window.location.reload();
+            },
+        });
+    }
   return (
     <div >
       <form class="bg-white shadow rounded-lg mb-5 p-4 w-full md:w-full"  onSubmit={handleSubmit}>
@@ -58,4 +54,4 @@ const Posts = () => {
   )
 }
 
-export default Posts
+export default Posts;

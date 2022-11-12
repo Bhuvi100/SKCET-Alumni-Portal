@@ -44,7 +44,7 @@ const HomeNav = ({ auth }) => {
 
                         <ul class="list-reset lg:flex justify-end flex-1 items-center">
                             <li>
-                                <h1 class="text-white mr-3">User 1</h1>
+                                <h1 class="text-white mr-3">Test User</h1>
                             </li>
 
                             <li>
