@@ -81106,7 +81106,7 @@ function Authenticated(_ref) {
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_Components_HomeNav__WEBPACK_IMPORTED_MODULE_2__["default"], {
         auth: auth
       }), window.innerWidth > 700 && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_Components_SideBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("main", {
-        className: "w-full m-3 md:ml-80  mt-24",
+        className: "w-full md:m-3 md:ml-80  mt-24",
         children: children
       })]
     })
@@ -86042,12 +86042,12 @@ function Show(_ref) {
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_Components_ProfileComponents_AboutUser__WEBPACK_IMPORTED_MODULE_0__["default"], {
                 user: user
               }), arr.map(function (a) {
-                return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxs"])("div", {
+                return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
+                  className: "bg-gray-100",
                   style: {
                     width: "100%",
-                    height: "100vh"
-                  },
-                  children: ["hello $", a]
+                    height: "50vh"
+                  }
                 });
               })]
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxs"])("div", {
@@ -86081,7 +86081,9 @@ function Show(_ref) {
                     return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxs"])("div", {
                       style: {
                         width: "100%",
-                        height: "100vh"
+                        height: "50vh",
+                        marginBottom: "2rem",
+                        background: "white"
                       },
                       children: ["hello $", a]
                     });
@@ -86592,10 +86594,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-_inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__["InertiaProgress"].init({
-  color: "#ED8936",
-  showSpinner: true
-});
+_inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__["InertiaProgress"].init();
 Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__["createInertiaApp"])({
   resolve: function resolve(name) {
     return __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*$")("./".concat(name));
