@@ -1,10 +1,14 @@
 import React from 'react'
 import IndexFooter from '../Components/IndexFooter'
 import Navbar from '../Components/Navbar'
+import {Head} from "@inertiajs/inertia-react";
 
 const Gallery = () => {
   return (
     <div>
+      <Head>
+        <title>Gallery | LinkUP</title>
+      </Head>
       <div>
         <Navbar />
         <h1 class="mt-28 text-center font-bold py-10 text-3xl italic">Capture it,
