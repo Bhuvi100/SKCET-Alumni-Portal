@@ -83557,6 +83557,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_IndexHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/IndexHeader */ "./resources/js/Components/IndexHeader.jsx");
 /* harmony import */ var _Components_StarAlumni__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Components/StarAlumni */ "./resources/js/Components/StarAlumni.jsx");
 /* harmony import */ var _Components_SuccessStories__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Components/SuccessStories */ "./resources/js/Components/SuccessStories.jsx");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -83564,7 +83567,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Landing = function Landing() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_IndexHeader__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_Members__WEBPACK_IMPORTED_MODULE_0__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_StarAlumni__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_IndexFooter__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_6__["Head"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Login")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_IndexHeader__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_Members__WEBPACK_IMPORTED_MODULE_0__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_StarAlumni__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_IndexFooter__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 /* harmony default export */ __webpack_exports__["default"] = (Landing);
 
@@ -84278,8 +84281,8 @@ function route(name, params, absolute, config) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! B:\Projects\SKCET-Alumni-Portal\laravel8\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! B:\Projects\SKCET-Alumni-Portal\laravel8\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\Users\AJAYVIJAY\OneDrive\Desktop\web development\Skcet Alumni\SKCET-Alumni-Portal\laravel8\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\AJAYVIJAY\OneDrive\Desktop\web development\Skcet Alumni\SKCET-Alumni-Portal\laravel8\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ }),

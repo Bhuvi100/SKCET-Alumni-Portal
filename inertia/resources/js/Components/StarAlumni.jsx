@@ -10,7 +10,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 const StarAlumni = () => {
   return (
     <>
-        <div class="max-w-lg mx-auto text-center">
+        <div class="max-w-lg mx-auto text-center" style = {{height : "10%"}}>
             <h1 className={" mt-16 mb-8 pb-2 font-bold sm:text-xl text-2xl md:text-3xl text-center"}>
                 Notable
             <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-300" >
