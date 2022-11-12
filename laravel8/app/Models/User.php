@@ -74,10 +74,10 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Comment::class);
     }
 
-    public function getpictureUrl()
-    {    
-        return $this->getAttribute('picture') ? Storage::disk('public')
-            ->url(str_replace('public/', '', $this->getAttribute('picture'))) : asset('/assets/user.png');
+    public function getPictureUrlAttribute()
+    {
+        return $this->picture ? Storage::disk('public')
+            ->url(str_replace('public/', '', $this->picture)) : asset('/assets/user.png');
     }
 
     public function toResource()
