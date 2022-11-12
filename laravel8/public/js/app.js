@@ -81099,13 +81099,9 @@ function Authenticated(_ref) {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     return console.log("awsdeas");
   }, []);
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
     className: "bg-gray-300",
-    children: [header && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__["Head"], {
-      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("title", {
-        children: header
-      })
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
       className: "flex",
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_Components_HomeNav__WEBPACK_IMPORTED_MODULE_2__["default"], {
         auth: auth
@@ -81113,7 +81109,7 @@ function Authenticated(_ref) {
         className: "w-full m-3 md:ml-80  mt-24",
         children: children
       })]
-    })]
+    })
   });
 }
 
@@ -84121,16 +84117,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Dashboard(props) {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxs"])(_Layouts_AuthenticatedLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_Layouts_AuthenticatedLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     auth: props.auth,
     errors: props.errors,
     header: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])("h2", {
       className: "font-semibold text-xl text-gray-800 leading-tight",
       children: "Dashboard"
     }),
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__["Head"], {
-      title: "Dashboard"
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])("div", {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])("div", {
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])("div", {
         "class": "flex flex-col flex-1 ",
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])("main", {
@@ -84262,7 +84256,7 @@ function Dashboard(props) {
           })
         })
       })
-    })]
+    })
   });
 }
 
@@ -86491,38 +86485,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var UnderConstruction = function UnderConstruction(props) {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
-    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_Layouts_AuthenticatedLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      auth: props.auth,
-      errors: props.errors,
-      header: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("h2", {
-        className: "font-semibold text-xl text-gray-800 leading-tight",
-        children: "Under Construction"
-      }),
-      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("main", {
-        "class": "h-screen w-full flex md:mt-8 flex-col justify-center items-center ",
-        style: {
-          background: "linear-gradient(to right, #2A2A72, #009FFD)"
-        },
-        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
-          "class": "p-2 flex justify-center items-center",
-          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
-            href: route("dashboard"),
-            "class": "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-blue-600 " + (route("dashboard") === window.location.href ? "bg-blue-100" : ""),
-            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("img", {
-              src: "/assets/ski_logo.png",
-              "class": "h-40 w-40"
-            })
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_Layouts_AuthenticatedLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    auth: props.auth,
+    errors: props.errors,
+    header: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("h2", {
+      className: "font-semibold text-xl text-gray-800 leading-tight",
+      children: "Under Construction"
+    }),
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("main", {
+      "class": "h-screen w-full flex md:mt-8 flex-col justify-center items-center ",
+      style: {
+        background: "linear-gradient(to right, #2A2A72, #009FFD)"
+      },
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+        "class": "p-2 flex justify-center items-center",
+        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
+          href: route("dashboard"),
+          "class": "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-blue-600 " + (route("dashboard") === window.location.href ? "bg-blue-100" : ""),
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("img", {
+            src: "/assets/ski_logo.png",
+            "class": "h-40 w-40"
           })
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("h1", {
-          "class": "md:text-7xl text-3xl mx-auto font-extrabold text-white tracking-widest",
-          children: " Site under construction"
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
-          href: "/dashboard",
-          "class": "mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
-          children: "Go Home"
-        })]
-      })
+        })
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("h1", {
+        "class": "md:text-7xl text-3xl mx-auto font-extrabold text-white tracking-widest",
+        children: [" ", "Site under construction"]
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
+        href: "/dashboard",
+        "class": "mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
+        children: "Go Home"
+      })]
     })
   });
 };
