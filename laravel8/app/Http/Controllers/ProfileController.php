@@ -49,6 +49,7 @@ class ProfileController extends Controller
             'organization_email'=> 'nullable|string',
             'areas_of_expertise'=> 'nullable|string',
             'category'=> 'nullable|string',
+            'picture' => 'required|file', 
         ]);
         $user->name = $request->name;
         $user->phone = $request->phone;
@@ -59,6 +60,14 @@ class ProfileController extends Controller
         $user->organization_email = $request->organization_email;
         $user->areas_of_expertise = $request->areas_of_expertise;
         $user->category = $request->category;
+        if ($request->hasFile('picture')) {
+            if (\Storage::exists($user->picture ?? 'null')) {
+                \Storage::delete($user->picture);
+            }
+
+            $user['picture'] = $request->file('picture')->store("user/profile/{$user->id}");
+        }
+
         $user->update();
 
         return redirect('profile');

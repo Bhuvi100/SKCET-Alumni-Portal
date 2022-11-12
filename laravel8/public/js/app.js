@@ -85771,15 +85771,18 @@ var Edit = function Edit(_ref) {
                               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
                                 "class": "flex text-sm text-gray-600",
                                 children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("label", {
-                                  "for": "file-upload",
+                                  "for": "picture",
                                   "class": "relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500",
                                   children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("span", {
                                     children: "Upload a file"
                                   }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("input", {
-                                    id: "file-upload",
-                                    name: "file-upload",
+                                    id: "picture",
+                                    name: "picture",
                                     type: "file",
-                                    "class": "sr-only"
+                                    "class": "sr-only",
+                                    onChange: function onChange(e) {
+                                      setData("picture", e.target.files[0]);
+                                    }
                                   })]
                                 }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("p", {
                                   "class": "pl-1",
@@ -87165,8 +87168,8 @@ function route(name, params, absolute, config) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\AJAYVIJAY\OneDrive\Desktop\web development\Skcet Alumni\SKCET-Alumni-Portal\laravel8\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\AJAYVIJAY\OneDrive\Desktop\web development\Skcet Alumni\SKCET-Alumni-Portal\laravel8\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! E:\other_apps\git_projects\SKCET-Alumni-Portal\laravel8\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\other_apps\git_projects\SKCET-Alumni-Portal\laravel8\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ }),
