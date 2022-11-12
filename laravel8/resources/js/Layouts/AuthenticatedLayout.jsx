@@ -9,15 +9,10 @@ export default function Authenticated({ auth, header, children }) {
 
     return (
         <div className="bg-gray-300">
-            {header && (
-                <Head>
-                    <title>{header}</title>
-                </Head>
-            )}
             <div className="flex">
                 <HomeNav auth={auth} />
                 {window.innerWidth > 700 && <SideBar />}
-                <main className="w-full m-3 md:ml-80  mt-24">{children}</main>A
+                <main className="w-full m-3 md:ml-80  mt-24">{children}</main>
             </div>
         </div>
     );
