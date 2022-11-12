@@ -22,7 +22,7 @@ export default function Dashboard(props) {
             <Head title="Dashboard" />
 
             <div>
-                <div class="flex flex-col flex-1">
+                <div class="flex flex-col flex-1 ">
                     <main class="pb-16 overflow-y-auto">
                         <div class="block md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3 ">
                             <div class="col-span-2">

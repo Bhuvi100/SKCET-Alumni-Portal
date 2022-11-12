@@ -20,7 +20,7 @@ const Posts = () => {
  }
 
   return (
-    <div>
+    <div >
       <form class="bg-white shadow rounded-lg mb-5 p-4 w-full md:w-full"  onSubmit={handleSubmit}>
     
     <h2 class="mb-1 font-medium mb-3">Start a post</h2>

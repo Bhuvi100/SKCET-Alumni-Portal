@@ -7,7 +7,7 @@ export default function SideBar(props) {
     const [showSidebar, setShowSidebar] = useState(true);
     return (
         <div>
-            <div className="fixed  top-8 lg:top-40 left-4">
+            <div className="fixed mr-3 top-8 lg:top-40 left-4">
                 <div className="">
                     {
                         window.innerWidth<700 && <button

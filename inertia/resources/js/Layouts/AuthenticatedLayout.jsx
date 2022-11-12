@@ -5,14 +5,14 @@ import HomeNav from "@/Components/HomeNav";
 export default function Authenticated({ auth, header, children }) {
 
     return (
-        <div className="">
+        <div className="bg-gray-300">
             <div className="flex">
                 <HomeNav user={auth}/>
                 
                 {
                     window.innerWidth>700 && <SideBar />
                 }
-                <main className="w-full m-2 md:ml-80 mt-24">
+                <main className="w-full m-3 md:ml-80  mt-24" >
                     {children}
                 </main>
                

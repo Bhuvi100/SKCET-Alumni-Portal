@@ -69,7 +69,7 @@ const UserPosts = (props) => {
     };
 
     return (
-        <div>
+        <div className="mr-3">
             {showMod !== false && (
                 <Modal data={pid} setShowModal={setShowMod} />
             )}
