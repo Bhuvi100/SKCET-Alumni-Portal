@@ -1,4 +1,3 @@
-import SuccessStories from "../components/SuccessStories";
 import { useState } from "react";
 import { Link } from "@inertiajs/inertia-react";
 import route from "../../../vendor/tightenco/ziggy/src/js";
