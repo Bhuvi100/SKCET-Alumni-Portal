@@ -447,6 +447,13 @@ main {
 	background-color: #b11509;
 }*/
 
+.bgconstruction{
+    background : url('../../public/assets/underconstruction.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+}
+
 
 .separator {
 	--separator-size: 8px;

@@ -2,8 +2,8 @@ import React from 'react'
 import "../../css/app.css"
 const UnderConstruction = () => {
   return (
-    <div>
-      <main>
+    <div >
+      <main className = "bgconstruction">
 	<div class="book">
 		<div class="book-cover">
 			<div>
@@ -16,7 +16,7 @@ const UnderConstruction = () => {
                                     >
                                         <img
                                             src="/assets/ski_logo.png"
-                                            class="h-24 w-24"
+                                            class="h-40 w-40"
                                         />
                                     </a>
                                 </div>
@@ -25,7 +25,7 @@ const UnderConstruction = () => {
 		</div>
 		<div class="book-content">
 			
-      <h1 class = "flex justify-center items-center h-full text-3xl">This page is currently under construction</h1>
+      <h1 class = "flex justify-center items-center h-full text-3xl">Site  is currently under construction</h1>
 
 		</div>
 	</div>
