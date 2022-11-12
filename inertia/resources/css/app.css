@@ -45,10 +45,11 @@ html {
     }
 }
 #bg {
-    background: url('https://www.skcet.ac.in/images/admin%20front2.jpg');
+    background: url('https://www.skcet.ac.in/images/admin%20front2.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
     height : 100vh;
+    
 
 }
 
