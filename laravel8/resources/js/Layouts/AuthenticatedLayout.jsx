@@ -12,7 +12,7 @@ export default function Authenticated({ auth, header, children }) {
                 {
                     window.innerWidth>700 && <SideBar />
                 }
-                <main className="w-full m-3 md:ml-80  mt-24" >
+                <main className="w-full md:m-3  md:ml-80  mt-24" >
                     {children}
                 </main>
                

@@ -79727,8 +79727,8 @@ function SideBar(props) {
     _useState2 = _slicedToArray(_useState, 2),
     showSidebar = _useState2[0],
     setShowSidebar = _useState2[1];
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
-    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
+    children: [console.log(showSidebar), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
       className: "fixed mr-3 top-8 lg:top-40 left-4",
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
         className: "",
@@ -79872,7 +79872,7 @@ function SideBar(props) {
                 })
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("li", {
                 children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("a", {
-                  href: "#",
+                  href: "/construction",
                   className: "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600",
                   children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
@@ -79893,7 +79893,7 @@ function SideBar(props) {
                 })
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("li", {
                 children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("a", {
-                  href: "#",
+                  href: "/construction",
                   "class": "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600",
                   children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
@@ -79912,7 +79912,7 @@ function SideBar(props) {
                 })
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("li", {
                 children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("a", {
-                  href: "/chats",
+                  href: "/construction",
                   "class": "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600",
                   children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
@@ -79993,7 +79993,7 @@ function SideBar(props) {
           })
         })
       })]
-    })
+    })]
   });
 }
 
@@ -81099,7 +81099,7 @@ function Authenticated(_ref) {
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_Components_HomeNav__WEBPACK_IMPORTED_MODULE_2__["default"], {
         auth: auth
       }), window.innerWidth > 700 && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_Components_SideBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("main", {
-        className: "w-full m-3 md:ml-80  mt-24",
+        className: "w-full md:m-3  md:ml-80  mt-24",
         children: children
       })]
     })
@@ -86469,33 +86469,49 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../css/app.css */ "./resources/css/app.css");
-/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_app_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Layouts_AuthenticatedLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Layouts/AuthenticatedLayout */ "./resources/js/Layouts/AuthenticatedLayout.jsx");
+/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../css/app.css */ "./resources/css/app.css");
+/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_app_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 
-var UnderConstruction = function UnderConstruction() {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
-    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxs"])("main", {
-      "class": "h-screen w-full flex flex-col justify-center items-center ",
-      style: {
-        background: "linear-gradient(to right, #2A2A72, #009FFD)",
-        position: "fixed",
-        top: "0",
-        left: "0",
-        width: "100vw"
-      },
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("h1", {
-        "class": "text-9xl font-extrabold text-white tracking-widest",
-        children: " Site under construction"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("a", {
-        href: "/dashboard",
-        "class": "mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
-        children: "Go Home"
-      })]
+
+var UnderConstruction = function UnderConstruction(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_Layouts_AuthenticatedLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      auth: props.auth,
+      errors: props.errors,
+      header: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("h2", {
+        className: "font-semibold text-xl text-gray-800 leading-tight",
+        children: "Under Construction"
+      }),
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("main", {
+        "class": "h-screen w-full flex md:mt-8 flex-col justify-center items-center ",
+        style: {
+          background: "linear-gradient(to right, #2A2A72, #009FFD)"
+        },
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+          "class": "p-2 flex justify-center items-center",
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
+            href: route("dashboard"),
+            "class": "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-blue-600 " + (route("dashboard") === window.location.href ? "bg-blue-100" : ""),
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("img", {
+              src: "/assets/ski_logo.png",
+              "class": "h-40 w-40"
+            })
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("h1", {
+          "class": "md:text-7xl text-3xl mx-auto font-extrabold text-white tracking-widest",
+          children: " Site under construction"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
+          href: "/dashboard",
+          "class": "mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
+          children: "Go Home"
+        })]
+      })
     })
   });
 };
