@@ -29,8 +29,8 @@ export default function Show({ user, auth, errors }) {
                                 <div class="my-4"></div>
                                 <AboutUser user={user} />
                                 {
-                    arr.map((a) => <div style = {{width : "100%", height : "100vh"}}>
-                        hello ${a}
+                    arr.map((a) => <div className="bg-gray-100" style = {{width : "100%", height : "50vh",  }}>
+                        
                         </div>)
                 }
                     
@@ -64,7 +64,7 @@ export default function Show({ user, auth, errors }) {
                                      
                                     </div>
                        {
-           arr.map((a) => <div style = {{width : "100%", height : "100vh"}}>
+           arr.map((a) => <div style = {{width : "100%", height : "50vh",marginBottom : "2rem" ,background : "white"}}>
                hello ${a}
                </div>)
        }
