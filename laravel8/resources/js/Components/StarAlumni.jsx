@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import "../../css/app.css"
 
 const StarAlumni = () => {
   return (
