@@ -16,7 +16,10 @@ export default function VerifyEmail({ status, message }) {
     const submit = (e) => {
         e.preventDefault();
 
-        post(route("verification.send"));
+        post(route("verification.send"), {
+            onSuccess: (res) => {
+                alert("Email verification mail sent successfully. Please check your mail!");
+            }});
     };
 
     return (

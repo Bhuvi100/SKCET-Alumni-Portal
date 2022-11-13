@@ -15,7 +15,10 @@ export default function ForgotPassword({ status }) {
     const submit = (e) => {
         e.preventDefault();
 
-        post(route("password.email"));
+        post(route("password.email"), {
+            onSuccess: (res) => {
+                alert("Password Reset mail sent successfully. Please check your mail!");
+            }});
     };
 
     return (

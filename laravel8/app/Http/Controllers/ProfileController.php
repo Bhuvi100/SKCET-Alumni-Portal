@@ -35,7 +35,11 @@ class ProfileController extends Controller
 
 
     public function update(Request $request, User $user)
-    {   
+    {
+
+        if ($user->id !== auth()->id()) {
+            abort(401);
+        }
 
         $request->validate([
           
@@ -65,7 +69,7 @@ class ProfileController extends Controller
                 \Storage::delete($user->picture);
             }
 
-            $user['picture'] = $request->file('picture')->store("user/profile/{$user->id}");
+            $user['picture'] = $request->file('picture')->store("user/profile/{$user->id}", ['disk' => 'public']);
         }
 
         $user->update();

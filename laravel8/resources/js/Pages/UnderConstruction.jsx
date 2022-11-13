@@ -13,7 +13,7 @@ const UnderConstruction = (props) => {
                 }
             >
                 <main
-                    class="h-screen w-full flex md:mt-8 flex-col justify-center items-center "
+                    class="min-h-screen w-full flex md:mt-8 flex-col justify-center items-center "
                     style={{
                         background:
                             "linear-gradient(to right, #2A2A72, #009FFD)",

@@ -12,7 +12,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = PostResource::collection(Post::with('user')->get());
+        $posts = PostResource::collection(Post::with('user')->orderByDesc('created_at')->get());
 
         return  response()->json([
             "posts" => $posts

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link } from "@inertiajs/inertia-react";
 import route from "../../../vendor/tightenco/ziggy/src/js";
+import React from 'react';
 
 export default function SideBar(props) {
     const [showSidebar, setShowSidebar] = useState(window.innerWidth >= 700);
     return (
         <div>
-            {console.log(showSidebar)}
             <div className="fixed mr-3 top-8 lg:top-40 left-4">
                 <div className="">
                     {window.innerWidth < 700 && (

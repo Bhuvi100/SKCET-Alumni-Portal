@@ -24,7 +24,10 @@ export default function ResetPassword({ token, email }) {
     const submit = (e) => {
         e.preventDefault();
 
-        post(route("password.update"));
+        post(route("password.update"), {
+            onSuccess: (res) => {
+                alert("Password Reset Successful!");
+            }});
     };
 
     return (
