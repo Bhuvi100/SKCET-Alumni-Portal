@@ -83101,7 +83101,7 @@ function Dashboard(props) {
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("main", {
           className: "pb-16 overflow-y-auto mt-16",
           children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
-            className: "block md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3 ",
+            className: "flex flex-col md:flex-row items-center space-x-2 font-semibold text-gray-900 leading-8",
             children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
               className: "col-span-2",
               children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
