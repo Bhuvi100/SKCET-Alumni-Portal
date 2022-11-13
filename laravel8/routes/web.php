@@ -38,11 +38,11 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard', ['auth' => auth()->user()]);
+        return Inertia::render('Dashboard');
     })->name('dashboard');
 
     Route::get('/chapters', function () {
-        return Inertia::render('Chapters', ['auth' => auth()->user()]);
+        return Inertia::render('Chapters');
     });
 
     // profile user edit
@@ -84,12 +84,12 @@ Route::middleware(['auth', 'verified'])->group(function() {
 
         // job oppurtunity and guest speaker form
         Route::get('/job', function () {
-            return Inertia::render('JobForm',['auth' => auth()->user()]);
+            return Inertia::render('JobForm');
         });
         Route::post('/jobSubmit',[\App\Http\Controllers\FormsController::class, 'jobSubmit'])->name('jobSubmit');
 
         Route::get('/guestspeaker', function () {
-            return Inertia::render('GuestSpeakerform',['auth' => auth()->user()]);
+            return Inertia::render('GuestSpeakerform');
         });
         Route::post('/guestspeakerSubmit',[\App\Http\Controllers\FormsController::class, 'guestSpeakerSubmit'])->name('guestspeakerSubmit');
 });
@@ -133,5 +133,9 @@ Route::get('/construction', function () {
 Route::get('/events', function () {
     return Inertia::render('Events');
 });
+
+Route::get('/storage/{extra}', function ($extra) {
+    return redirect("/public/storage/$extra");
+})->where('extra', '.*');
 
 require __DIR__.'/auth.php';

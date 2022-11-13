@@ -17,9 +17,7 @@ function handleSubmit(e) {
     e.preventDefault();
     post(route("generalQuerySubmit"), {
       onSuccess: (res) => {
-        console.log(
-          "sucessfull"
-        );
+          alert("Query sent successfully")
       }
     });
 }

@@ -6,7 +6,6 @@ import UserPosts from "../../Components/UserPosts";
 import { Head } from "@inertiajs/inertia-react";
 import AuthenticatedLayout from "../../Layouts/AuthenticatedLayout";
 
-const arr = [1,2,4,3,5,6,7,8,9,0,12,34]
 export default function Show({ user, auth, errors }) {
     return (
         <AuthenticatedLayout
@@ -19,28 +18,20 @@ export default function Show({ user, auth, errors }) {
             }
         >
             <Head title="Profile" />
-            <div className="mt-8">
-                <div class="bg-gray-100 h-full">
-                    <div class="container">
-                        <div class="md:flex no-wrap md:-mx-2 ">
+            <div className="mt-8 bg-gray-100 h-full">
+                <div class="">
+                    <div class="">
+                        <div class="md:flex no-wrap md:-mx-2 space-x-4 ">
                             <div class="w-full md:w-3/12 md:mx-2">
-                       
                                 <UserInfo user={user} />
                                 <div class="my-4"></div>
                                 <AboutUser user={user} />
-                                {
-                    arr.map((a) => <div className="bg-gray-100" style = {{width : "100%", height : "50vh",  }}>
-                        
-                        </div>)
-                }
-                    
                             </div>
-                            <div class="w-full md:w-9/12 mx-2 h-64">
-                         
+                            <div class="w-full md:w-8/12 mx-2">
                                 <ExtraInfo user={user} />
                                 <div class="my-4"></div>
                                 <Experience user={user} />
-                                              
+
                                 <div className="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mt-4 ml-3">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -56,24 +47,15 @@ export default function Show({ user, auth, errors }) {
                                             d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
                                         />
                                     </svg>
-                                    
+
                                     <div class="w-full md:w-3/12 md:mx-2">
-                       
-                                    <div className="text-black text-2xl font-semibold">
-                                        Your Post
-                                     
+                                        <div className="text-black text-2xl font-semibold">
+                                            Your Post
+                                        </div>
                                     </div>
-                       {
-           arr.map((a) => <div style = {{width : "100%", height : "50vh",marginBottom : "2rem" ,background : "white"}}>
-               hello ${a}
-               </div>)
-       }
-           
-                   </div>
                                 </div>
-                                
+
                                 <UserPosts />
-                               
                             </div>
                         </div>
                     </div>

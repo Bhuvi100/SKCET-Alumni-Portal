@@ -3,7 +3,7 @@ import React from "react";
 const Experience = ({ user }) => {
     return (
         <div>
-            <div class="bg-white p-1 shadow-sm rounded-sm md:w-30">
+            <div class="bg-white p-1 shadow-sm rounded-sm ">
                 <div class="grid grid-cols-3">
                     <div className="p-2">
                         <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mb-3">
