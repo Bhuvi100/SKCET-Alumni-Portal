@@ -26,11 +26,12 @@ const UserPosts = (props) => {
         description: "",
     });
 
-    function handleSubmitCommentsAndReply(e) {
-        e.preventDefault();
-        post(route("addComment", `${postid}`), {
+    function handleSubmitCommentsAndReply( post_id) {
+        //e.preventDefault();
+        console.log(post_id)
+        post(route("addComment", `${post_id}`), {
             onSuccess: (res) => {
-                GetComments(postid);
+                GetComments(post_id);
                 console.log("sucessfull");
             },
             onError: () => {
@@ -46,16 +47,10 @@ const UserPosts = (props) => {
         e.preventDefault();
     };
 
-    useEffect(() => {
-        axios()
-            .get("http://127.0.0.1:8000/Posts")
-            .then((response) => {
-                console.log(response.data);
-                setPostdata(response.data.posts);
-            });
-    }, []);
+ 
 
     const GetComments = (post_id) => {
+        console.log(post_id);
         setCom(!com);
         setPostid(post_id);
         axios()
@@ -73,7 +68,8 @@ const UserPosts = (props) => {
             {showMod !== false && (
                 <Modal data={pid} setShowModal={setShowMod} />
             )}
-            {postdata.map((posts, index) => (
+       {console.log(props.post)}
+            {props.post && props.post.data.map((posts, index) => (
                 <div class="bg-white shadow rounded-lg pb-4 mt-7">
                     <div class="flex flex-row px-2 py-2 mx-3">
                         <div class="w-auto h-auto rounded-full border-2 border-green-500">
@@ -114,6 +110,7 @@ const UserPosts = (props) => {
                     </div>
                     <div class="text-gray-500 text-sm mb-6 mx-3 px-2">
                         {posts.description}
+                       
                     </div>
                     <div class="flex w-full border-t border-gray-100">
                         <div class="mx-4 mt-2 flex flex-row"><span
@@ -156,9 +153,10 @@ const UserPosts = (props) => {
                                 </svg>
                             </span></div>
                         <div class="mt-3 mx-5 flex flex-row text-xs">
+                        
                             <button
                                 class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center"
-                                onClick={() => GetComments(posts.id)}
+                                onClick={() => { GetComments(posts.id)} }
                             >
                                 Comments:
                                 <div class="ml-1 text-gray-400 text-ms">
@@ -252,7 +250,8 @@ const UserPosts = (props) => {
                                             <form
                                                 class="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400"
                                                 onSubmit={
-                                                    handleSubmitCommentsAndReply
+                                                    (e) => 
+                                                    handleSubmitCommentsAndReply(posts.id)
                                                 }
                                             >
                                                 <img
@@ -309,7 +308,7 @@ const UserPosts = (props) => {
                         ))}
 
                     <form
-                        onSubmit={handleSubmitCommentsAndReply}
+                        onSubmit={(e) => {e.preventDefault(),handleSubmitCommentsAndReply(posts.id)}}
                         class="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400"
                     >
                         <img

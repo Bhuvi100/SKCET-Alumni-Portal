@@ -7,7 +7,7 @@ import { Head } from "@inertiajs/inertia-react";
 import AuthenticatedLayout from "../../Layouts/AuthenticatedLayout";
 
 const arr = [1,2,4,3,5,6,7,8,9,0,12,34]
-export default function Show({ user, auth, errors }) {
+export default function Show({ user, auth, errors, posts }) {
     return (
         <AuthenticatedLayout
             auth={auth}
@@ -73,6 +73,7 @@ export default function Show({ user, auth, errors }) {
                                 </div>
                                 
                                 <UserPosts />
+                               
                                
                             </div>
                         </div>

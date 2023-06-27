@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Inertia } from "@inertiajs/inertia";
 import { InertiaLink, useForm } from "@inertiajs/inertia-react";
 const SuccessStoriesForm = (props) => {
-
   const { data, setData, errors, post } = useForm({
     achievement: "",
     description: "",

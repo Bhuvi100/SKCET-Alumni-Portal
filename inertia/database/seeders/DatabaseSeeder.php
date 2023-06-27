@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+// use Illuminate\Database\Consoles\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,5 +28,31 @@ class DatabaseSeeder extends Seeder
              'category' => 'Entrepreneurs',
              'role' => 'user',
          ]);
+         \App\Models\User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test1@example.com',
+            'phone' => '1234567899',
+            'password' => \Hash::make('password'),
+            'designation' => 'manager',
+            'city_state' => 'cuddalore',
+            'country' => 'India',
+            'organization' => 'intel',
+            'organization_email' => 'balatest@intel.co.in',
+            'category' => 'Entrepreneurs',
+            'role' => 'user',
+        ]);
+        \App\Models\User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test2@example.com',
+            'phone' => '1234567899',
+            'password' => \Hash::make('password'),
+            'designation' => 'manager',
+            'city_state' => 'cuddalore',
+            'country' => 'India',
+            'organization' => 'intel',
+            'organization_email' => 'balatest@intel.co.in',
+            'category' => 'Entrepreneurs',
+            'role' => 'user',
+        ]);
     }
 }

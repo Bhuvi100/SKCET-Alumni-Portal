@@ -70,7 +70,6 @@ class PostController extends Controller
         $post->description = $request->description;
         $post->update();
 
-
         return redirect(RouteServiceProvider::HOME);
     }
 

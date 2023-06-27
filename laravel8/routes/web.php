@@ -36,6 +36,11 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/Posts', [\App\Http\Controllers\PostController::class, 'index'])->name('Posts');
+Route::get('/MyPosts', function () {
+    return Inertia::render('MyPosts');
+})->name('MyPosts');
+
 Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard', ['auth' => auth()->user()]);
@@ -72,10 +77,10 @@ Route::middleware(['auth', 'verified'])->group(function() {
         Route::post('/addPost', [\App\Http\Controllers\PostController::class, 'store'])->name('addPost');
         Route::post('/updatePost/{post}', [\App\Http\Controllers\PostController::class, 'update'])->name('updatePost');
 
-        Route::get('/Posts', [\App\Http\Controllers\PostController::class, 'index'])->name('Posts');
-        Route::get('/MyPosts', function () {
-            return Inertia::render('MyPosts');
-        })->name('MyPosts');
+        // Route::get('/Posts', [\App\Http\Controllers\PostController::class, 'index'])->name('Posts');
+        // Route::get('/MyPosts', function () {
+        //     return Inertia::render('MyPosts');
+        // })->name('MyPosts');
 
         // adding/update comments
         Route::get('/getComment/{post}', [\App\Http\Controllers\CommentController::class, 'index'])->name('getComment');

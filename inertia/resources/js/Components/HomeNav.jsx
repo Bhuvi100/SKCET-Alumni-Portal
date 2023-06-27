@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "@inertiajs/inertia-react";
 import SideBar from "./SideBar";
 
 const HomeNav = ({ auth }) => {
@@ -55,13 +56,14 @@ const HomeNav = ({ auth }) => {
                                 />
                             </li>
                         </ul>
-                        <a
-                            href="/login"
-                            id="navAction"
-                            class="mx-auto lg:mx-0 hover:underline bg-red-300 text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-                        >
-                            Logout
-                        </a>
+
+                        <Link
+                            href ="auth/logout"
+                             method="post">
+                                     <span class="mx-auto lg:mx-0 hover:underline bg-red-300 text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                                Logout
+                                     </span>
+                        </Link>
                     </div>
                 </div>
             </div>

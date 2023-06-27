@@ -7,8 +7,12 @@ import UserPosts from "../../Components/UserPosts";
 import SideBar from "@/Components/SideBar";
 import { Head } from "@inertiajs/inertia-react";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
+import { useState } from "react";
 
-export default function Show({ user, auth, errors }) {
+export default function Show({ user, auth, errors, posts, p }) {
+    console.log(posts)
+    console.log(user,posts)
+    const [filteredPost , setFilteredPost ] = useState([]);
     return (
         <AuthenticatedLayout
             auth={auth}
@@ -19,6 +23,7 @@ export default function Show({ user, auth, errors }) {
                 </h2>
             }
         >
+            {console.log(posts , user)}
             <Head title="Profile" />
             <div className="mt-8">
                 <div class="bg-gray-100">
@@ -52,7 +57,10 @@ export default function Show({ user, auth, errors }) {
                                         Your Posts
                                     </div>
                                 </div>
-                                <UserPosts />
+                                {/* if(user.id == post.id){
+                                    setFilteredPost(posts.data)
+                                } */}
+                                <UserPosts  post={posts} />
                             </div>
                         </div>
                     </div>
