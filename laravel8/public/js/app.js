@@ -77836,8 +77836,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _SideBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SideBar */ "./resources/js/Components/SideBar.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _vendor_tightenco_ziggy_src_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../vendor/tightenco/ziggy/src/js */ "./vendor/tightenco/ziggy/src/js/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
 
 
 
@@ -77845,9 +77850,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var HomeNav = function HomeNav(_ref) {
   var auth = _ref.auth;
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
     "class": "mb-4",
-    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
       className: "px-4 py-5 mx-auto sm:max-w-xl md:max-w-full sm:px-12  md:px-24 lg:px-5 fixed w-full z-30 top-0 text-white",
       id: "header",
       style: {
@@ -77857,24 +77862,24 @@ var HomeNav = function HomeNav(_ref) {
         left: "0",
         width: "100vw"
       },
-      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxs"])("div", {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
         className: "relative flex items-center justify-between",
-        children: [window.innerWidth < 500 && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_SideBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
+        children: [window.innerWidth < 500 && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_SideBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
           "class": "pl-4 flex items-center",
-          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("a", {
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("a", {
             href: "#",
             "class": "relative flex flex-row items-center h-11 focus:outline-none transparent pr-6 mt-4 ml-6",
-            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("img", {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("img", {
               src: "/assets/ski_logo.png",
               "class": "h-24 w-24"
             })
           })
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxs"])("div", {
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
           "class": "w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20",
           id: "nav-content",
-          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("li", {
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("li", {
             "class": "ml-50 mr-3 lg:flex justify-between flex-1 items-center",
-            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("h1", {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("h1", {
               "class": "text-white text-center",
               style: {
                 fontSize: "2rem",
@@ -77882,24 +77887,26 @@ var HomeNav = function HomeNav(_ref) {
               },
               children: "Link Up"
             })
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxs"])("ul", {
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("ul", {
             "class": "list-reset lg:flex justify-end flex-1 items-center",
-            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("li", {
-              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("h1", {
+            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("li", {
+              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("h1", {
                 "class": "text-white mr-3",
                 children: auth.name
               })
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("li", {
-              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("img", {
+            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("li", {
+              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("img", {
                 src: auth.picture_url,
                 className: "rounded-full h-25 w-10 mr-3",
                 alt: 'Profile '
               })
             })]
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("a", {
-            href: "/login",
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+            href: Object(_vendor_tightenco_ziggy_src_js__WEBPACK_IMPORTED_MODULE_2__["default"])("logout"),
+            method: "post",
+            as: "button",
             id: "navAction",
-            "class": "mx-auto lg:mx-0 hover:underline bg-red-300 text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
+            "class": "mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
             children: "Logout"
           })]
         })]
@@ -78789,7 +78796,7 @@ var Modal = function Modal(props) {
                   },
                   children: "Close "
                 }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("button", {
-                  className: "bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150",
+                  className: "bg-emerald-500 active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150",
                   type: "submit",
                   children: "Save Changes "
                 })]
@@ -79370,7 +79377,7 @@ var Experience = function Experience(_ref) {
   var user = _ref.user;
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
     children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
-      "class": "bg-white p-1 shadow-sm rounded-sm md:w-30",
+      "class": "bg-white p-1 shadow-sm rounded-sm ",
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxs"])("div", {
         "class": "grid grid-cols-3",
         children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxs"])("div", {
@@ -79515,6 +79522,7 @@ __webpack_require__.r(__webpack_exports__);
 var ExtraInfo = function ExtraInfo(_ref) {
   var user = _ref.user;
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
+    "class": "mr-4",
     children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxs"])("div", {
       "class": "bg-white p-3 shadow-sm rounded-sm",
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxs"])("div", {
@@ -79653,9 +79661,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var UserInfo = function UserInfo(_ref) {
   var user = _ref.user;
-  console.log(user);
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxs"])("div", {
-    "class": "bg-white p-3 border-t-4 border-blue-400 shadow-lg md:h-50 w-full m-3 sm:h-50 w-full m-3  mr-8",
+    "class": "bg-white border-t-4 border-blue-400 shadow-lg md:h-50 w-full m-3 p-4 sm:h-50 w-full",
     children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
       "class": "lg:image overflow-hidden md:h-30 ",
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("img", {
@@ -79722,13 +79729,14 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function SideBar(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(window.innerWidth >= 700),
     _useState2 = _slicedToArray(_useState, 2),
     showSidebar = _useState2[0],
     setShowSidebar = _useState2[1];
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
-    children: [console.log(showSidebar), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
       className: "fixed mr-3 top-8 lg:top-40 left-4",
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
         className: "",
@@ -79893,7 +79901,7 @@ function SideBar(props) {
                 })
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("li", {
                 children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("a", {
-                  href: "/construction",
+                  href: "/events",
                   "class": "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600",
                   children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
@@ -79993,7 +80001,7 @@ function SideBar(props) {
           })
         })
       })]
-    })]
+    })
   });
 }
 
@@ -80765,7 +80773,6 @@ var UserPosts = function UserPosts(props) {
     post(route("addComment", "".concat(postid)), {
       onSuccess: function onSuccess(res) {
         GetComments(postid);
-        console.log("sucessfull");
       },
       onError: function onError() {
         console.log("error");
@@ -80779,20 +80786,16 @@ var UserPosts = function UserPosts(props) {
     e.preventDefault();
   };
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(_utils_axios__WEBPACK_IMPORTED_MODULE_3__["default"])().get("http://127.0.0.1:8000/Posts").then(function (response) {
-      console.log(response.data);
+    Object(_utils_axios__WEBPACK_IMPORTED_MODULE_3__["default"])().get("/Posts").then(function (response) {
       setPostdata(response.data.posts);
     });
   }, []);
   var GetComments = function GetComments(post_id) {
     setCom(!com);
     setPostid(post_id);
-    Object(_utils_axios__WEBPACK_IMPORTED_MODULE_3__["default"])().get("http://127.0.0.1:8000/getComment/".concat(post_id)).then(function (response) {
+    Object(_utils_axios__WEBPACK_IMPORTED_MODULE_3__["default"])().get("/getComment/".concat(post_id)).then(function (response) {
       setComment(response.data);
-      console.log("heloo");
-      console.log(response.data);
     });
-    console.log(post_id);
   };
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
     className: "mr-3",
@@ -80837,227 +80840,13 @@ var UserPosts = function UserPosts(props) {
             })]
           })]
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
-          "class": "border-b border-gray-100 p-4"
+          "class": "border-b border-gray-100 p-1"
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
           "class": "text-gray-600 font-semibold mt-2  mb-2 mx-3 px-2",
           children: posts.title
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
           "class": "text-gray-500 text-sm mb-6 mx-3 px-2",
           children: posts.description
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-          "class": "flex w-full border-t border-gray-100",
-          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-            "class": "mx-4 mt-2 flex flex-row",
-            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("span", {
-              className: "transition ease-out duration-300 hover:bg-blue-50 bg-blue-100 w-8 h-8 px-2 py-2 text-center rounded-full text-blue-400 cursor-pointer mr-2",
-              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("svg", {
-                xmlns: "http://www.w3.org/2000/svg",
-                fill: "none",
-                width: "14px",
-                viewBox: "0 0 24 24",
-                stroke: "currentColor",
-                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("path", {
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  d: "M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
-                })
-              })
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("span", {
-              className: "transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer",
-              onClick: function onClick() {
-                setTr(!tr);
-                tr ? setLiked("blue") : setLiked("none");
-              },
-              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("svg", {
-                xmlns: "http://www.w3.org/2000/svg",
-                fill: liked,
-                viewBox: "0 0 24 24",
-                "stroke-width": "1.5",
-                stroke: "blue",
-                className: "w-6 h-6",
-                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("path", {
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  d: "M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z"
-                })
-              })
-            })]
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-            "class": "mt-3 mx-5 flex flex-row text-xs",
-            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("button", {
-              "class": "flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center",
-              onClick: function onClick() {
-                return GetComments(posts.id);
-              },
-              children: ["Comments:", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                "class": "ml-1 text-gray-400 text-ms",
-                children: [" ", "0"]
-              })]
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-              "class": "flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center",
-              children: ["Likes", " ", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                "class": "ml-1 text-gray-400 text-ms",
-                children: [" ", "0"]
-              })]
-            })]
-          })]
-        }), com && posts.id == postid && comment.map(function (obj) {
-          return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("section", {
-            "class": "relative flex items-center justify-center p-3 antialiased bg-white bg-gray-100 min-w-screen",
-            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
-              "class": "container px-0 mx-auto sm:px-5",
-              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                "class": "flex-col w-full py-4 mx-auto bg-white border-b-2 border-r-2 border-gray-200 ",
-                children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                  "class": "flex flex-row ",
-                  children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("img", {
-                    "class": "object-cover w-12 h-12 border-2 border-gray-300 rounded-full",
-                    alt: "Noob master's avatar",
-                    src: "https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&faces=1&faceindex=1&facepad=2.5&w=500&h=500&q=80"
-                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                    "class": "flex-col mt-1",
-                    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                      "class": "flex items-center flex-1 px-4 font-bold leading-tight",
-                      children: [obj.user.name, /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("span", {
-                        "class": "ml-2 text-xs font-normal text-gray-500",
-                        children: "2 weeks ago"
-                      })]
-                    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
-                      "class": "flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600",
-                      children: obj.description
-                    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("button", {
-                      "class": "inline-flex items-center px-1 pt-2 ml-1 flex-column",
-                      onClick: function onClick() {
-                        setRep(true);
-                        setData("comment_id", obj.id);
-                        setCommentid(obj.id);
-                        console.log(commentid);
-                      },
-                      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("svg", {
-                        "class": "w-5 h-5 ml-2 text-gray-600 cursor-pointer fill-current hover:text-gray-900",
-                        viewBox: "0 0 95 78",
-                        xmlns: "http://www.w3.org/2000/svg",
-                        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("path", {
-                          d: "M29.58 0c1.53.064 2.88 1.47 2.879 3v11.31c19.841.769 34.384 8.902 41.247 20.464 7.212 12.15 5.505 27.83-6.384 40.273-.987 1.088-2.82 1.274-4.005.405-1.186-.868-1.559-2.67-.814-3.936 4.986-9.075 2.985-18.092-3.13-24.214-5.775-5.78-15.377-8.782-26.914-5.53V53.99c-.01 1.167-.769 2.294-1.848 2.744-1.08.45-2.416.195-3.253-.62L.85 30.119c-1.146-1.124-1.131-3.205.032-4.312L27.389.812c.703-.579 1.49-.703 2.19-.812zm-3.13 9.935L7.297 27.994l19.153 18.84v-7.342c-.002-1.244.856-2.442 2.034-2.844 14.307-4.882 27.323-1.394 35.145 6.437 3.985 3.989 6.581 9.143 7.355 14.715 2.14-6.959 1.157-13.902-2.441-19.964-5.89-9.92-19.251-17.684-39.089-17.684-1.573 0-3.004-1.429-3.004-3V9.936z",
-                          "fill-rule": "nonzero"
-                        })
-                      })
-                    })]
-                  })]
-                }), obj.replies.map(function (reply) {
-                  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("hr", {
-                      "class": "my-2 ml-16 border-gray-200"
-                    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                      "class": "flex flex-row pt-1 md-10 md:ml-16",
-                      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("img", {
-                        "class": "w-12 h-12 border-2 border-gray-300 rounded-full",
-                        alt: "Emily's avatar",
-                        src: "https://images.unsplash.com/photo-1581624657276-5807462d0a3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&faces=1&faceindex=1&facepad=2.5&w=500&h=500&q=80"
-                      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                        "class": "flex-col mt-1",
-                        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                          "class": "flex items-center flex-1 px-4 font-bold leading-tight",
-                          children: [obj.user.name, /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("span", {
-                            "class": "ml-2 text-xs font-normal text-gray-500",
-                            children: "5 days ago"
-                          })]
-                        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
-                          "class": "flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600",
-                          children: reply.description
-                        })]
-                      })]
-                    })]
-                  });
-                }), rep && data.comment_id === obj.id && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("form", {
-                  "class": "relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400",
-                  onSubmit: handleSubmitCommentsAndReply,
-                  children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("img", {
-                    "class": "w-10 h-10 object-cover rounded-full shadow mr-2 cursor-pointer",
-                    alt: "User avatar",
-                    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
-                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("span", {
-                    "class": "absolute inset-y-0 right-0 flex items-center pr-6",
-                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("button", {
-                      type: "submit",
-                      "class": "p-1 focus:outline-none focus:shadow-none hover:text-blue-500",
-                      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("svg", {
-                        "class": "ml-1",
-                        viewBox: "0 0 24 24",
-                        width: "16",
-                        height: "16",
-                        stroke: "currentColor",
-                        "stroke-width": "2",
-                        fill: "none",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("line", {
-                          x1: "22",
-                          y1: "2",
-                          x2: "11",
-                          y2: "13"
-                        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("polygon", {
-                          points: "22 2 15 22 11 13 2 9 22 2"
-                        })]
-                      })
-                    })
-                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("input", {
-                    type: "text",
-                    name: "description",
-                    "class": "w-full py-2 pl-4 pr-10 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400 focus:bg-white focus:outline-none focus:border-blue-500 focus:text-gray-900 focus:shadow-outline-blue",
-                    placeholder: "Post a comment...",
-                    autocomplete: "off",
-                    onChange: function onChange(e) {
-                      return setData("description", e.target.value);
-                    }
-                  })]
-                })]
-              })
-            })
-          });
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("form", {
-          onSubmit: handleSubmitCommentsAndReply,
-          "class": "relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400",
-          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("img", {
-            "class": "w-10 h-10 object-cover rounded-full shadow mr-2 cursor-pointer",
-            alt: "User avatar",
-            src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("span", {
-            "class": "absolute inset-y-0 right-0 flex items-center pr-6",
-            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("button", {
-              type: "submit",
-              "class": "p-1 focus:outline-none focus:shadow-none hover:text-blue-500",
-              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("svg", {
-                "class": "ml-1",
-                viewBox: "0 0 24 24",
-                width: "16",
-                height: "16",
-                stroke: "currentColor",
-                "stroke-width": "2",
-                fill: "none",
-                "stroke-linecap": "round",
-                "stroke-linejoin": "round",
-                children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("line", {
-                  x1: "22",
-                  y1: "2",
-                  x2: "11",
-                  y2: "13"
-                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("polygon", {
-                  points: "22 2 15 22 11 13 2 9 22 2"
-                })]
-              })
-            })
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("input", {
-            type: "text",
-            name: "description",
-            "class": "w-full py-2 pl-4 pr-10 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400 focus:bg-white focus:outline-none focus:border-blue-500 focus:text-gray-900 focus:shadow-outline-blue",
-            placeholder: "Post a comment...",
-            autocomplete: "off",
-            onChange: function onChange(e) {
-              return setData("description", e.target.value);
-            }
-          })]
         })]
       });
     })]
@@ -81096,20 +80885,21 @@ function Authenticated(_ref) {
   var auth = _ref.auth,
     header = _ref.header,
     children = _ref.children;
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    return console.log("awsdeas");
-  }, []);
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
     className: "bg-gray-300",
-    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__["Head"], {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("title", {
+        children: header.props.children
+      })
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
       className: "flex",
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_Components_HomeNav__WEBPACK_IMPORTED_MODULE_2__["default"], {
         auth: auth
       }), window.innerWidth > 700 && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_Components_SideBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("main", {
-        className: "w-full md:m-3 md:ml-80  mt-24",
+        className: "w-full md:ml-80 mt-24",
         children: children
       })]
-    })
+    })]
   });
 }
 
@@ -81173,6 +80963,8 @@ var map = {
 	"./Chats.jsx": "./resources/js/Pages/Chats.jsx",
 	"./Dashboard": "./resources/js/Pages/Dashboard.jsx",
 	"./Dashboard.jsx": "./resources/js/Pages/Dashboard.jsx",
+	"./Events": "./resources/js/Pages/Events.jsx",
+	"./Events.jsx": "./resources/js/Pages/Events.jsx",
 	"./Gallery": "./resources/js/Pages/Gallery.jsx",
 	"./Gallery.jsx": "./resources/js/Pages/Gallery.jsx",
 	"./GuestSpeakerform": "./resources/js/Pages/GuestSpeakerform.jsx",
@@ -81747,7 +81539,11 @@ function ForgotPassword(_ref) {
   };
   var submit = function submit(e) {
     e.preventDefault();
-    post(route("password.email"));
+    post(route("password.email"), {
+      onSuccess: function onSuccess(res) {
+        alert("Password Reset mail sent successfully. Please check your mail!");
+      }
+    });
   };
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_Layouts_GuestLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
@@ -82801,7 +82597,11 @@ function ResetPassword(_ref) {
   };
   var submit = function submit(e) {
     e.preventDefault();
-    post(route("password.update"));
+    post(route("password.update"), {
+      onSuccess: function onSuccess(res) {
+        alert("Password Reset Successful!");
+      }
+    });
   };
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_Layouts_GuestLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
@@ -82979,7 +82779,11 @@ function VerifyEmail(_ref) {
   }, [status, message]);
   var submit = function submit(e) {
     e.preventDefault();
-    post(route("verification.send"));
+    post(route("verification.send"), {
+      onSuccess: function onSuccess(res) {
+        alert("Email verification mail sent successfully. Please check your mail!");
+      }
+    });
   };
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_Layouts_GuestLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
@@ -83095,31 +82899,31 @@ function Dashboard(props) {
       title: "Chapters"
     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
-        className: "flex flex-col flex-1",
+        className: "flex flex-row flex-1",
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("main", {
-          className: "pb-16 overflow-y-auto",
+          className: "pb-16 overflow-y-auto mt-16",
           children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
-            className: "block md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3 ",
+            className: "block md:grid md:grid-flow-row-dense md:grid-cols-3 grid-cols-1 grid-rows-1 md:grid-rows-3 gap-10",
             children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
               className: "col-span-2",
               children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
-                className: "flex flex-row mt-5 justify-center",
+                className: "flex flex-col md:flex-row mt-5 justify-center",
                 children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
                   className: "container mr-4 mt-10 px-6 text-gray-500 md:px-12 xl:px-0 mb-5 ",
                   children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
                     className: "max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white",
                     children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("img", {
-                      className: "w-full",
-                      src: "/assets/ski_logo.png",
-                      alt: "Sunset in the mountains"
+                      className: "w-full h-4/5",
+                      src: "/assets/Coimbatore.jpg",
+                      alt: "Coimbatore Chapter"
                     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
                       className: "px-6 py-4",
                       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
                         className: "font-bold text-xl mb-2",
                         children: "Coimbatore Chapter"
                       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("p", {
-                        className: "text-gray-700 text-base",
-                        children: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+                        className: "text-gray-700 text-xl",
+                        children: "Being the Hometown of Sri Krishna Family, Coimbatore chapter plays a major role in SKCET's Alumni Network."
                       })]
                     })]
                   })
@@ -83128,17 +82932,17 @@ function Dashboard(props) {
                   children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
                     className: "max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white",
                     children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("img", {
-                      className: "w-full",
-                      src: "/assets/ski_logo.png",
-                      alt: "Sunset in the mountains"
+                      className: "w-full h-4/5",
+                      src: "/assets/Chennai.jpeg",
+                      alt: "Chennai Chapter"
                     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
                       className: "px-6 py-4",
                       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
                         className: "font-bold text-xl mb-2",
                         children: "Chennai Chapter"
                       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("p", {
-                        className: "text-gray-700 text-base",
-                        children: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+                        className: "text-gray-700 text-xl",
+                        children: "As the Capital city and the largest city of Tamilnadu, Chennai chapter is dedicated for those who are living in Chennai."
                       })]
                     })]
                   })
@@ -83147,17 +82951,17 @@ function Dashboard(props) {
                   children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
                     className: "max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white",
                     children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("img", {
-                      className: "w-full",
-                      src: "/assets/ski_logo.png",
-                      alt: "Sunset in the mountains"
+                      className: "w-full h-4/5",
+                      src: "/assets/Bangalore.jpeg",
+                      alt: "Bangalore Chapter"
                     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
                       className: "px-6 py-4",
                       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
                         className: "font-bold text-xl mb-2",
                         children: "Bangalore Chapter"
                       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("p", {
-                        className: "text-gray-700 text-base",
-                        children: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+                        className: "text-gray-700 text-xl",
+                        children: "As the center of India's high-tech industry, Bangalore Chapter is catered to alumni residing in Bangalore."
                       })]
                     })]
                   })
@@ -84130,7 +83934,7 @@ function Dashboard(props) {
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])("main", {
           "class": "pb-16 overflow-y-auto",
           children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxs"])("div", {
-            "class": "block md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3 ",
+            "class": "block md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-2 ",
             children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxs"])("div", {
               "class": "col-span-2",
               children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])("div", {
@@ -84247,8 +84051,8 @@ function Dashboard(props) {
                   "class": "flex items-center justify-center",
                   children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])("a", {
                     "class": "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800",
-                    href: "/jobs",
-                    children: "View Openings"
+                    href: "#",
+                    children: "Coming soon"
                   })
                 })]
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_Components_Mentorship__WEBPACK_IMPORTED_MODULE_4__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_Components_Suggestions__WEBPACK_IMPORTED_MODULE_5__["default"], {})]
@@ -84257,6 +84061,78 @@ function Dashboard(props) {
         })
       })
     })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Events.jsx":
+/*!***************************************!*\
+  !*** ./resources/js/Pages/Events.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Dashboard; });
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Components_Posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/Posts */ "./resources/js/Components/Posts.jsx");
+/* harmony import */ var _Components_TrendingPosts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/TrendingPosts */ "./resources/js/Components/TrendingPosts.jsx");
+/* harmony import */ var _Components_UserPosts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/UserPosts */ "./resources/js/Components/UserPosts.jsx");
+/* harmony import */ var _Layouts_AuthenticatedLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Layouts/AuthenticatedLayout */ "./resources/js/Layouts/AuthenticatedLayout.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+function Dashboard(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])(_Layouts_AuthenticatedLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    auth: props.auth,
+    errors: props.errors,
+    header: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("h2", {
+      className: "font-semibold text-xl text-gray-800 leading-tight",
+      children: "Events"
+    }),
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__["Head"], {
+      title: "Events"
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+        "class": "bg-white p-3 shadow-sm rounded-sm mt-8",
+        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
+          "class": "flex flex-col md:flex-row items-center space-x-2 font-semibold text-gray-900 leading-8",
+          style: {
+            width: "80vw",
+            height: "100vh"
+          },
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("img", {
+            className: "w-50 h-50",
+            style: {
+              width: "70vw",
+              height: "70vh"
+            },
+            src: "/assets/invitation.jfif",
+            alt: "Sunset in the mountains"
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
+              className: "px-6 py-4",
+              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+                className: "font-bold text-4xl mb-4",
+                children: "Alumni Meeting"
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("p", {
+                className: "text-gray-700 text-base",
+                children: "As the branches of a tree, each one of us grow in different directions, yet our roots remain as one. One such cherished root is our home, SKCET, where not only skilled engineers but good citizens are born. Our home, SKCET has been constantly developing since the day it was rooted and shines brighter day by day. So are the children of SKCET. We introduce you, SKCET's LinkUp, Reconnect and Relive, the official and indigenous Alumni Network of SKCET where we could stay connected to cherish the memories and to create new ones."
+              })]
+            })
+          })]
+        })
+      })
+    })]
   });
 }
 
@@ -84401,7 +84277,7 @@ var GuestSpeakerForm = function GuestSpeakerForm(_ref) {
     e.preventDefault();
     post(route("guestspeakerSubmit"), {
       onSuccess: function onSuccess(res) {
-        console.log("sucessfull");
+        alert("Success");
       }
     });
   }
@@ -84474,12 +84350,16 @@ var GuestSpeakerForm = function GuestSpeakerForm(_ref) {
               "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring ",
               name: "orientation_type",
               id: "orientation_type",
-              value: data.orientation_type,
               onChange: function onChange(e) {
                 return setData("orientation_type", e.target.value);
               },
+              required: true,
               children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("option", {
                 selected: true,
+                value: "",
+                children: "Choose approach"
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("option", {
+                value: "Orientation Approach",
                 children: "Orientation Approach"
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("option", {
                 value: "Guest Speaker",
@@ -84523,10 +84403,10 @@ var GuestSpeakerForm = function GuestSpeakerForm(_ref) {
             })]
           })]
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
-          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("label", {
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("label", {
             "for": "expected_audience",
             "class": "block mb-2 text-black dark:text-gray-900",
-            children: "Expected Audience "
+            children: ["Expected Audience", " "]
           }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("input", {
             type: "text",
             "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring",
@@ -84702,7 +84582,7 @@ var JobForm = function JobForm() {
     e.preventDefault();
     post(route("jobSubmit"), {
       onSuccess: function onSuccess(res) {
-        console.log("sucessfull");
+        alert("Success");
       }
     });
   }
@@ -84774,7 +84654,9 @@ var JobForm = function JobForm() {
               onChange: function onChange(e) {
                 return setData("workPlace_type", e.target.value);
               },
+              required: true,
               children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("option", {
+                value: "",
                 selected: true,
                 children: "Select Type"
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("option", {
@@ -84817,7 +84699,9 @@ var JobForm = function JobForm() {
               onChange: function onChange(e) {
                 return setData("employment_type", e.target.value);
               },
+              required: true,
               children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("option", {
+                value: "",
                 selected: true,
                 children: "Select Type"
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("option", {
@@ -85028,6 +84912,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -85036,6 +84921,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var MentorForm = function MentorForm(props) {
+  var _jsx2, _jsx3, _jsx4;
   var _useForm = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__["useForm"])({
       // name: "",
       // phone: "",
@@ -85053,7 +84939,7 @@ var MentorForm = function MentorForm(props) {
     e.preventDefault();
     post(route("mentorFormSubmit"), {
       onSuccess: function onSuccess(res) {
-        console.log("sucessfull");
+        alert("Successful");
       }
     });
   }
@@ -85086,6 +84972,7 @@ var MentorForm = function MentorForm(props) {
               "class": "block mb-2 text-black dark:text-gray-900",
               children: "Full Name"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+              required: true,
               type: "text",
               "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
             })]
@@ -85095,6 +84982,7 @@ var MentorForm = function MentorForm(props) {
               "class": "block mb-2 text-black dark:text-gray-900",
               children: "Email"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+              required: true,
               type: "email",
               "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
             })]
@@ -85104,6 +84992,7 @@ var MentorForm = function MentorForm(props) {
               "class": "block mb-2 text-black dark:text-gray-900",
               children: "Mobile Number"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+              required: true,
               type: "tel",
               "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
             })]
@@ -85113,6 +85002,7 @@ var MentorForm = function MentorForm(props) {
               "class": "block mb-2 text-black dark:text-gray-900",
               children: "Method Of Guidance"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("select", {
+              required: true,
               name: "method_of_guidance",
               "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring",
               value: data.method_of_guidance,
@@ -85120,6 +85010,7 @@ var MentorForm = function MentorForm(props) {
                 return setData("method_of_guidance", e.target.value);
               },
               children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("option", {
+                value: "",
                 selected: true,
                 children: "Select Method"
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("option", {
@@ -85136,6 +85027,7 @@ var MentorForm = function MentorForm(props) {
               "class": "block mb-2 text-black dark:text-gray-900",
               children: "Department"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("select", {
+              required: true,
               name: "department",
               "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring ",
               value: data.department,
@@ -85143,6 +85035,7 @@ var MentorForm = function MentorForm(props) {
                 return setData("department", e.target.value);
               },
               children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("option", {
+                value: "",
                 selected: true,
                 children: "Choose the department"
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("option", {
@@ -85154,9 +85047,9 @@ var MentorForm = function MentorForm(props) {
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("option", {
                 value: "B.E. Computer Science and Engineering",
                 children: "B.E. Computer Science and Engineering"
-              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("option", {
+              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("option", {
                 value: "B.E. Computer Science and Engineering (Cyber Security) ",
-                children: "B.E. Computer Science and Engineering (Cyber Security) "
+                children: ["B.E. Computer Science and Engineering (Cyber Security)", " "]
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("option", {
                 value: "B.E. Computer Science and Design",
                 children: "B.E. Computer Science and Design"
@@ -85188,47 +85081,41 @@ var MentorForm = function MentorForm(props) {
               "for": "expertise",
               "class": "block mb-2 text-black dark:text-gray-900",
               children: "Area Of Expertise"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", (_jsx2 = {
+              required: true,
               name: "area_of_expertise",
               type: "text",
-              "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring",
-              required: true,
-              value: data.area_of_expertise,
-              onChange: function onChange(e) {
-                return setData("area_of_expertise", e.target.value);
-              }
-            })]
+              "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
+            }, _defineProperty(_jsx2, "required", true), _defineProperty(_jsx2, "value", data.area_of_expertise), _defineProperty(_jsx2, "onChange", function onChange(e) {
+              return setData("area_of_expertise", e.target.value);
+            }), _jsx2))]
           })]
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
-          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("label", {
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("label", {
             "for": "experience",
             "class": "block mb-2 text-black dark:text-gray-900",
-            children: "Briefly describe prior experience you have with mentoring. "
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+            children: ["Briefly describe prior experience you have with mentoring.", " "]
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", (_jsx3 = {
+            required: true,
             name: "mentor_experience",
             type: "text",
-            "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring",
-            required: true,
-            value: data.mentor_experience,
-            onChange: function onChange(e) {
-              return setData("mentor_experience", e.target.value);
-            }
-          })]
+            "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
+          }, _defineProperty(_jsx3, "required", true), _defineProperty(_jsx3, "value", data.mentor_experience), _defineProperty(_jsx3, "onChange", function onChange(e) {
+            return setData("mentor_experience", e.target.value);
+          }), _jsx3))]
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
           children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("label", {
             "for": "specific_concern",
             "class": "block mt-5 mb-2 text-black dark:text-gray-900",
             children: "Do you have any specific concerns you'd want us to be aware of?"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", (_jsx4 = {
+            required: true,
             name: "specific_concern",
             type: "text",
-            "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring",
-            required: true,
-            value: data.specific_concern,
-            onChange: function onChange(e) {
-              return setData("specific_concern", e.target.value);
-            }
-          })]
+            "class": "block w-full px-4 py-2 mt-2  bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
+          }, _defineProperty(_jsx4, "required", true), _defineProperty(_jsx4, "value", data.specific_concern), _defineProperty(_jsx4, "onChange", function onChange(e) {
+            return setData("specific_concern", e.target.value);
+          }), _jsx4))]
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
           "class": "flex items-center mt-4 justify-center",
           children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("button", {
@@ -85643,7 +85530,7 @@ var Edit = function Edit(_ref) {
       children: "Edit Profile"
     }),
     children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
-      className: "mt-8 -ml-20",
+      className: "mt-8 -ml-20 w-full",
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
         className: "bg-gray-100",
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
@@ -85666,7 +85553,7 @@ var Edit = function Edit(_ref) {
                       "class": "image overflow-hidden",
                       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("img", {
                         "class": "h-96 w-auto mb-4 mx-auto",
-                        src: "/assets/Alumni-Images/2.jpg",
+                        src: auth.picture_url,
                         alt: "Not available"
                       })
                     })]
@@ -86014,7 +85901,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var arr = [1, 2, 4, 3, 5, 6, 7, 8, 9, 0, 12, 34];
 function Show(_ref) {
   var user = _ref.user,
     auth = _ref.auth,
@@ -86029,13 +85915,13 @@ function Show(_ref) {
     children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__["Head"], {
       title: "Profile"
     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
-      className: "mt-8",
+      className: "mt-8 bg-gray-100 h-full",
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
-        "class": "bg-gray-100 h-full",
+        "class": "",
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
-          "class": "container",
+          "class": "",
           children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxs"])("div", {
-            "class": "md:flex no-wrap md:-mx-2 ",
+            "class": "md:flex no-wrap md:-mx-2 space-x-4 ",
             children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxs"])("div", {
               "class": "w-full md:w-3/12 md:mx-2",
               children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_Components_ProfileComponents_UserInfo__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -86044,17 +85930,9 @@ function Show(_ref) {
                 "class": "my-4"
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_Components_ProfileComponents_AboutUser__WEBPACK_IMPORTED_MODULE_0__["default"], {
                 user: user
-              }), arr.map(function (a) {
-                return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
-                  className: "bg-gray-100",
-                  style: {
-                    width: "100%",
-                    height: "50vh"
-                  }
-                });
               })]
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxs"])("div", {
-              "class": "w-full md:w-9/12 mx-2 h-64",
+              "class": "w-full md:w-8/12 mx-2",
               children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_Components_ProfileComponents_ExtraInfo__WEBPACK_IMPORTED_MODULE_2__["default"], {
                 user: user
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
@@ -86075,22 +85953,12 @@ function Show(_ref) {
                     "stroke-linejoin": "round",
                     d: "M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
                   })
-                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxs"])("div", {
+                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
                   "class": "w-full md:w-3/12 md:mx-2",
-                  children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
+                  children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
                     className: "text-black text-2xl font-semibold",
                     children: "Your Post"
-                  }), arr.map(function (a) {
-                    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxs"])("div", {
-                      style: {
-                        width: "100%",
-                        height: "50vh",
-                        marginBottom: "2rem",
-                        background: "white"
-                      },
-                      children: ["hello $", a]
-                    });
-                  })]
+                  })
                 })]
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_Components_UserPosts__WEBPACK_IMPORTED_MODULE_4__["default"], {})]
             })]
@@ -86144,7 +86012,7 @@ var QueriesForm = function QueriesForm() {
     e.preventDefault();
     post(route("generalQuerySubmit"), {
       onSuccess: function onSuccess(res) {
-        console.log("sucessfull");
+        alert("Query sent successfully");
       }
     });
   }
@@ -86310,7 +86178,7 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
     e.preventDefault();
     post(route("successStorySubmit"), {
       onSuccess: function onSuccess(res) {
-        console.log("sucessfull");
+        alert('Success');
       }
     }), {
       forceFormData: true
@@ -86319,7 +86187,7 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
     id: "bg",
     children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
-      "class": "max-w-2xl mx-auto bg-slate-200 p-5 mt-5",
+      "class": "bg-white max-w-2xl mx-auto p-10 mt-5",
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
         "class": "flex flex-col justify-center items-center h-12 text-3xl font-extrabold bg-blue-600 mb-2",
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("h3", {
@@ -86331,11 +86199,12 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
         children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
           "class": "grid gap-6 mb-6 lg:grid-cols-2 mt-2",
           children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
-            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("label", {
+            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("label", {
               "for": "name",
               "class": "block mb-2 text-black font-bold",
-              children: " Name"
+              children: [" ", "Name"]
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+              required: true,
               name: "name",
               type: "text",
               placeholder: props.auth.name,
@@ -86348,6 +86217,7 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
               "class": "block mb-2 text-black font-bold",
               children: "Mobile Number"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+              required: true,
               name: "phone",
               type: "tel",
               placeholder: props.auth.phone,
@@ -86360,10 +86230,10 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
               "class": "block mb-2 text-black font-bold",
               children: "Achievement Title"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+              required: true,
               name: "achievement",
               type: "text",
               "class": "bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500",
-              required: true,
               value: data.achievement,
               onChange: function onChange(e) {
                 return setData("achievement", e.target.value);
@@ -86375,6 +86245,7 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
               "class": "block mb-2 text-black font-bold",
               children: "Description"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("textarea", {
+              required: true,
               name: "description",
               id: "message",
               rows: "4",
@@ -86391,6 +86262,7 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
               "class": "block mb-2 text-black font-bold",
               children: "Category"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("select", {
+              required: true,
               name: "category",
               "class": "bg-white border border-gray-300 text-gray-900 text-medium rounded-lg  block w-full p-2.5 ",
               value: data.category,
@@ -86398,7 +86270,7 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
                 return setData("category", e.target.value);
               },
               children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("option", {
-                selected: true,
+                value: "",
                 children: "Choose Category"
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("option", {
                 value: "National",
@@ -86414,6 +86286,7 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
               "class": "block mb-2 text-black font-bold",
               children: "Date of Achievement"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+              required: true,
               name: "date_of_achievement",
               type: "date",
               "class": "bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500",
@@ -86428,7 +86301,8 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
               "class": "block mb-2 text-black font-bold",
               children: "Videos"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
-              namae: "video_url",
+              required: true,
+              name: "video_url",
               type: "text",
               "class": "bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500",
               value: data.video_url,
@@ -86442,6 +86316,7 @@ var SuccessStoriesForm = function SuccessStoriesForm(props) {
               "class": "block mb-2 text-black font-bold",
               children: "Snapshots"
             }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("input", {
+              required: true,
               name: "snapshot",
               type: "file",
               "class": "bg-white border border-gray-300 text-gray-900 text-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -86498,7 +86373,7 @@ var UnderConstruction = function UnderConstruction(props) {
       children: "Under Construction"
     }),
     children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("main", {
-      "class": "h-screen w-full flex md:mt-8 flex-col justify-center items-center ",
+      "class": "min-h-screen w-full flex md:mt-8 flex-col justify-center items-center ",
       style: {
         background: "linear-gradient(to right, #2A2A72, #009FFD)"
       },

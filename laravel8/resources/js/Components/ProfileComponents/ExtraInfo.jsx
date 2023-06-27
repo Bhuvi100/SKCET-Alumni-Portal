@@ -2,7 +2,7 @@ import React from "react";
 
 const ExtraInfo = ({ user }) => {
     return (
-        <div>
+        <div class="mr-4">
             <div class="bg-white p-3 shadow-sm rounded-sm">
                 <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
                     <span clas="text-green-500">

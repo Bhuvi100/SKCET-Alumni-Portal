@@ -36,7 +36,7 @@ const Edit = ({ auth }) => {
                 </h2>
             }
         >
-            <div className="mt-8 -ml-20">
+            <div className="mt-8 -ml-20 w-full">
                 <div className="bg-gray-100">
                     <div className="container">
                         <form
@@ -53,7 +53,7 @@ const Edit = ({ auth }) => {
                                             <div class="image overflow-hidden">
                                                 <img
                                                     class="h-96 w-auto mb-4 mx-auto"
-                                                    src="/assets/Alumni-Images/2.jpg"
+                                                    src={auth.picture_url}
                                                     alt="Not available"
                                                 />
                                             </div>

@@ -246,26 +246,7 @@ function Register() {
                                     />
                                 </div>
                             </div>
-                            <div>
-                                <label
-                                    for="job"
-                                    class="block mb-2 text-black dark:text-gray-900"
-                                >
-                                    Designation
-                                </label>
-                                <input
-                                    type="text"
-                                    class="block w-full px-4 py-4 mt-2 bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring"
-                                    required
-                                    name="designation"
-                                    onChange={onInputChange}
-                                    value={data.designation}
-                                />
-                                <InputError
-                                    message={errors.designation}
-                                    class="mt-2"
-                                />
-                            </div>
+                           
                         </div>
                         <div class="grid gap-6 mb-6 lg:grid-cols-2 mt-2">
                             <div>

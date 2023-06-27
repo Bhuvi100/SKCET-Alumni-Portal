@@ -22,7 +22,7 @@ export default function Dashboard(props) {
             <div>
                 <div class="flex flex-col flex-1 ">
                     <main class="pb-16 overflow-y-auto">
-                        <div class="block md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3 ">
+                        <div class="block md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-2 ">
                             <div class="col-span-2">
                                 <div class="pt-10">
                                     <Posts />
@@ -137,9 +137,9 @@ export default function Dashboard(props) {
                                     <div class="flex items-center justify-center">
                                         <a
                                             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                                            href="/jobs"
+                                            href="#"
                                         >
-                                            View Openings
+                                            Coming soon
                                         </a>
                                     </div>
                                 </div>

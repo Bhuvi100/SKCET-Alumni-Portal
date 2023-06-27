@@ -42,7 +42,7 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', 'min:8'],
             'phone'  => 'required|string|max:20|min:6',
             'designation' => 'required|string|max:255',
-            'picture' => 'nullable|file|mimes:.jpg,.png,.jpeg',
+            'picture' => 'nullable|file|mimes:jpg,png,jpeg',
             'city_state' => 'required|string|max:255',
             'country' => 'required|string|max:255',
             'organization' => 'required|string|max:255',
