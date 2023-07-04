@@ -87064,8 +87064,8 @@ function route(name, params, absolute, config) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\AJAYVIJAY\OneDrive\Desktop\web development\Skcet Alumni\SKCET-Alumni-Portal\laravel8\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\AJAYVIJAY\OneDrive\Desktop\web development\Skcet Alumni\SKCET-Alumni-Portal\laravel8\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! E:\other_apps\git_projects\SKCET-Alumni-Portal\laravel8\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\other_apps\git_projects\SKCET-Alumni-Portal\laravel8\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ }),

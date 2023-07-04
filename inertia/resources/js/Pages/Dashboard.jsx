@@ -34,7 +34,8 @@ export default function Dashboard(props) {
                                     <div class="container m-auto px-6 text-gray-500 md:px-12 xl:px-0 mb-5 bg-slate-200">
                                         <TrendingPosts />
                                     </div>
-                                    <UserPosts />
+                                    {console.log(props.posts)}
+                                    <UserPosts post={props.posts}/>
                                 </div>
                             </div>
                             <div class="hidden md:block lg:block py-8 rounded-lg sticky h-4 ml-4 mr-4 mt-2">

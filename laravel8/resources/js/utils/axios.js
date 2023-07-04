@@ -5,5 +5,7 @@ export default function axios() {
         Accept: "application/json",
     };
 
+    axiosLib.defaults.withCredentials = true;
+
     return axiosLib;
 }

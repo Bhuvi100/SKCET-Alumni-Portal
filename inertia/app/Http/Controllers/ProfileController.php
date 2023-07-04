@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 use App\Providers\RouteServiceProvider;
 use App\Imports\UsersImport;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Log;
+
+use App\Http\Resources\PostResource;
+use App\Models\Post;
+
 
 class ProfileController extends Controller
 {
@@ -20,8 +25,12 @@ class ProfileController extends Controller
     public function show(?User $user)
     {
         $user = $user->id ? $user : auth()->user();
+         $posts = PostResource::collection(Post::with('user')->where('user_id', '=', $user->id)->get());
+       // $posts =   PostResource::collection(Post::whereBelongsTo($user)->get());
+       
+        // Log::info("INFO", $posts);
 
-        return Inertia::render('Profile/Show', ['user' => $user->toResource()]);
+        return Inertia::render('Profile/Show', ['user' => $user->toResource(), 'posts'=>$posts]);
     }
 
     public function edit(User $user)

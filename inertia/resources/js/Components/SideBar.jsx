@@ -299,7 +299,8 @@ export default function SideBar(props) {
                                     </li>
                                     <li>
                                         <Link
-                                            href={route("logout")}
+                                            // href={route("logout")}
+                                            href = {"auth/logout"}
                                             method="post"
                                             as="button"
                                             className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600"

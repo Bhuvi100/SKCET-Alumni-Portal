@@ -17,6 +17,11 @@ use App\Http\Resources\UserResource;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('auth/logout',function(){
+    auth()->logout();
+    return Inertia::location('/login');
+});
+
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
 })->middleware('auth')->name('verification.notice');
@@ -36,11 +41,13 @@ Route::get('/', function () {
     ]);
 });
 
-Route::middleware(['auth', 'verified'])->group(function() {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard', ['auth' => auth()->user()]);
-    })->name('dashboard');
 
+
+Route::middleware(['auth', 'verified'])->group(function() {
+    // Route::get('/dashboard', function () {
+    //      return Inertia::render('Dashboard', ['auth' => auth()->user()]);
+    // })->name('dashboard');
+    Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/chapters', function () {
         return Inertia::render('Chapters', ['auth' => auth()->user()]);
     });
