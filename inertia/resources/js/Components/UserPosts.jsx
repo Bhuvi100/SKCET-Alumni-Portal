@@ -54,7 +54,11 @@ const UserPosts = (props) => {
                 setPostdata(response.data.posts);
             });
     }, []);
-
+    
+    const handleLikes = (post_id) => {
+        setTr(!tr);
+        tr ? setLiked("blue") : setLiked("none");
+    }
     const GetComments = (post_id) => {
         setCom(!com);
         setPostid(post_id);
@@ -135,10 +139,7 @@ const UserPosts = (props) => {
                             </span>
                             <span
                                 className="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer"
-                                onClick={() => {
-                                    setTr(!tr);
-                                    tr ? setLiked("blue") : setLiked("none");
-                                }}
+                                onClick={() => {handleLikes(posts.id)}}
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
