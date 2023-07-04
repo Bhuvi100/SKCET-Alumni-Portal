@@ -29,16 +29,20 @@ const UserPosts = (props) => {
     
     const handleLikes = (post_id) => {
         setTr(!tr);
-        setLikeid(post_id);
-        console.log(likeid);
-        axios()
-            .get(`http://127.0.0.1:8000/likes/${post_id}`)
-            .then((response) => {
-                setLiked("blue");
-                console.log("heloo");
-                //console.log(response.data);
-                console.log(likeid);
-            });
+        setPostid(post_id);
+        console.log(postid);
+        post(route("addlike", `${post_id}`), {
+            onSuccess: (res) => {
+                GetLikes(post_id);
+                console.log("sucessfull");
+            },
+            onError: () => {
+                console.log("error");
+            },
+            onFinish: () => {
+                console.log("finished");
+            },
+        });
         
         tr ? setLiked("blue") : setLiked("none");
     }
