@@ -15,6 +15,7 @@ const UserPosts = (props) => {
     const [tr, setTr] = useState(false);
     const [showMod, setShowMod] = useState(false);
     const [postid, setPostid] = useState(0);
+    const [likeid, setLikeid] = useState(0);
     const [commentid, setCommentid] = useState(0);
     const [liked, setLiked] = useState("none");
     const [rep, setRep] = useState(false);
@@ -28,6 +29,17 @@ const UserPosts = (props) => {
     
     const handleLikes = (post_id) => {
         setTr(!tr);
+        setLikeid(post_id);
+        console.log(likeid);
+        axios()
+            .get(`http://127.0.0.1:8000/likes/${post_id}`)
+            .then((response) => {
+                setLiked("blue");
+                console.log("heloo");
+                //console.log(response.data);
+                console.log(likeid);
+            });
+        
         tr ? setLiked("blue") : setLiked("none");
     }
 
