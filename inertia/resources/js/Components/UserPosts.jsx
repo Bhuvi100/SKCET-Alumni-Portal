@@ -15,6 +15,7 @@ const UserPosts = (props) => {
     const [tr, setTr] = useState(false);
     const [showMod, setShowMod] = useState(false);
     const [postid, setPostid] = useState(0);
+    const [likeid, setLikeid] = useState(0);
     const [commentid, setCommentid] = useState(0);
     const [liked, setLiked] = useState("none");
     const [rep, setRep] = useState(false);
@@ -25,6 +26,26 @@ const UserPosts = (props) => {
         comment_id: null,
         description: "",
     });
+    
+    const handleLikes = (post_id) => {
+        setTr(!tr);
+        setPostid(post_id);
+        console.log(postid);
+        post(route("addlike", `${post_id}`), {
+            onSuccess: (res) => {
+                GetLikes(post_id);
+                console.log("sucessfull");
+            },
+            onError: () => {
+                console.log("error");
+            },
+            onFinish: () => {
+                console.log("finished");
+            },
+        });
+        
+        tr ? setLiked("blue") : setLiked("none");
+    }
 
     function handleSubmitCommentsAndReply( post_id) {
         //e.preventDefault();
@@ -148,10 +169,7 @@ const UserPosts = (props) => {
                             </span>
                             <span
                                 className="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer"
-                                onClick={() => {
-                                    setTr(!tr);
-                                    tr ? setLiked("blue") : setLiked("none"); 
-                                }}
+                                onClick={() => {handleLikes(posts.id)}}
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
