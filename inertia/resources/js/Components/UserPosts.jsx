@@ -27,13 +27,16 @@ const UserPosts = (props) => {
         description: "",
     });
     
-    const handleLikes = (post_id) => {
-        setTr(!tr);
+    const handleLikes = (post_id , likes) => {
+        setTr(!likes);
+        
         setPostid(post_id);
-        console.log(postid);
-        post(route("addlike", `${post_id}`), {
+        console.log(likes);
+        console.log(post_id);
+        tr ? setLiked("blue") : setLiked("none");
+        post(route("likes", `${post_id}`), {
             onSuccess: (res) => {
-                GetLikes(post_id);
+                //GetLikes(post_id);
                 console.log("sucessfull");
             },
             onError: () => {
@@ -43,8 +46,9 @@ const UserPosts = (props) => {
                 console.log("finished");
             },
         });
+        console.log(liked , tr)
         
-        tr ? setLiked("blue") : setLiked("none");
+   
     }
 
     function handleSubmitCommentsAndReply( post_id) {
@@ -64,21 +68,7 @@ const UserPosts = (props) => {
         });
     }
 
-    function handleSubmitLikes( post_id) {
-        
-        post(route("likes", `${post_id}`), {
-            onSuccess: (res) => {
-                GetComments(post_id);
-                console.log("sucessfull");
-            },
-            onError: () => {
-                console.log("error");
-            },
-            onFinish: () => {
-                console.log("finished");
-            },
-        });
-    }
+  
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -169,11 +159,11 @@ const UserPosts = (props) => {
                             </span>
                             <span
                                 className="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer"
-                                onClick={() => {handleLikes(posts.id)}}
+                                onClick={() => {handleLikes(posts.id , posts.liked_by_user)}}
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    fill={liked}
+                                    fill={posts.liked_by_user ? "blue":"none"}
                                     viewBox="0 0 24 24"
                                     stroke-width="1.5"
                                     stroke="blue"
@@ -195,14 +185,14 @@ const UserPosts = (props) => {
                                 Comments:
                                 <div class="ml-1 text-gray-400 text-ms">
                                     {" "}
-                                    0
+                                    {posts.comments_count ?posts.comments_count:0}
                                 </div>
                             </button>
                             <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">
                                 Likes{" "}
                                 <div class="ml-1 text-gray-400 text-ms">
                                     {" "}
-                                    {posts.likes ? posts.likes:0} {posts.liked_by_user? 1:0}
+                                    {posts.likes ? posts.likes:0} 
                                 </div>
                             </div>
                         </div>

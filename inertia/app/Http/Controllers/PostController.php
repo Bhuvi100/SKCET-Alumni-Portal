@@ -32,14 +32,14 @@ class PostController extends Controller
                 ->first();
         if($like){
             $like->delete();
-            return redirect('profile');
+           
         } 
         else{
             Like::create([
                 'user_id' => $userId,
-                'post_id' => $postId
+                'post_id' => $post->id
             ]);
-            return redirect('profile');
+            
 
         }
     }

@@ -84,7 +84,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
             return Inertia::render('MyPosts');
         })->name('MyPosts');
         // likes
-        Route::get('/likes/{post}', [\App\Http\Controllers\PostController::class, 'likes'])->name('likes');
+        Route::post('/likes/{post}', [\App\Http\Controllers\PostController::class, 'likes'])->name('likes');
 
 
         // adding/update comments
