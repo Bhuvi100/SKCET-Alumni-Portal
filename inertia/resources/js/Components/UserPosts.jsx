@@ -43,6 +43,22 @@ const UserPosts = (props) => {
         });
     }
 
+    function handleSubmitLikes( post_id) {
+        
+        post(route("likes", `${post_id}`), {
+            onSuccess: (res) => {
+                GetComments(post_id);
+                console.log("sucessfull");
+            },
+            onError: () => {
+                console.log("error");
+            },
+            onFinish: () => {
+                console.log("finished");
+            },
+        });
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
     };
@@ -134,7 +150,7 @@ const UserPosts = (props) => {
                                 className="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer"
                                 onClick={() => {
                                     setTr(!tr);
-                                    tr ? setLiked("blue") : setLiked("none");
+                                    tr ? setLiked("blue") : setLiked("none"); 
                                 }}
                             >
                                 <svg
@@ -168,7 +184,7 @@ const UserPosts = (props) => {
                                 Likes{" "}
                                 <div class="ml-1 text-gray-400 text-ms">
                                     {" "}
-                                    0
+                                    {posts.likes ? posts.likes:0} {posts.liked_by_user? 1:0}
                                 </div>
                             </div>
                         </div>
