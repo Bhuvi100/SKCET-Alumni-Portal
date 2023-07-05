@@ -38,7 +38,7 @@ export default function Dashboard(props) {
                                     <UserPosts post={props.posts}/>
                                 </div>
                             </div>
-                            <div class="hidden md:block lg:block py-8 rounded-lg sticky h-4 ml-4 mr-4 mt-2">
+                            <div class="hidden md:block lg:block py-8 rounded-lg sticky h-4 ml-4 mr-4 mt-2" >
                                 <div class="max-w-2xl mx-auto">
                                     <form>
                                         <div class="relative">

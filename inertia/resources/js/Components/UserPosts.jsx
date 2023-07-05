@@ -31,18 +31,19 @@ const UserPosts = (props) => {
         setTr(!tr);
         setPostid(post_id);
         console.log(postid);
-        post(route("addlike", `${post_id}`), {
-            onSuccess: (res) => {
-                GetLikes(post_id);
-                console.log("sucessfull");
-            },
-            onError: () => {
-                console.log("error");
-            },
-            onFinish: () => {
-                console.log("finished");
-            },
-        });
+
+        // post(route("addlike", `${post_id}`), {
+        //     onSuccess: (res) => {
+        //         GetLikes(post_id);
+        //         console.log("sucessfull");
+        //     },
+        //     onError: () => {
+        //         console.log("error");
+        //     },
+        //     onFinish: () => {
+        //         console.log("finished");
+        //     },
+        // });
         
         tr ? setLiked("blue") : setLiked("none");
     }
