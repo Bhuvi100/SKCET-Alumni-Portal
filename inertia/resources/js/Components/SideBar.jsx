@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "@inertiajs/inertia-react";
 import route from "../../../vendor/tightenco/ziggy/src/js";
+import React from 'react';
 
 export default function SideBar(props) {
-    const [showSidebar, setShowSidebar] = useState(true);
+    const [showSidebar, setShowSidebar] = useState(window.innerWidth >= 700);
     return (
         <div>
             <div className="fixed mr-3 top-8 lg:top-40 left-4">
@@ -177,7 +178,7 @@ export default function SideBar(props) {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="/construction"
                                             className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600"
                                         >
                                             <svg
@@ -201,7 +202,7 @@ export default function SideBar(props) {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="/events"
                                             class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600"
                                         >
                                             <svg
@@ -224,7 +225,7 @@ export default function SideBar(props) {
                                     </li>
                                     <li>
                                         <a
-                                            href="/chats"
+                                            href="/construction"
                                             class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-black hover:text-white hover:bg-blue-600"
                                         >
                                             <svg
@@ -299,7 +300,7 @@ export default function SideBar(props) {
                                     </li>
                                     <li>
                                         <Link
-                                            // href={route("logout")}
+                                            
                                             href = {"auth/logout"}
                                             method="post"
                                             as="button"
@@ -332,3 +333,4 @@ export default function SideBar(props) {
         </div>
     );
 }
+

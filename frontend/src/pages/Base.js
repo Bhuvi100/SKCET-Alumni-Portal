@@ -25,7 +25,7 @@ const Base = () => {
   return (
     <div>
 
-<Routes>
+      <Routes>
             <Route
               path="/login"
               element={<Login />}
@@ -125,7 +125,7 @@ const Base = () => {
           />
           
           
-          </Routes>
+      </Routes>
     </div>
   )
 }

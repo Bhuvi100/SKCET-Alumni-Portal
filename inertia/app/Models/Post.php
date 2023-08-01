@@ -15,14 +15,24 @@ class Post extends Model
       
     ];
     use HasFactory;
-    
+
+    public function likes(){
+        return $this->hasMany(Like::class);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
+    public function likedByUser()
+    {
+        return $this->likes()->where('user_id',auth()->id())->exists();
+    }
+    
     public function comments()
     {
         return $this->hasMany(Comment::class);
     }
+   
 }

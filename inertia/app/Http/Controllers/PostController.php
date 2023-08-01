@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Http\Resources\PostResource;
 use App\Models\Post;
+use App\Models\Like;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Providers\RouteServiceProvider;
@@ -21,6 +22,27 @@ class PostController extends Controller
     }
 
 
+    public function likes(Post $post)
+    {   
+        
+        $userId = auth()->user()->id;
+    
+        $like = Like::where('user_id', $userId)
+                ->where('post_id', $post->id)
+                ->first();
+        if($like){
+            $like->delete();
+           
+        } 
+        else{
+            Like::create([
+                'user_id' => $userId,
+                'post_id' => $post->id
+            ]);
+            
+
+        }
+    }
 
     public function create()
     {

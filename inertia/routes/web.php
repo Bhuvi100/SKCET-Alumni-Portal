@@ -83,6 +83,9 @@ Route::middleware(['auth', 'verified'])->group(function() {
         Route::get('/MyPosts', function () {
             return Inertia::render('MyPosts');
         })->name('MyPosts');
+        // likes
+        Route::post('/likes/{post}', [\App\Http\Controllers\PostController::class, 'likes'])->name('likes');
+
 
         // adding/update comments
         Route::get('/getComment/{post}', [\App\Http\Controllers\CommentController::class, 'index'])->name('getComment');
