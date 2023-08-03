@@ -126,7 +126,9 @@ Route::get('/gallery', function () {
     return Inertia::render('Gallery');
 });
 
-
+Route::get('/events', function () {
+    return Inertia::render('Events');
+});
 
 Route::get('/mediumofinstruction', function () {
     return Inertia::render('MediumOfInstructionForm');
