@@ -15,7 +15,7 @@ const Loginform = () => {
                         <div class="text-center">
                         <img
                             class="mx-auto w-48"
-                            src="https://www.padhaishala.com/logo-img/121-skcet-coimbatore.jpg"
+                            src="/assets/ski_logo.png"
                             alt="logo"
                         />
                         <h4 class="text-xl font-semibold mt-1 mb-12 pb-1">Once Again Welcome To SKCET Family !</h4>
