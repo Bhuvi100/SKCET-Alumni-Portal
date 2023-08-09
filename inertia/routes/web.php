@@ -93,7 +93,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
 
 
         // job oppurtunity and guest speaker form
-        Route::get('/job', function () {
+        Route::get('/jobs', function () {
             return Inertia::render('JobForm',['auth' => auth()->user()]);
         });
         Route::post('/jobSubmit',[\App\Http\Controllers\FormsController::class, 'jobSubmit'])->name('jobSubmit');
