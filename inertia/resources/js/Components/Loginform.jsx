@@ -16,7 +16,7 @@ const Loginform = () => {
                         <img
                             class="mx-auto w-48"
                             src="/assets/ski_logo.png"
-                            alt="logo"
+                            alt="logo" Hardware details
                         />
                         <h4 class="text-xl font-semibold mt-1 mb-12 pb-1">Once Again Welcome To SKCET Family !</h4>
                         </div>
@@ -82,6 +82,7 @@ const Loginform = () => {
             </div>
             </div>
         </div>
+        
     </section>
     
     </div>

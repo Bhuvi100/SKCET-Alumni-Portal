@@ -81,7 +81,7 @@ const UserPosts = (props) => {
         setCom(!com);
         setPostid(post_id);
         axios()
-            .get(`http://127.0.0.1:8000/getComment/${post_id}`)
+            .get(`https://alumni.skcet.ac.in/getComment/${post_id}`)
             .then((response) => {
                 setComment(response.data);
                 console.log("heloo");
